@@ -1,0 +1,90 @@
+.mkjk-pagehero {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  padding: 46px 0 50px;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(255, 220, 95, 0.22), transparent 28%),
+    radial-gradient(circle at 12% 110%, rgba(255, 133, 34, 0.2), transparent 30%),
+    linear-gradient(110deg, #55210c 0%, #8b3510 48%, #c65311 100%);
+  border-bottom: 5px solid #f2bd3d;
+}
+
+.mkjk-pagehero::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  right: -220px;
+  top: -300px;
+  border: 1px solid rgba(255, 237, 157, 0.28);
+  border-radius: 50%;
+  box-shadow: 0 0 0 35px rgba(255, 237, 157, 0.04),
+    0 0 0 70px rgba(255, 237, 157, 0.03);
+}
+
+.mkjk-pagehero-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1280px, calc(100% - 30px));
+  margin: 0 auto;
+}
+
+.mkjk-pagehero-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 24px;
+  color: #ffeab5;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.mkjk-pagehero-breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.mkjk-pagehero-inner > span {
+  display: inline-flex;
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 230, 135, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 242, 188, 0.09);
+  color: #ffe28a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.mkjk-pagehero h1 {
+  max-width: 900px;
+  margin: 13px 0 10px;
+  color: #fffdf5;
+  font-size: clamp(34px, 4.5vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -1.3px;
+}
+
+.mkjk-pagehero p {
+  max-width: 780px;
+  margin: 0;
+  color: #fff1d3;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .mkjk-pagehero {
+    padding: 34px 0 38px;
+  }
+
+  .mkjk-pagehero h1 {
+    font-size: 35px;
+  }
+
+  .mkjk-pagehero p {
+    font-size: 15px;
+  }
+}

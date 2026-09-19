@@ -1,0 +1,1119 @@
+/* =========================================================
+   MKJK POST GRADUATE
+   PREMIUM ACADEMIC PROGRAMME PAGE
+   ========================================================= */
+
+.page-scope-postgraduate {
+  --pg-brown: #54220c;
+  --pg-dark: #3b1707;
+  --pg-orange: #e95d16;
+  --pg-orange-dark: #c84708;
+  --pg-gold: #efc14d;
+  --pg-gold-light: #fff0bd;
+  --pg-cream: #fff8df;
+  --pg-paper: #fffdf8;
+  --pg-text: #3f2616;
+  --pg-muted: #735e4b;
+  --pg-border: #eadabd;
+
+  font-family: "Montserrat", sans-serif;
+
+  color: var(--pg-text);
+
+  background:
+    radial-gradient(
+      circle at 4% 6%,
+      rgba(239, 193, 77, 0.13),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 96% 42%,
+      rgba(233, 93, 22, 0.06),
+      transparent 28%
+    ),
+    #fffdf8;
+
+  padding: 56px 0 88px;
+}
+
+.page-scope-postgraduate *,
+.page-scope-postgraduate *::before,
+.page-scope-postgraduate *::after {
+  box-sizing: border-box;
+}
+
+.pg-container {
+  width: min(1240px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.pg-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--pg-orange);
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+}
+
+.pg-eyebrow span {
+  width: 30px;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--pg-orange),
+      var(--pg-gold)
+    );
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.pg-intro {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    250px;
+
+  align-items: center;
+
+  gap: 40px;
+
+  min-height: 330px;
+
+  padding: 45px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #fff0cf 56%,
+      #fffdf8
+    );
+
+  border:
+    1px solid
+    var(--pg-border);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 22px 55px
+    rgba(76, 40, 11, 0.08);
+
+  animation: pgFadeUp 0.65s ease both;
+}
+
+.pg-intro::before {
+  content: "";
+
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  right: -180px;
+  top: -195px;
+
+  border:
+    52px solid
+    rgba(239, 193, 77, 0.13);
+
+  border-radius: 50%;
+}
+
+.pg-intro::after {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  left: -60px;
+  bottom: -60px;
+
+  background:
+    rgba(233, 93, 22, 0.07);
+
+  border-radius: 50%;
+}
+
+.pg-intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+.pg-intro h1 {
+  margin: 13px 0 15px;
+
+  color: var(--pg-brown);
+
+  font-size:
+    clamp(35px, 4.5vw, 54px);
+
+  line-height: 1.06;
+
+  letter-spacing: -1.7px;
+}
+
+.pg-intro h1 strong {
+  color: var(--pg-orange);
+}
+
+.pg-intro-content > p {
+  max-width: 710px;
+
+  margin: 0;
+
+  color: var(--pg-muted);
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.pg-highlights {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 23px;
+}
+
+.pg-highlights span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 8px 11px;
+
+  color: var(--pg-brown);
+
+  background:
+    rgba(255, 255, 255, 0.75);
+
+  border:
+    1px solid
+    #eadabd;
+
+  border-radius: 9px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.pg-highlights svg {
+  color: var(--pg-orange);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   COUNT CARD
+   ========================================================= */
+
+.pg-count-card {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  justify-self: end;
+
+  width: 210px;
+  height: 235px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--pg-brown),
+      var(--pg-orange-dark)
+    );
+
+  border-radius: 110px 110px 22px 22px;
+
+  box-shadow:
+    0 24px 48px
+    rgba(84, 34, 12, 0.22);
+
+  transform: rotate(1deg);
+}
+
+.pg-count-ring {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 137px;
+  height: 137px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.32);
+
+  border-radius: 50%;
+}
+
+.pg-count-ring svg {
+  margin-bottom: 4px;
+
+  color: var(--pg-gold);
+
+  font-size: 19px;
+}
+
+.pg-count-ring strong {
+  color: #ffd979;
+
+  font-size: 42px;
+
+  line-height: 0.95;
+}
+
+.pg-count-ring span {
+  margin-top: 6px;
+
+  color: #ffe8c7;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  line-height: 1.4;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+}
+
+.pg-count-card > small {
+  margin-top: 17px;
+
+  color: #ffd979;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.pg-section-head {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin: 58px 0 27px;
+}
+
+.pg-small-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 9px;
+
+  color: var(--pg-orange);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+}
+
+.pg-small-title span {
+  width: 27px;
+  height: 3px;
+
+  background: var(--pg-gold);
+
+  border-radius: 10px;
+}
+
+.pg-section-head h2 {
+  margin: 0;
+
+  color: var(--pg-brown);
+
+  font-size:
+    clamp(28px, 3vw, 39px);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.8px;
+}
+
+.pg-section-head h2 strong {
+  color: var(--pg-orange);
+}
+
+
+/* =========================================================
+   ELIGIBILITY BUTTON
+   ========================================================= */
+
+.pg-eligibility {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 12px 16px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pg-brown),
+      var(--pg-orange-dark)
+    );
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 9px 20px
+    rgba(84, 34, 12, 0.14);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.pg-eligibility:hover {
+  color: #fff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 27px
+    rgba(84, 34, 12, 0.2);
+}
+
+.pg-eligibility svg:last-child {
+  color: var(--pg-gold);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   COURSE GRID
+   ========================================================= */
+
+.pg-course-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   COURSE CARD
+   ========================================================= */
+
+.pg-course-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 245px;
+
+  padding: 22px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fffdf8
+    );
+
+  border:
+    1px solid
+    var(--pg-border);
+
+  border-radius: 19px;
+
+  box-shadow:
+    0 11px 27px
+    rgba(76, 40, 11, 0.045);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.pg-course-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 115px;
+  height: 115px;
+
+  right: -55px;
+  top: -55px;
+
+  background:
+    rgba(239, 193, 77, 0.10);
+
+  border-radius: 50%;
+}
+
+.pg-course-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--pg-orange),
+      var(--pg-gold)
+    );
+
+  border-radius: 0 0 8px 0;
+
+  transition:
+    height 0.3s ease;
+}
+
+.pg-course-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #dfbb60;
+
+  box-shadow:
+    0 21px 40px
+    rgba(76, 40, 11, 0.10);
+}
+
+.pg-course-card:hover::after {
+  height: 100%;
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.pg-card-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+}
+
+.pg-card-number {
+  color: #ddceb2;
+
+  font-size: 27px;
+
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+.pg-card-icon {
+  display: grid;
+
+  place-items: center;
+
+  width: 46px;
+  height: 46px;
+
+  color: var(--pg-orange);
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff0bd,
+      #fffaf0
+    );
+
+  border:
+    1px solid
+    #ecd9a5;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.pg-course-card:hover .pg-card-icon {
+  transform:
+    rotate(-6deg)
+    scale(1.06);
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffe4a0,
+      #fff2cc
+    );
+}
+
+.pg-card-icon svg {
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.pg-card-content {
+  position: relative;
+  z-index: 2;
+
+  flex: 1;
+
+  margin-top: 22px;
+}
+
+.pg-card-label {
+  color: var(--pg-orange);
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.4px;
+}
+
+.pg-card-content h3 {
+  max-width: 260px;
+
+  margin: 9px 0 0;
+
+  color: var(--pg-brown);
+
+  font-size: 17px;
+
+  line-height: 1.45;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+   ========================================================= */
+
+.pg-card-footer {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-top: 20px;
+
+  padding-top: 13px;
+
+  border-top:
+    1px solid
+    #eee5d6;
+}
+
+.pg-card-footer > div:first-child {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 7px;
+}
+
+.pg-card-footer small {
+  color: #9a8873;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.1px;
+}
+
+.pg-card-footer strong {
+  color: var(--pg-orange);
+
+  font-size: 23px;
+
+  line-height: 1;
+}
+
+.pg-card-footer span {
+  color: #a39380;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.pg-card-arrow {
+  display: grid;
+
+  place-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  color: var(--pg-orange);
+
+  background: var(--pg-cream);
+
+  border:
+    1px solid
+    #ecd9a5;
+
+  border-radius: 8px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.pg-course-card:hover .pg-card-arrow {
+  transform: translateX(4px);
+
+  background: var(--pg-gold);
+}
+
+.pg-card-arrow svg {
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+   ========================================================= */
+
+.pg-bottom-cta {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    64px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 19px;
+
+  padding: 29px 34px;
+
+  overflow: hidden;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      120deg,
+      #4b1d0b,
+      #74300d 55%,
+      #c74b0b
+    );
+
+  border-radius: 21px;
+
+  box-shadow:
+    0 20px 42px
+    rgba(84, 34, 12, 0.17);
+}
+
+.pg-bottom-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  right: -115px;
+  top: -130px;
+
+  border:
+    40px solid
+    rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
+}
+
+.pg-bottom-icon {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  place-items: center;
+
+  width: 64px;
+  height: 64px;
+
+  color: var(--pg-brown);
+
+  background: var(--pg-gold);
+
+  border-radius: 15px;
+}
+
+.pg-bottom-icon svg {
+  font-size: 26px;
+}
+
+.pg-bottom-content {
+  position: relative;
+  z-index: 2;
+}
+
+.pg-bottom-content > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #ffd979;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+.pg-bottom-content h2 {
+  margin: 0 0 7px;
+
+  color: #fff;
+
+  font-size:
+    clamp(20px, 2.5vw, 28px);
+
+  line-height: 1.3;
+}
+
+.pg-bottom-content h2 strong {
+  color: #ffd979;
+}
+
+.pg-bottom-content p {
+  max-width: 690px;
+
+  margin: 0;
+
+  color: #f6dcc8;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.pg-bottom-button {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 17px;
+
+  color: var(--pg-brown);
+
+  background: var(--pg-gold);
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.pg-bottom-button:hover {
+  color: var(--pg-brown);
+
+  background: #ffd96c;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes pgFadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   1050px
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .pg-course-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .pg-intro {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .pg-count-card {
+    justify-self: start;
+
+    width: 175px;
+    height: 205px;
+  }
+
+  .pg-count-ring {
+    width: 120px;
+    height: 120px;
+  }
+
+  .pg-count-ring strong {
+    font-size: 35px;
+  }
+}
+
+
+/* =========================================================
+   700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .page-scope-postgraduate {
+    padding: 42px 0 65px;
+  }
+
+  .pg-container {
+    width: min(100% - 24px, 1240px);
+  }
+
+  .pg-intro {
+    padding: 30px 22px;
+
+    border-radius: 21px;
+  }
+
+  .pg-intro h1 {
+    font-size: 34px;
+  }
+
+  .pg-intro-content > p {
+    font-size: 13px;
+  }
+
+  .pg-highlights {
+    flex-direction: column;
+  }
+
+  .pg-highlights span {
+    width: fit-content;
+  }
+
+  .pg-section-head {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .pg-eligibility {
+    width: fit-content;
+  }
+
+  .pg-course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pg-course-card {
+    min-height: 225px;
+  }
+
+  .pg-bottom-cta {
+    grid-template-columns:
+      58px
+      minmax(0, 1fr);
+
+    padding: 25px 21px;
+  }
+
+  .pg-bottom-button {
+    grid-column: 2;
+
+    width: fit-content;
+  }
+}
+
+
+/* =========================================================
+   500px
+   ========================================================= */
+
+@media (max-width: 500px) {
+  .pg-container {
+    width: min(100% - 18px, 1240px);
+  }
+
+  .pg-intro {
+    padding: 25px 18px;
+  }
+
+  .pg-intro h1 {
+    font-size: 29px;
+  }
+
+  .pg-count-card {
+    width: 155px;
+    height: 185px;
+  }
+
+  .pg-count-ring {
+    width: 105px;
+    height: 105px;
+  }
+
+  .pg-count-ring strong {
+    font-size: 31px;
+  }
+
+  .pg-count-ring span {
+    font-size: 7px;
+  }
+
+  .pg-card-content h3 {
+    font-size: 16px;
+  }
+
+  .pg-bottom-cta {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .pg-bottom-button {
+    grid-column: auto;
+  }
+}

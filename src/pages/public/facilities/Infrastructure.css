@@ -1,0 +1,1261 @@
+/* =========================================================
+   INFRASTRUCTURE PAGE
+   College Theme
+========================================================= */
+
+.page-scope-infrastructure {
+  --infra-orange: #e85c17;
+  --infra-orange-dark: #a83f0f;
+  --infra-brown: #54220c;
+
+  --infra-blue: #3478d3;
+  --infra-blue-dark: #1e589f;
+
+  --infra-cream: #fff3cf;
+  --infra-bg: #fffdf8;
+
+  --infra-text: #53667d;
+  --infra-muted: #7c8998;
+
+  font-family: "Montserrat", sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 5% 10%,
+      rgba(232, 92, 23, 0.045),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 96% 25%,
+      rgba(52, 120, 211, 0.045),
+      transparent 28%
+    ),
+    var(--infra-bg);
+
+  padding: 55px 0 85px;
+
+  overflow: hidden;
+}
+
+.mkjk-infrastructure-container {
+  width: min(1200px, calc(100% - 30px));
+  margin: auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.mkjk-infra-hero {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(330px, 0.75fr);
+
+  gap: 0;
+
+  background: #fff;
+
+  border: 1px solid #eadabd;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 18px 45px rgba(76, 40, 11, 0.075);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   LEFT CAMPUS
+========================================================= */
+
+.mkjk-infra-campus {
+  position: relative;
+
+  padding: 34px 38px 30px;
+
+  border-right: 1px solid #eee3d2;
+
+  overflow: hidden;
+}
+
+.mkjk-section-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--infra-orange);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+}
+
+.mkjk-section-label > span {
+  display: block;
+
+  width: 45px;
+  height: 2px;
+
+  background: var(--infra-orange);
+
+  border-radius: 99px;
+}
+
+.mkjk-infra-campus h1 {
+  margin: 12px 0 9px;
+
+  color: var(--infra-brown);
+
+  font-size: clamp(30px, 3vw, 40px);
+
+  line-height: 1.08;
+
+  letter-spacing: -0.8px;
+}
+
+.mkjk-infra-campus h1 em {
+  color: var(--infra-orange);
+
+  font-style: normal;
+}
+
+.mkjk-infra-description {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: var(--infra-text);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CAMPUS DIAGRAM
+========================================================= */
+
+.mkjk-campus-diagram {
+  position: relative;
+
+  min-height: 390px;
+
+  margin-top: 25px;
+
+  padding: 4px 0 15px;
+
+  overflow: hidden;
+}
+
+.mkjk-diagram-top {
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.8fr;
+
+  gap: 60px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   DIAGRAM MAIN TITLES
+========================================================= */
+
+.mkjk-diagram-main-title {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 50px;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2877d1,
+      #4e95e2
+    );
+
+  border: 1px solid #2168b9;
+
+  box-shadow:
+    0 8px 17px rgba(37, 106, 183, 0.2);
+
+  font-size: 16px;
+
+  font-weight: 900;
+
+  text-transform: capitalize;
+
+  text-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.mkjk-diagram-main-title svg {
+  font-size: 20px;
+}
+
+.hostel-title {
+  background:
+    linear-gradient(
+      135deg,
+      #5bd8dc,
+      #7ce7e9
+    );
+
+  border-color: #3bc5ca;
+
+  color: #fff;
+
+  box-shadow:
+    0 8px 17px rgba(54, 188, 193, 0.18);
+}
+
+
+/* =========================================================
+   TEACHING BRANCH
+========================================================= */
+
+.mkjk-diagram-branch {
+  position: relative;
+
+  margin-top: 12px;
+
+  padding-left: 42px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.mkjk-diagram-branch::before {
+  content: "";
+
+  position: absolute;
+
+  left: 20px;
+
+  top: -11px;
+
+  bottom: 28px;
+
+  width: 3px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #3576c5,
+      #4c89d0
+    );
+
+  border-radius: 99px;
+}
+
+.mkjk-diagram-node {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-height: 46px;
+
+  padding: 9px 13px;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d8eaff,
+      #eaf3ff
+    );
+
+  border: 1px solid #82b4eb;
+
+  color: #214d80;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 12px rgba(42, 96, 156, 0.1);
+
+  opacity: 0;
+
+  animation:
+    infraNodeReveal
+    0.55s
+    ease forwards;
+
+  animation-delay: var(--diagram-delay);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mkjk-diagram-node::before {
+  content: "";
+
+  position: absolute;
+
+  left: -25px;
+
+  top: 50%;
+
+  width: 25px;
+
+  height: 3px;
+
+  background: #3576c5;
+
+  transform: translateY(-50%);
+}
+
+.mkjk-diagram-node:hover {
+  transform:
+    translateX(5px)
+    scale(1.015);
+
+  box-shadow:
+    0 9px 18px rgba(42, 96, 156, 0.17);
+}
+
+.mkjk-node-icon {
+  width: 29px;
+  height: 29px;
+
+  flex: 0 0 29px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 7px;
+
+  color: #2165aa;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   HOSTEL BRANCH
+========================================================= */
+
+.mkjk-hostel-branch {
+  position: relative;
+
+  margin-top: 12px;
+
+  padding: 0 0 0 30px;
+}
+
+.mkjk-hostel-branch::before {
+  content: "";
+
+  position: absolute;
+
+  left: 13px;
+
+  top: 22px;
+
+  width: 20px;
+
+  height: 3px;
+
+  background: #4380bc;
+}
+
+.mkjk-hostel-branch::after {
+  content: "";
+
+  position: absolute;
+
+  left: 13px;
+
+  top: -11px;
+
+  width: 3px;
+
+  height: 35px;
+
+  background: #4380bc;
+
+  border-radius: 99px;
+}
+
+.mkjk-hostel-node {
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 9px 14px;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4eff7,
+      #fff
+    );
+
+  border: 1px solid #b8aebb;
+
+  color: #453d47;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 5px 12px rgba(76, 40, 11, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.mkjk-hostel-node:hover {
+  transform: translateX(5px);
+
+  box-shadow:
+    0 10px 20px rgba(76, 40, 11, 0.12);
+}
+
+.mkjk-hostel-node .mkjk-node-icon {
+  color: #725c79;
+
+  background: #eee8f0;
+}
+
+.mkjk-hostel-node small {
+  display: block;
+
+  font-size: 10px;
+
+  margin-top: 2px;
+
+  color: #706673;
+}
+
+
+/* =========================================================
+   DIAGRAM DECORATION
+========================================================= */
+
+.mkjk-diagram-decoration {
+  position: absolute;
+
+  pointer-events: none;
+}
+
+.dot-one {
+  right: 12px;
+  bottom: 20px;
+
+  width: 75px;
+  height: 55px;
+
+  opacity: 0.35;
+
+  background-image:
+    radial-gradient(
+      #e85c17 1.5px,
+      transparent 1.5px
+    );
+
+  background-size: 14px 14px;
+}
+
+.dot-two {
+  left: -10px;
+  bottom: 8px;
+
+  width: 65px;
+  height: 55px;
+
+  opacity: 0.23;
+
+  background-image:
+    radial-gradient(
+      #e85c17 1.5px,
+      transparent 1.5px
+    );
+
+  background-size: 12px 12px;
+}
+
+.circle-one {
+  width: 150px;
+  height: 150px;
+
+  left: -80px;
+  bottom: -85px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 215, 129, 0.25);
+}
+
+
+/* =========================================================
+   REFERENCE NOTE
+========================================================= */
+
+.mkjk-reference-note {
+  position: relative;
+
+  z-index: 4;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 5px;
+
+  padding: 13px 16px;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fff6dd,
+      #fffaf0
+    );
+
+  border: 1px solid #f0ddae;
+
+  color: #76583e;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.mkjk-reference-note svg {
+  flex: 0 0 auto;
+
+  color: var(--infra-orange);
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   RIGHT HIGHLIGHTS
+========================================================= */
+
+.mkjk-infra-highlights {
+  padding: 34px 32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffefa,
+      #fffaf0
+    );
+}
+
+.mkjk-infra-highlights h2 {
+  margin: 12px 0 12px;
+
+  color: var(--infra-brown);
+
+  font-size: clamp(25px, 2.5vw, 34px);
+
+  line-height: 1.12;
+
+  letter-spacing: -0.6px;
+}
+
+.mkjk-infra-highlights h2 em {
+  color: var(--infra-orange);
+
+  font-style: normal;
+}
+
+.mkjk-infra-highlights > p {
+  margin: 0;
+
+  color: var(--infra-text);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   HIGHLIGHT GRID
+========================================================= */
+
+.mkjk-highlights-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 13px;
+
+  margin-top: 22px;
+}
+
+.mkjk-highlight-card {
+  min-height: 145px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 14px;
+
+  border-radius: 15px;
+
+  border: 1px solid;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mkjk-highlight-card:hover {
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 13px 25px rgba(84, 34, 12, 0.08);
+}
+
+.mkjk-highlight-card.orange {
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf0,
+      #fff
+    );
+
+  border-color: #f1dfb9;
+}
+
+.mkjk-highlight-card.blue {
+  background:
+    linear-gradient(
+      145deg,
+      #f2f8ff,
+      #fff
+    );
+
+  border-color: #d2e4fb;
+}
+
+.mkjk-highlight-card.red {
+  background:
+    linear-gradient(
+      145deg,
+      #fff4f3,
+      #fff
+    );
+
+  border-color: #f4d9d6;
+}
+
+.mkjk-highlight-card.purple {
+  background:
+    linear-gradient(
+      145deg,
+      #f8f3ff,
+      #fff
+    );
+
+  border-color: #e4d8f5;
+}
+
+.mkjk-highlight-icon {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin-bottom: 8px;
+
+  border-radius: 50%;
+
+  font-size: 18px;
+}
+
+.orange .mkjk-highlight-icon {
+  color: #d99b16;
+  background: #fff3ca;
+  border: 1px solid #f2d67c;
+}
+
+.blue .mkjk-highlight-icon {
+  color: #3982db;
+  background: #e8f3ff;
+  border: 1px solid #a7cdf5;
+}
+
+.red .mkjk-highlight-icon {
+  color: #e15a50;
+  background: #fff0ef;
+  border: 1px solid #f0b8b4;
+}
+
+.purple .mkjk-highlight-icon {
+  color: #8a58d3;
+  background: #f3eaff;
+  border: 1px solid #d9bff7;
+}
+
+.mkjk-highlight-card strong {
+  color: var(--infra-orange-dark);
+
+  font-size: 24px;
+
+  line-height: 1;
+}
+
+.mkjk-highlight-card span {
+  margin-top: 7px;
+
+  color: #53667d;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.mkjk-highlight-card small {
+  margin-top: 4px;
+
+  color: #8994a2;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.mkjk-infra-quote {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 22px;
+}
+
+.quote-mark {
+  color: var(--infra-orange);
+
+  font-family: Georgia, serif;
+
+  font-size: 45px;
+
+  line-height: 0.7;
+}
+
+.mkjk-infra-quote strong {
+  display: block;
+
+  color: #53667d;
+
+  font-size: 14px;
+
+  font-style: italic;
+}
+
+.mkjk-infra-quote small {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 10px;
+
+  color: var(--infra-orange);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.mkjk-infra-quote small b {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--infra-orange);
+}
+
+
+/* =========================================================
+   DETAILS CARD
+========================================================= */
+
+.mkjk-infra-details {
+  margin-top: 22px;
+
+  padding: 28px 28px 30px;
+
+  background: #fff;
+
+  border: 1px solid #eadabd;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 15px 35px rgba(76, 40, 11, 0.055);
+}
+
+.mkjk-details-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.mkjk-details-heading-icon {
+  width: 46px;
+  height: 46px;
+
+  flex: 0 0 46px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: var(--infra-orange);
+
+  background: #fff3d0;
+
+  border: 1px solid #eed59a;
+
+  border-radius: 14px;
+
+  font-size: 20px;
+}
+
+.mkjk-details-heading h2 {
+  margin: 0;
+
+  color: var(--infra-brown);
+
+  font-size: 27px;
+}
+
+.mkjk-details-heading p {
+  margin: 3px 0 0;
+
+  color: #7c8998;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.mkjk-infrastructure-table-wrap {
+  overflow: hidden;
+
+  border: 1px solid #eadabd;
+
+  border-radius: 15px;
+}
+
+.mkjk-infrastructure-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.mkjk-infrastructure-table th {
+  padding: 14px 15px;
+
+  text-align: left;
+
+  color: #5b2a12;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fff0c2,
+      #ffe4b8
+    );
+}
+
+.mkjk-infrastructure-table td {
+  padding: 12px 15px;
+
+  color: #5d6e82;
+
+  font-size: 13px;
+
+  border-top: 1px solid #f0e6d5;
+
+  transition: 0.2s ease;
+}
+
+.mkjk-infrastructure-table tbody tr:hover td {
+  background: #fffaf0;
+}
+
+.mkjk-infrastructure-table td:first-child {
+  width: 90px;
+}
+
+.mkjk-infrastructure-table td:last-child {
+  width: 180px;
+}
+
+.mkjk-infrastructure-table td:last-child strong {
+  color: var(--infra-orange-dark);
+
+  font-size: 13px;
+}
+
+.mkjk-table-number {
+  width: 27px;
+  height: 27px;
+
+  display: inline-grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--infra-orange);
+
+  background: #fff4d7;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.mkjk-infra-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-top: 22px;
+}
+
+.mkjk-summary-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 17px 18px;
+
+  background: #fff;
+
+  border: 1px solid #eadabd;
+
+  border-radius: 15px;
+
+  transition: 0.3s ease;
+}
+
+.mkjk-summary-item:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(76, 40, 11, 0.07);
+}
+
+.mkjk-summary-item > svg {
+  width: 39px;
+  height: 39px;
+
+  padding: 9px;
+
+  border-radius: 11px;
+
+  color: var(--infra-orange);
+
+  background: #fff2ce;
+}
+
+.mkjk-summary-item strong {
+  display: block;
+
+  color: var(--infra-brown);
+
+  font-size: 19px;
+}
+
+.mkjk-summary-item span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #7c8998;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes infraNodeReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(-15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .mkjk-infra-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .mkjk-infra-campus {
+    border-right: 0;
+
+    border-bottom: 1px solid #eee3d2;
+  }
+
+  .mkjk-infra-highlights {
+    padding-top: 30px;
+  }
+
+  .mkjk-infra-summary {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .page-scope-infrastructure {
+    padding: 35px 0 60px;
+  }
+
+  .mkjk-infrastructure-container {
+    width: min(
+      calc(100% - 22px),
+      1200px
+    );
+  }
+
+  .mkjk-infra-campus {
+    padding: 25px 20px 23px;
+  }
+
+  .mkjk-infra-highlights {
+    padding: 26px 20px;
+  }
+
+  .mkjk-infra-campus h1 {
+    font-size: 31px;
+  }
+
+  .mkjk-infra-description {
+    font-size: 13px;
+  }
+
+  .mkjk-diagram-top {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .mkjk-campus-diagram {
+    min-height: auto;
+  }
+
+  .mkjk-diagram-main-title {
+    font-size: 14px;
+  }
+
+  .mkjk-diagram-node {
+    font-size: 11px;
+  }
+
+  .mkjk-highlights-grid {
+    gap: 10px;
+  }
+
+  .mkjk-highlight-card {
+    min-height: 125px;
+  }
+
+  .mkjk-highlight-card strong {
+    font-size: 21px;
+  }
+
+  .mkjk-infra-details {
+    padding: 21px 16px;
+  }
+
+  .mkjk-details-heading h2 {
+    font-size: 23px;
+  }
+
+  .mkjk-infrastructure-table-wrap {
+    overflow-x: auto;
+  }
+
+  .mkjk-infrastructure-table {
+    min-width: 600px;
+  }
+
+  .mkjk-infra-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+  .mkjk-infra-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .mkjk-highlights-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mkjk-highlight-card {
+    min-height: 115px;
+  }
+
+  .mkjk-highlight-card strong {
+    font-size: 19px;
+  }
+
+  .mkjk-highlight-card span {
+    font-size: 10px;
+  }
+
+  .mkjk-highlight-card small {
+    font-size: 8px;
+  }
+
+  .mkjk-reference-note {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .mkjk-diagram-node {
+    animation: none;
+
+    opacity: 1;
+  }
+
+  .mkjk-diagram-node,
+  .mkjk-highlight-card,
+  .mkjk-summary-item,
+  .mkjk-hostel-node {
+    transition: none;
+  }
+}

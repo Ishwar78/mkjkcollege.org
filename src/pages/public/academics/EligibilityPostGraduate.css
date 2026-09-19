@@ -1,0 +1,118 @@
+.page-scope-eligibilitypostgraduate .mkjk-eligibility-pg{font-family:"Montserrat",sans-serif;background:#fffaf3;padding:52px 0 75px}.page-scope-eligibilitypostgraduate .mkjk-eligibility-pg-container{width:min(1000px,calc(100% - 28px));margin:auto}.page-scope-eligibilitypostgraduate .mkjk-eligibility-pg-head span{color:#e95d16;font-size:12px;font-weight:800;letter-spacing:1.5px}.page-scope-eligibilitypostgraduate .mkjk-eligibility-pg-head h1{font-size:clamp(34px,4vw,50px);color:#54220c;margin:8px 0}.page-scope-eligibilitypostgraduate .mkjk-eligibility-pg-head p{font-size:16px;color:#647286;line-height:1.7}.page-scope-eligibilitypostgraduate .mkjk-pg-document{background:#fff;border:1px solid #eee5d8;border-radius:20px;padding:34px;margin-top:25px;box-shadow:0 15px 35px rgba(16,36,63,.06)}.page-scope-eligibilitypostgraduate .mkjk-pg-document h2{font-size:27px;color:#54220c;margin-top:0}.page-scope-eligibilitypostgraduate .mkjk-pg-document p, .page-scope-eligibilitypostgraduate .mkjk-pg-document li{font-size:16px;line-height:1.85;color:#5f6d80}.page-scope-eligibilitypostgraduate .mkjk-pg-document ol{padding-left:24px}.page-scope-eligibilitypostgraduate .mkjk-pg-document li{margin:9px 0}.page-scope-eligibilitypostgraduate .mkjk-pg-notice{margin-top:25px;background:#fff3c6;border:1px solid #efdda7;border-radius:16px;padding:22px}.page-scope-eligibilitypostgraduate .mkjk-pg-notice strong{color:#a51058}.page-scope-eligibilitypostgraduate .mkjk-pg-notice p{margin-bottom:0}@media(max-width:600px){.page-scope-eligibilitypostgraduate .mkjk-pg-document{padding:21px}}
+
+/* MKJK WARM PREMIUM PAGE LAYER */
+.page-scope-eligibilitypostgraduate {
+  --mkjk-page-brown: #54220c;
+  --mkjk-page-orange: #e95d16;
+  --mkjk-page-gold: #efc14d;
+  --mkjk-page-cream: #fff8df;
+  --mkjk-page-paper: #fffdf8;
+  --mkjk-page-ink: #3f2616;
+  --mkjk-page-muted: #735e4b;
+  font-family: "Montserrat", sans-serif;
+  color: var(--mkjk-page-ink);
+  background: #fffdf8;
+}
+
+.page-scope-eligibilitypostgraduate [class*="container"] {
+  width: min(1280px, calc(100% - 30px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-scope-eligibilitypostgraduate p,
+.page-scope-eligibilitypostgraduate li {
+  font-size: 16px;
+  line-height: 1.82;
+  color: var(--mkjk-page-muted);
+}
+
+.page-scope-eligibilitypostgraduate h1,
+.page-scope-eligibilitypostgraduate h2,
+.page-scope-eligibilitypostgraduate h3,
+.page-scope-eligibilitypostgraduate h4 {
+  color: var(--mkjk-page-ink);
+  letter-spacing: -0.35px;
+}
+
+.page-scope-eligibilitypostgraduate h1 {
+  font-size: clamp(30px, 4vw, 50px);
+}
+
+.page-scope-eligibilitypostgraduate h2 {
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.page-scope-eligibilitypostgraduate a {
+  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.page-scope-eligibilitypostgraduate article,
+.page-scope-eligibilitypostgraduate .card,
+.page-scope-eligibilitypostgraduate [class*="card"] {
+  border-color: #eadabd;
+}
+
+.page-scope-eligibilitypostgraduate article:hover,
+.page-scope-eligibilitypostgraduate .card:hover,
+.page-scope-eligibilitypostgraduate [class*="card"]:hover {
+  border-color: #e6b94d;
+}
+
+.page-scope-eligibilitypostgraduate table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #e8d8b9;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
+}
+
+.page-scope-eligibilitypostgraduate th {
+  padding: 14px 16px;
+  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
+  color: #5b2a12;
+  font-size: 13px;
+  text-align: left;
+}
+
+.page-scope-eligibilitypostgraduate td {
+  padding: 13px 16px;
+  border-top: 1px solid #f0e5d1;
+  color: #634d3a;
+  font-size: 14px;
+}
+
+.page-scope-eligibilitypostgraduate tr:hover td {
+  background: #fffaf0;
+}
+
+.page-scope-eligibilitypostgraduate ul {
+  padding-left: 23px;
+}
+
+.page-scope-eligibilitypostgraduate li::marker {
+  color: var(--mkjk-page-orange);
+}
+
+.page-scope-eligibilitypostgraduate button {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 650px) {
+  .page-scope-eligibilitypostgraduate [class*="container"] {
+    width: min(100% - 22px, 1280px);
+  }
+
+  .page-scope-eligibilitypostgraduate p,
+  .page-scope-eligibilitypostgraduate li {
+    font-size: 15px;
+  }
+
+  .page-scope-eligibilitypostgraduate td,
+  .page-scope-eligibilitypostgraduate th {
+    padding: 11px 12px;
+  }
+}

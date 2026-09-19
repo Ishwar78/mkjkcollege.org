@@ -1,0 +1,118 @@
+.page-scope-ourcollege .mkjk-college{font-family:"Montserrat",sans-serif;background:#fffaf3;padding:52px 0 72px;color:#54220c}.page-scope-ourcollege .mkjk-college-container{width:min(1180px,calc(100% - 28px));margin:auto}.page-scope-ourcollege .mkjk-college-hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}.page-scope-ourcollege .mkjk-college-image{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 20px 42px rgba(16,36,63,.12)}.page-scope-ourcollege .mkjk-college-image img{width:100%;height:470px;object-fit:cover}.page-scope-ourcollege .mkjk-college-image span{position:absolute;left:18px;bottom:18px;background:#fff;padding:12px 16px;border-radius:10px;color:#e95d16;font-size:12px;font-weight:700}.page-scope-ourcollege .mkjk-college-image b{font-size:18px;margin-left:4px}.page-scope-ourcollege .mkjk-college-hero article{background:#fff;border:1px solid #eee6d8;border-radius:20px;padding:32px}.page-scope-ourcollege .mkjk-college-hero article>span, .page-scope-ourcollege .mkjk-college-story>div>span, .page-scope-ourcollege .mkjk-college-values>div>span{color:#e95d16;font-size:12px;font-weight:800;letter-spacing:1.6px}.page-scope-ourcollege .mkjk-college-hero h1{font-size:clamp(31px,4vw,48px);line-height:1.12;margin:10px 0 16px}.page-scope-ourcollege .mkjk-college p{font-size:16px;line-height:1.85;color:#627083}.page-scope-ourcollege .mkjk-college-story{display:grid;grid-template-columns:.7fr 1.3fr;gap:35px;margin-top:28px;padding:32px;border-radius:20px;background:linear-gradient(135deg,#fff1f7,#fff8d9);border:1px solid #f3e2e9}.page-scope-ourcollege .mkjk-college-story h2, .page-scope-ourcollege .mkjk-college-values h2{font-size:30px;margin:9px 0}.page-scope-ourcollege .mkjk-college-story p{margin:0 0 12px}.page-scope-ourcollege .mkjk-college-values{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:18px;padding:30px;background:#54220c;color:#fff;border-radius:20px}.page-scope-ourcollege .mkjk-college-values p{color:#dce7ef}.page-scope-ourcollege .mkjk-value-list{display:grid;gap:10px}.page-scope-ourcollege .mkjk-value-list div{display:flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px}.page-scope-ourcollege .mkjk-value-list svg{color:#ff72ae}.page-scope-ourcollege .mkjk-value-list span{font-size:14px}.page-scope-ourcollege .mkjk-college-next{display:inline-flex;align-items:center;gap:8px;color:#e95d16;font-weight:800;font-size:13px;margin-top:22px}@media(max-width:800px){.page-scope-ourcollege .mkjk-college-hero, .page-scope-ourcollege .mkjk-college-story, .page-scope-ourcollege .mkjk-college-values{grid-template-columns:1fr}.page-scope-ourcollege .mkjk-college-image img{height:320px}}
+
+/* MKJK WARM PREMIUM PAGE LAYER */
+.page-scope-ourcollege {
+  --mkjk-page-brown: #54220c;
+  --mkjk-page-orange: #e95d16;
+  --mkjk-page-gold: #efc14d;
+  --mkjk-page-cream: #fff8df;
+  --mkjk-page-paper: #fffdf8;
+  --mkjk-page-ink: #3f2616;
+  --mkjk-page-muted: #735e4b;
+  font-family: "Montserrat", sans-serif;
+  color: var(--mkjk-page-ink);
+  background: #fffdf8;
+}
+
+.page-scope-ourcollege [class*="container"] {
+  width: min(1280px, calc(100% - 30px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-scope-ourcollege p,
+.page-scope-ourcollege li {
+  font-size: 16px;
+  line-height: 1.82;
+  color: var(--mkjk-page-muted);
+}
+
+.page-scope-ourcollege h1,
+.page-scope-ourcollege h2,
+.page-scope-ourcollege h3,
+.page-scope-ourcollege h4 {
+  color: var(--mkjk-page-ink);
+  letter-spacing: -0.35px;
+}
+
+.page-scope-ourcollege h1 {
+  font-size: clamp(30px, 4vw, 50px);
+}
+
+.page-scope-ourcollege h2 {
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.page-scope-ourcollege a {
+  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.page-scope-ourcollege article,
+.page-scope-ourcollege .card,
+.page-scope-ourcollege [class*="card"] {
+  border-color: #eadabd;
+}
+
+.page-scope-ourcollege article:hover,
+.page-scope-ourcollege .card:hover,
+.page-scope-ourcollege [class*="card"]:hover {
+  border-color: #e6b94d;
+}
+
+.page-scope-ourcollege table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #e8d8b9;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
+}
+
+.page-scope-ourcollege th {
+  padding: 14px 16px;
+  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
+  color: #5b2a12;
+  font-size: 13px;
+  text-align: left;
+}
+
+.page-scope-ourcollege td {
+  padding: 13px 16px;
+  border-top: 1px solid #f0e5d1;
+  color: #634d3a;
+  font-size: 14px;
+}
+
+.page-scope-ourcollege tr:hover td {
+  background: #fffaf0;
+}
+
+.page-scope-ourcollege ul {
+  padding-left: 23px;
+}
+
+.page-scope-ourcollege li::marker {
+  color: var(--mkjk-page-orange);
+}
+
+.page-scope-ourcollege button {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 650px) {
+  .page-scope-ourcollege [class*="container"] {
+    width: min(100% - 22px, 1280px);
+  }
+
+  .page-scope-ourcollege p,
+  .page-scope-ourcollege li {
+    font-size: 15px;
+  }
+
+  .page-scope-ourcollege td,
+  .page-scope-ourcollege th {
+    padding: 11px 12px;
+  }
+}

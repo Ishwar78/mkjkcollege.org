@@ -1,0 +1,286 @@
+.page-scope-coursesoffered .courses-offered-page{
+  background: #fffaf4;
+  padding: 54px 20px 72px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.page-scope-coursesoffered .courses-offered-container{
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.page-scope-coursesoffered .courses-offered-intro{
+  max-width: 780px;
+  margin-bottom: 34px;
+}
+
+.page-scope-coursesoffered .courses-offered-kicker{
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #ffe2ed;
+  color: #d41469;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.page-scope-coursesoffered .courses-offered-intro h1{
+  margin: 14px 0 12px;
+  color: #17142a;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+.page-scope-coursesoffered .courses-offered-intro p{
+  margin: 0;
+  color: #5f6470;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.page-scope-coursesoffered .courses-offered-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.page-scope-coursesoffered .courses-offered-card{
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  padding: 30px;
+  border: 1px solid #eee5e8;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 16px 45px rgba(28, 20, 30, 0.07);
+  text-decoration: none;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.page-scope-coursesoffered .courses-offered-card::after{
+  content: "";
+  position: absolute;
+  right: -65px;
+  bottom: -75px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.page-scope-coursesoffered .courses-offered-card:hover{
+  transform: translateY(-7px);
+  box-shadow: 0 24px 55px rgba(28, 20, 30, 0.13);
+}
+
+.page-scope-coursesoffered .courses-offered-card--ug::after{
+  background: #ffd9e9;
+}
+
+.page-scope-coursesoffered .courses-offered-card--pg::after{
+  background: #fff0b8;
+}
+
+.page-scope-coursesoffered .courses-offered-card--other::after{
+  background: #cceeff;
+}
+
+.page-scope-coursesoffered .courses-offered-icon{
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  border-radius: 17px;
+  background: #f50075;
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.page-scope-coursesoffered .courses-offered-card--pg .courses-offered-icon{
+  background: #f19a16;
+}
+
+.page-scope-coursesoffered .courses-offered-card--other .courses-offered-icon{
+  background: #d46b17;
+}
+
+.page-scope-coursesoffered .courses-offered-card > span{
+  color: #9b9ca5;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.page-scope-coursesoffered .courses-offered-card h2{
+  position: relative;
+  z-index: 1;
+  margin: 10px 0 12px;
+  color: #17142a;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.page-scope-coursesoffered .courses-offered-card p{
+  position: relative;
+  z-index: 1;
+  min-height: 70px;
+  margin: 0 0 20px;
+  color: #666a73;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.page-scope-coursesoffered .courses-offered-card strong{
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #d41469;
+  font-size: 14px;
+}
+
+.page-scope-coursesoffered .courses-offered-card--pg strong{
+  color: #bf7300;
+}
+
+.page-scope-coursesoffered .courses-offered-card--other strong{
+  color: #0874a9;
+}
+
+@media (max-width: 900px) {
+  .page-scope-coursesoffered .courses-offered-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-scope-coursesoffered .courses-offered-page{
+    padding: 38px 14px 52px;
+  }
+
+  .page-scope-coursesoffered .courses-offered-card{
+    min-height: auto;
+    padding: 25px;
+  }
+}
+
+/* MKJK WARM PREMIUM PAGE LAYER */
+.page-scope-coursesoffered {
+  --mkjk-page-brown: #54220c;
+  --mkjk-page-orange: #e95d16;
+  --mkjk-page-gold: #efc14d;
+  --mkjk-page-cream: #fff8df;
+  --mkjk-page-paper: #fffdf8;
+  --mkjk-page-ink: #3f2616;
+  --mkjk-page-muted: #735e4b;
+  font-family: "Montserrat", sans-serif;
+  color: var(--mkjk-page-ink);
+  background: #fffdf8;
+}
+
+.page-scope-coursesoffered [class*="container"] {
+  width: min(1280px, calc(100% - 30px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-scope-coursesoffered p,
+.page-scope-coursesoffered li {
+  font-size: 16px;
+  line-height: 1.82;
+  color: var(--mkjk-page-muted);
+}
+
+.page-scope-coursesoffered h1,
+.page-scope-coursesoffered h2,
+.page-scope-coursesoffered h3,
+.page-scope-coursesoffered h4 {
+  color: var(--mkjk-page-ink);
+  letter-spacing: -0.35px;
+}
+
+.page-scope-coursesoffered h1 {
+  font-size: clamp(30px, 4vw, 50px);
+}
+
+.page-scope-coursesoffered h2 {
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.page-scope-coursesoffered a {
+  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.page-scope-coursesoffered article,
+.page-scope-coursesoffered .card,
+.page-scope-coursesoffered [class*="card"] {
+  border-color: #eadabd;
+}
+
+.page-scope-coursesoffered article:hover,
+.page-scope-coursesoffered .card:hover,
+.page-scope-coursesoffered [class*="card"]:hover {
+  border-color: #e6b94d;
+}
+
+.page-scope-coursesoffered table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #e8d8b9;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
+}
+
+.page-scope-coursesoffered th {
+  padding: 14px 16px;
+  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
+  color: #5b2a12;
+  font-size: 13px;
+  text-align: left;
+}
+
+.page-scope-coursesoffered td {
+  padding: 13px 16px;
+  border-top: 1px solid #f0e5d1;
+  color: #634d3a;
+  font-size: 14px;
+}
+
+.page-scope-coursesoffered tr:hover td {
+  background: #fffaf0;
+}
+
+.page-scope-coursesoffered ul {
+  padding-left: 23px;
+}
+
+.page-scope-coursesoffered li::marker {
+  color: var(--mkjk-page-orange);
+}
+
+.page-scope-coursesoffered button {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 650px) {
+  .page-scope-coursesoffered [class*="container"] {
+    width: min(100% - 22px, 1280px);
+  }
+
+  .page-scope-coursesoffered p,
+  .page-scope-coursesoffered li {
+    font-size: 15px;
+  }
+
+  .page-scope-coursesoffered td,
+  .page-scope-coursesoffered th {
+    padding: 11px 12px;
+  }
+}

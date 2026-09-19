@@ -1,0 +1,118 @@
+.page-scope-affiliation .mkjk-affiliation{font-family:"Montserrat",sans-serif;background:#f8fbff;padding:54px 0 72px}.page-scope-affiliation .mkjk-affiliation-container{width:min(1180px,calc(100% - 28px));margin:auto}.page-scope-affiliation .mkjk-affiliation-intro{background:#fff;border:1px solid #e6edf3;border-radius:22px;padding:34px;box-shadow:0 15px 35px rgba(16,36,63,.06)}.page-scope-affiliation .mkjk-affiliation-intro>span{color:#e95d16;font-size:12px;font-weight:800;letter-spacing:1.5px}.page-scope-affiliation .mkjk-affiliation-intro h1{font-size:clamp(32px,4vw,48px);margin:9px 0 14px;color:#54220c}.page-scope-affiliation .mkjk-affiliation-intro>p{font-size:17px;line-height:1.8;color:#617083;max-width:900px}.page-scope-affiliation .mkjk-affiliation-points{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:25px}.page-scope-affiliation .mkjk-affiliation-points div{display:flex;align-items:center;gap:12px;background:#fff7df;border:1px solid #f0e3b6;padding:15px;border-radius:12px;color:#263852;font-size:14px}.page-scope-affiliation .mkjk-affiliation-points svg{color:#e95d16}.page-scope-affiliation .mkjk-affiliation-docs{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:18px}.page-scope-affiliation .mkjk-affiliation-docs a{background:#54220c;color:#fff;border-radius:17px;padding:22px;text-decoration:none}.page-scope-affiliation .mkjk-affiliation-docs span{display:block;color:#ffcc65;font-size:20px;font-weight:800}.page-scope-affiliation .mkjk-affiliation-docs b{display:flex;align-items:center;justify-content:space-between;margin-top:24px;font-size:12px;color:#dce7ef}@media(max-width:700px){.page-scope-affiliation .mkjk-affiliation-points, .page-scope-affiliation .mkjk-affiliation-docs{grid-template-columns:1fr}}
+
+/* MKJK WARM PREMIUM PAGE LAYER */
+.page-scope-affiliation {
+  --mkjk-page-brown: #54220c;
+  --mkjk-page-orange: #e95d16;
+  --mkjk-page-gold: #efc14d;
+  --mkjk-page-cream: #fff8df;
+  --mkjk-page-paper: #fffdf8;
+  --mkjk-page-ink: #3f2616;
+  --mkjk-page-muted: #735e4b;
+  font-family: "Montserrat", sans-serif;
+  color: var(--mkjk-page-ink);
+  background: #fffdf8;
+}
+
+.page-scope-affiliation [class*="container"] {
+  width: min(1280px, calc(100% - 30px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-scope-affiliation p,
+.page-scope-affiliation li {
+  font-size: 16px;
+  line-height: 1.82;
+  color: var(--mkjk-page-muted);
+}
+
+.page-scope-affiliation h1,
+.page-scope-affiliation h2,
+.page-scope-affiliation h3,
+.page-scope-affiliation h4 {
+  color: var(--mkjk-page-ink);
+  letter-spacing: -0.35px;
+}
+
+.page-scope-affiliation h1 {
+  font-size: clamp(30px, 4vw, 50px);
+}
+
+.page-scope-affiliation h2 {
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.page-scope-affiliation a {
+  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.page-scope-affiliation article,
+.page-scope-affiliation .card,
+.page-scope-affiliation [class*="card"] {
+  border-color: #eadabd;
+}
+
+.page-scope-affiliation article:hover,
+.page-scope-affiliation .card:hover,
+.page-scope-affiliation [class*="card"]:hover {
+  border-color: #e6b94d;
+}
+
+.page-scope-affiliation table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #e8d8b9;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
+}
+
+.page-scope-affiliation th {
+  padding: 14px 16px;
+  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
+  color: #5b2a12;
+  font-size: 13px;
+  text-align: left;
+}
+
+.page-scope-affiliation td {
+  padding: 13px 16px;
+  border-top: 1px solid #f0e5d1;
+  color: #634d3a;
+  font-size: 14px;
+}
+
+.page-scope-affiliation tr:hover td {
+  background: #fffaf0;
+}
+
+.page-scope-affiliation ul {
+  padding-left: 23px;
+}
+
+.page-scope-affiliation li::marker {
+  color: var(--mkjk-page-orange);
+}
+
+.page-scope-affiliation button {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 650px) {
+  .page-scope-affiliation [class*="container"] {
+    width: min(100% - 22px, 1280px);
+  }
+
+  .page-scope-affiliation p,
+  .page-scope-affiliation li {
+    font-size: 15px;
+  }
+
+  .page-scope-affiliation td,
+  .page-scope-affiliation th {
+    padding: 11px 12px;
+  }
+}

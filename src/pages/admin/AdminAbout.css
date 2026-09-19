@@ -1,0 +1,32 @@
+.admin-work-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 18px
+}
+
+.note {
+    padding: 12px 0;
+    border-bottom: 1px solid #edf0f4
+}
+
+.note strong {
+    font-size: 13px
+}
+
+.note p {
+    margin: 3px 0;
+    color: #78869a;
+    font-size: 12px
+}
+
+.saved {
+    color: #0a9a65;
+    font-size: 12px;
+    font-weight: 700
+}
+
+@media(max-width:750px) {
+    .admin-work-grid {
+        grid-template-columns: 1fr
+    }
+}

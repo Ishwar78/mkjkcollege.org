@@ -1,0 +1,3 @@
+
+.backtop{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border:0;border-radius:50%;background:#f50075;color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px rgba(245,0,117,.3);cursor:pointer;z-index:1200;transition:.25s}
+.backtop:hover{transform:translateY(-3px);background:#c91563}

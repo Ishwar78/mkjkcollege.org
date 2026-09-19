@@ -1,0 +1,1361 @@
+/* =========================================================
+   MKJK - IQAC COMMITTEE
+   PREMIUM ORANGE / GOLD / CREAM DESIGN
+   ========================================================= */
+
+.page-scope-iqaccommittee {
+  --iqac-brown: #54220c;
+  --iqac-dark: #3f1b0a;
+  --iqac-orange: #e95d16;
+  --iqac-orange-dark: #c84708;
+  --iqac-gold: #efc14d;
+  --iqac-gold-light: #fff0b9;
+  --iqac-cream: #fff8df;
+  --iqac-paper: #fffdf8;
+  --iqac-text: #3f2616;
+  --iqac-muted: #735e4b;
+  --iqac-border: #eadabd;
+  --iqac-border-light: #f0e5d1;
+  --iqac-white: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+
+  color: var(--iqac-text);
+
+  background:
+    radial-gradient(
+      circle at 3% 8%,
+      rgba(239, 193, 77, 0.12),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 96% 30%,
+      rgba(233, 93, 22, 0.07),
+      transparent 30%
+    ),
+    #fffdf8;
+
+  padding: 55px 0 90px;
+}
+
+.page-scope-iqaccommittee * {
+  box-sizing: border-box;
+}
+
+.page-scope-iqaccommittee .container {
+  width: min(1240px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.page-scope-iqaccommittee h1,
+.page-scope-iqaccommittee h2,
+.page-scope-iqaccommittee h3,
+.page-scope-iqaccommittee p {
+  margin-top: 0;
+}
+
+.page-scope-iqaccommittee a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.iqac-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 13px;
+
+  color: var(--iqac-orange);
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.iqac-eyebrow::before {
+  content: "";
+
+  width: 29px;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--iqac-orange),
+      var(--iqac-gold)
+    );
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.iqac-intro {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    280px;
+
+  gap: 40px;
+
+  overflow: hidden;
+
+  margin-bottom: 55px;
+  padding: 48px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf0 0%,
+      #fff4d5 52%,
+      #fffdf8 100%
+    );
+
+  border: 1px solid var(--iqac-border);
+  border-radius: 28px;
+
+  box-shadow:
+    0 22px 55px rgba(76, 40, 11, 0.08),
+    0 3px 12px rgba(76, 40, 11, 0.04);
+
+  animation: iqacFadeUp 0.65s ease both;
+}
+
+.iqac-intro::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  right: -105px;
+  top: -120px;
+
+  border: 38px solid rgba(239, 193, 77, 0.15);
+
+  border-radius: 50%;
+}
+
+.iqac-intro::after {
+  content: "";
+
+  position: absolute;
+
+  width: 95px;
+  height: 95px;
+
+  left: -35px;
+  bottom: -40px;
+
+  background: rgba(233, 93, 22, 0.07);
+
+  border-radius: 50%;
+}
+
+.iqac-intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+.iqac-intro h1 {
+  margin-bottom: 17px;
+
+  color: var(--iqac-brown);
+
+  font-size: clamp(32px, 4vw, 52px);
+
+  line-height: 1.1;
+
+  letter-spacing: -1.4px;
+}
+
+.iqac-intro h1 span {
+  color: var(--iqac-orange);
+}
+
+.iqac-intro-content > p {
+  max-width: 850px;
+
+  margin-bottom: 30px;
+
+  color: var(--iqac-muted);
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   INTRO POINTS
+   ========================================================= */
+
+.iqac-intro-points {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 13px;
+}
+
+.iqac-point {
+  display: flex;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  border: 1px solid rgba(234, 218, 189, 0.9);
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.iqac-point:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(76, 40, 11, 0.08);
+}
+
+.iqac-point-number {
+  flex: 0 0 35px;
+
+  display: grid;
+  place-items: center;
+
+  width: 35px;
+  height: 35px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--iqac-brown),
+      var(--iqac-orange)
+    );
+
+  border-radius: 10px;
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.iqac-point strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--iqac-brown);
+
+  font-size: 13px;
+}
+
+.iqac-point p {
+  margin: 0;
+
+  color: var(--iqac-muted);
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   IQAC EMBLEM
+   ========================================================= */
+
+.iqac-emblem {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 275px;
+
+  padding: 25px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--iqac-brown),
+      var(--iqac-orange-dark)
+    );
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 20px 42px rgba(84, 34, 12, 0.2);
+}
+
+.iqac-emblem-ring {
+  display: grid;
+
+  place-items: center;
+
+  width: 135px;
+  height: 135px;
+
+  margin-bottom: 18px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.42);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 10px rgba(255, 255, 255, 0.06),
+    0 0 0 20px rgba(255, 255, 255, 0.035);
+}
+
+.iqac-emblem-ring span {
+  font-size: 28px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.iqac-emblem strong {
+  margin-bottom: 3px;
+
+  font-size: 16px;
+}
+
+.iqac-emblem small {
+  color: #ffe8c0;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+.iqac-emblem-line {
+  width: 45px;
+  height: 1px;
+
+  margin: 15px 0;
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.iqac-emblem-college {
+  color: #ffd979;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   COMMITTEE SECTION
+   ========================================================= */
+
+.iqac-section {
+  margin-bottom: 60px;
+
+  animation: iqacFadeUp 0.7s ease both;
+}
+
+.iqac-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 28px;
+}
+
+.iqac-section-heading h2 {
+  margin-bottom: 10px;
+
+  color: var(--iqac-brown);
+
+  font-size: clamp(27px, 3vw, 40px);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.9px;
+}
+
+.iqac-section-heading h2 span {
+  color: var(--iqac-orange);
+}
+
+.iqac-section-heading p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: var(--iqac-muted);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   MEMBER COUNT
+   ========================================================= */
+
+.member-count {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 105px;
+
+  min-height: 105px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff3c8,
+      #fff9e9
+    );
+
+  border: 1px solid #ecd9a4;
+
+  border-radius: 19px;
+
+  box-shadow:
+    0 10px 25px rgba(76, 40, 11, 0.06);
+}
+
+.member-count strong {
+  color: var(--iqac-brown);
+
+  font-size: 30px;
+
+  line-height: 1;
+}
+
+.member-count span {
+  margin-top: 6px;
+
+  color: var(--iqac-orange);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.iqac-table-wrap {
+  overflow: hidden;
+
+  background: #fff;
+
+  border:
+    1px solid
+    var(--iqac-border);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 17px 42px rgba(76, 40, 11, 0.075);
+}
+
+.iqac-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.iqac-table th {
+  padding: 17px 19px;
+
+  color: #5b2a12;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fff0c2,
+      #ffe7bd
+    );
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.7px;
+
+  text-align: left;
+
+  text-transform: uppercase;
+}
+
+.iqac-table th:nth-child(1) {
+  width: 90px;
+}
+
+.iqac-table th:nth-child(2) {
+  width: 23%;
+}
+
+.iqac-table th:nth-child(3) {
+  width: 43%;
+}
+
+.iqac-table th:nth-child(4) {
+  width: 25%;
+}
+
+.iqac-table td {
+  padding: 17px 19px;
+
+  border-top:
+    1px solid
+    var(--iqac-border-light);
+
+  vertical-align: middle;
+}
+
+.iqac-table tbody tr {
+  transition:
+    background 0.22s ease;
+}
+
+.iqac-table tbody tr:hover {
+  background: #fffaf0;
+}
+
+
+/* =========================================================
+   CHAIRPERSON ROW
+   ========================================================= */
+
+.iqac-table tbody tr.chairperson-row {
+  background:
+    linear-gradient(
+      90deg,
+      #fff8dc,
+      #fffdf7
+    );
+}
+
+.iqac-table tbody tr.chairperson-row:hover {
+  background:
+    linear-gradient(
+      90deg,
+      #fff2c0,
+      #fffaf0
+    );
+}
+
+.iqac-table tbody tr.chairperson-row td:first-child {
+  border-left: 4px solid var(--iqac-orange);
+}
+
+
+/* =========================================================
+   SERIAL NUMBER
+   ========================================================= */
+
+.iqac-sr {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 37px;
+  height: 37px;
+
+  color: var(--iqac-orange);
+
+  background: var(--iqac-cream);
+
+  border:
+    1px solid
+    #efdba9;
+
+  border-radius: 11px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   MEMBER NAME
+   ========================================================= */
+
+.iqac-member-name {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.iqac-member-name strong {
+  color: var(--iqac-brown);
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+.chair-icon {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 23px;
+  height: 23px;
+
+  color: #9b6800;
+
+  background: #ffe8a4;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   DESIGNATION
+   ========================================================= */
+
+.iqac-designation {
+  display: block;
+
+  color: var(--iqac-muted);
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   ROLE BADGES
+   ========================================================= */
+
+.iqac-role {
+  display: inline-flex;
+
+  align-items: center;
+
+  max-width: 100%;
+
+  padding: 7px 11px;
+
+  color: #75572b;
+
+  background: #fff5d7;
+
+  border:
+    1px solid
+    #ecd8a5;
+
+  border-radius: 30px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1.35;
+}
+
+.role-chairperson {
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--iqac-brown),
+      var(--iqac-orange)
+    );
+
+  border-color: transparent;
+
+  box-shadow:
+    0 5px 14px
+    rgba(201, 71, 8, 0.18);
+}
+
+
+/* =========================================================
+   MOBILE LIST
+   ========================================================= */
+
+.iqac-mobile-list {
+  display: none;
+}
+
+
+/* =========================================================
+   SUMMARY SECTION
+   ========================================================= */
+
+.iqac-summary {
+  position: relative;
+
+  margin-bottom: 48px;
+
+  padding: 38px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff9ea,
+      #fffdf8
+    );
+
+  border:
+    1px solid
+    var(--iqac-border);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 38px
+    rgba(76, 40, 11, 0.06);
+}
+
+.iqac-summary-heading {
+  max-width: 730px;
+
+  margin-bottom: 27px;
+}
+
+.iqac-summary-heading h2 {
+  margin-bottom: 9px;
+
+  color: var(--iqac-brown);
+
+  font-size: clamp(25px, 3vw, 35px);
+
+  line-height: 1.2;
+}
+
+.iqac-summary-heading h2 span {
+  color: var(--iqac-orange);
+}
+
+.iqac-summary-heading p {
+  margin: 0;
+
+  color: var(--iqac-muted);
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   SUMMARY GRID
+   ========================================================= */
+
+.iqac-summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 13px;
+}
+
+.summary-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  background: #fff;
+
+  border:
+    1px solid
+    var(--iqac-border);
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 11px 25px
+    rgba(76, 40, 11, 0.07);
+}
+
+.summary-icon {
+  display: grid;
+
+  place-items: center;
+
+  width: 39px;
+  height: 39px;
+
+  flex: 0 0 39px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--iqac-brown),
+      var(--iqac-orange)
+    );
+
+  border-radius: 11px;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.summary-card strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--iqac-brown);
+
+  font-size: 12px;
+}
+
+.summary-card span {
+  color: var(--iqac-muted);
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   PRINCIPAL
+   ========================================================= */
+
+.iqac-principal {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 25px 28px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      120deg,
+      #4b1d0b,
+      #74300d 55%,
+      #c74b0b
+    );
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 17px 38px
+    rgba(84, 34, 12, 0.16);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.iqac-principal::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -100px;
+  top: -125px;
+
+  border:
+    40px solid
+    rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
+}
+
+.principal-seal {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  place-items: center;
+
+  width: 68px;
+  height: 68px;
+
+  flex: 0 0 68px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.4);
+
+  border-radius: 50%;
+
+  color: var(--iqac-gold);
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.principal-content {
+  position: relative;
+  z-index: 2;
+}
+
+.principal-content > span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #ffd979;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+}
+
+.principal-content h3 {
+  margin-bottom: 3px;
+
+  color: #fff;
+
+  font-size: 19px;
+}
+
+.principal-content p {
+  margin: 0;
+
+  color: #f6dcc8;
+
+  font-size: 11px;
+}
+
+.principal-line {
+  position: relative;
+  z-index: 2;
+
+  width: 1px;
+  height: 43px;
+
+  margin-left: auto;
+
+  background:
+    rgba(255, 255, 255, 0.25);
+}
+
+.principal-note {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  min-width: 180px;
+}
+
+.principal-note span {
+  color: #ffd979;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.principal-note small {
+  color: #f6dcc8;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes iqacFadeUp {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .iqac-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .iqac-emblem {
+    min-height: 210px;
+  }
+
+  .iqac-summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .iqac-table-wrap {
+    overflow-x: auto;
+  }
+
+  .iqac-table {
+    min-width: 820px;
+  }
+
+  .iqac-table-wrap {
+    display: block;
+  }
+
+  .iqac-intro-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   800px
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .page-scope-iqaccommittee {
+    padding: 38px 0 65px;
+  }
+
+  .page-scope-iqaccommittee .container {
+    width: min(100% - 24px, 1240px);
+  }
+
+  .iqac-intro {
+    padding: 30px 23px;
+
+    border-radius: 21px;
+  }
+
+  .iqac-intro h1 {
+    font-size: 34px;
+  }
+
+  .iqac-section-heading {
+    align-items: flex-start;
+  }
+
+  .iqac-table-wrap {
+    display: none;
+  }
+
+  .iqac-mobile-list {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 13px;
+  }
+
+  .iqac-mobile-card {
+    padding: 18px;
+
+    background: #fff;
+
+    border:
+      1px solid
+      var(--iqac-border);
+
+    border-radius: 17px;
+
+    box-shadow:
+      0 10px 25px
+      rgba(76, 40, 11, 0.055);
+
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .iqac-mobile-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 14px 30px
+      rgba(76, 40, 11, 0.09);
+  }
+
+  .iqac-mobile-card.mobile-chairperson {
+    background:
+      linear-gradient(
+        145deg,
+        #fff8dc,
+        #fffdf8
+      );
+
+    border-color:
+      #e8c866;
+  }
+
+  .iqac-mobile-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+  }
+
+  .iqac-mobile-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  .iqac-mobile-card h3 {
+    margin-bottom: 7px;
+
+    color: var(--iqac-brown);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+  .iqac-mobile-card p {
+    margin: 0;
+
+    color: var(--iqac-muted);
+
+    font-size: 11px;
+
+    line-height: 1.65;
+  }
+
+  .mobile-star {
+    color: #b57900;
+
+    font-size: 11px;
+  }
+
+  .iqac-summary {
+    padding: 27px 20px;
+  }
+
+  .iqac-principal {
+    padding: 22px;
+  }
+}
+
+
+/* =========================================================
+   600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .page-scope-iqaccommittee .container {
+    width: min(100% - 20px, 1240px);
+  }
+
+  .iqac-intro {
+    padding: 25px 18px;
+  }
+
+  .iqac-intro h1 {
+    font-size: 29px;
+  }
+
+  .iqac-intro-content > p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .iqac-section-heading {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .member-count {
+    flex-direction: row;
+
+    justify-content: flex-start;
+
+    gap: 8px;
+
+    min-height: auto;
+
+    width: 100%;
+
+    padding: 12px 15px;
+  }
+
+  .member-count strong {
+    font-size: 25px;
+  }
+
+  .member-count span {
+    margin-top: 0;
+  }
+
+  .iqac-mobile-list {
+    grid-template-columns: 1fr;
+  }
+
+  .iqac-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .iqac-principal {
+    flex-wrap: wrap;
+  }
+
+  .principal-line {
+    display: none;
+  }
+
+  .principal-note {
+    width: 100%;
+
+    padding-top: 14px;
+
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.2);
+  }
+}
+
+
+/* =========================================================
+   420px
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .iqac-intro h1 {
+    font-size: 26px;
+  }
+
+  .iqac-point {
+    padding: 12px;
+  }
+
+  .iqac-summary {
+    padding: 23px 16px;
+  }
+
+  .iqac-principal {
+    gap: 13px;
+
+    padding: 19px;
+  }
+
+  .principal-seal {
+    width: 55px;
+    height: 55px;
+
+    flex-basis: 55px;
+
+    font-size: 9px;
+  }
+}

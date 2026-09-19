@@ -1,0 +1,118 @@
+.page-scope-othercourses .mkjk-other{font-family:"Montserrat",sans-serif;background:#fffaf3;padding:52px 0 75px}.page-scope-othercourses .mkjk-other-container{width:min(1000px,calc(100% - 28px));margin:auto}.page-scope-othercourses .mkjk-other-head{max-width:780px}.page-scope-othercourses .mkjk-other-head>span{color:#e95d16;font-size:12px;font-weight:800;letter-spacing:1.5px}.page-scope-othercourses .mkjk-other-head h1{font-size:clamp(32px,4vw,50px);line-height:1.12;margin:9px 0 13px;color:#54220c}.page-scope-othercourses .mkjk-other-head p{font-size:16px;line-height:1.8;color:#647286}.page-scope-othercourses .mkjk-other-card{margin-top:25px;border-radius:22px;background:linear-gradient(135deg,#54220c,#1a557f);color:#fff;padding:30px;display:grid;grid-template-columns:60px 1fr auto;gap:20px;align-items:center}.page-scope-othercourses .mkjk-other-card>span{width:58px;height:58px;border-radius:15px;background:#e95d16;display:grid;place-items:center;font-size:27px}.page-scope-othercourses .mkjk-other-card small{font-size:10px;letter-spacing:1.4px;color:#ffb8d8;font-weight:800}.page-scope-othercourses .mkjk-other-card h2{font-size:24px;margin:7px 0}.page-scope-othercourses .mkjk-other-card p{font-size:15px;line-height:1.7;color:#dce7ef}.page-scope-othercourses .mkjk-other-card a{color:#fff;background:#e95d16;border-radius:9px;padding:12px 16px;font-size:12px;font-weight:800;display:flex;align-items:center;gap:7px}@media(max-width:700px){.page-scope-othercourses .mkjk-other-card{grid-template-columns:1fr}.page-scope-othercourses .mkjk-other-card>a{justify-self:start}}
+
+/* MKJK WARM PREMIUM PAGE LAYER */
+.page-scope-othercourses {
+  --mkjk-page-brown: #54220c;
+  --mkjk-page-orange: #e95d16;
+  --mkjk-page-gold: #efc14d;
+  --mkjk-page-cream: #fff8df;
+  --mkjk-page-paper: #fffdf8;
+  --mkjk-page-ink: #3f2616;
+  --mkjk-page-muted: #735e4b;
+  font-family: "Montserrat", sans-serif;
+  color: var(--mkjk-page-ink);
+  background: #fffdf8;
+}
+
+.page-scope-othercourses [class*="container"] {
+  width: min(1280px, calc(100% - 30px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-scope-othercourses p,
+.page-scope-othercourses li {
+  font-size: 16px;
+  line-height: 1.82;
+  color: var(--mkjk-page-muted);
+}
+
+.page-scope-othercourses h1,
+.page-scope-othercourses h2,
+.page-scope-othercourses h3,
+.page-scope-othercourses h4 {
+  color: var(--mkjk-page-ink);
+  letter-spacing: -0.35px;
+}
+
+.page-scope-othercourses h1 {
+  font-size: clamp(30px, 4vw, 50px);
+}
+
+.page-scope-othercourses h2 {
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.page-scope-othercourses a {
+  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.page-scope-othercourses article,
+.page-scope-othercourses .card,
+.page-scope-othercourses [class*="card"] {
+  border-color: #eadabd;
+}
+
+.page-scope-othercourses article:hover,
+.page-scope-othercourses .card:hover,
+.page-scope-othercourses [class*="card"]:hover {
+  border-color: #e6b94d;
+}
+
+.page-scope-othercourses table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #e8d8b9;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
+}
+
+.page-scope-othercourses th {
+  padding: 14px 16px;
+  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
+  color: #5b2a12;
+  font-size: 13px;
+  text-align: left;
+}
+
+.page-scope-othercourses td {
+  padding: 13px 16px;
+  border-top: 1px solid #f0e5d1;
+  color: #634d3a;
+  font-size: 14px;
+}
+
+.page-scope-othercourses tr:hover td {
+  background: #fffaf0;
+}
+
+.page-scope-othercourses ul {
+  padding-left: 23px;
+}
+
+.page-scope-othercourses li::marker {
+  color: var(--mkjk-page-orange);
+}
+
+.page-scope-othercourses button {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 650px) {
+  .page-scope-othercourses [class*="container"] {
+    width: min(100% - 22px, 1280px);
+  }
+
+  .page-scope-othercourses p,
+  .page-scope-othercourses li {
+    font-size: 15px;
+  }
+
+  .page-scope-othercourses td,
+  .page-scope-othercourses th {
+    padding: 11px 12px;
+  }
+}

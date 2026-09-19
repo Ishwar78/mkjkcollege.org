@@ -1,0 +1,1054 @@
+/* =========================================================
+   MKJK OBJECTIVES PAGE
+   PREMIUM ORANGE / GOLD / CREAM DESIGN
+   ========================================================= */
+
+.page-scope-objectives {
+  --obj-brown: #54220c;
+  --obj-dark: #3b1808;
+  --obj-orange: #e95d16;
+  --obj-orange-dark: #c94708;
+  --obj-gold: #efc14d;
+  --obj-gold-light: #fff0bd;
+  --obj-cream: #fff8df;
+  --obj-paper: #fffdf8;
+  --obj-text: #3f2616;
+  --obj-muted: #735e4b;
+  --obj-border: #eadabd;
+
+  position: relative;
+
+  padding: 58px 0 90px;
+
+  font-family: "Montserrat", sans-serif;
+
+  color: var(--obj-text);
+
+  background:
+    radial-gradient(
+      circle at 5% 7%,
+      rgba(239, 193, 77, 0.13),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 96% 45%,
+      rgba(233, 93, 22, 0.06),
+      transparent 28%
+    ),
+    #fffdf8;
+}
+
+.page-scope-objectives *,
+.page-scope-objectives *::before,
+.page-scope-objectives *::after {
+  box-sizing: border-box;
+}
+
+.objectives-container {
+  width: min(1240px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.objectives-intro {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    240px;
+
+  align-items: center;
+
+  gap: 40px;
+
+  min-height: 290px;
+
+  padding: 48px;
+
+  margin-bottom: 62px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf0 0%,
+      #fff2d0 55%,
+      #fffdf8 100%
+    );
+
+  border: 1px solid var(--obj-border);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 22px 55px rgba(76, 40, 11, 0.08),
+    0 4px 14px rgba(76, 40, 11, 0.03);
+
+  animation: objectiveFadeUp 0.65s ease both;
+}
+
+.objectives-intro::before {
+  content: "";
+
+  position: absolute;
+
+  width: 310px;
+  height: 310px;
+
+  right: -150px;
+  top: -165px;
+
+  border: 48px solid rgba(239, 193, 77, 0.15);
+
+  border-radius: 50%;
+}
+
+.objectives-intro::after {
+  content: "";
+
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  left: -50px;
+  bottom: -55px;
+
+  background: rgba(233, 93, 22, 0.08);
+
+  border-radius: 50%;
+}
+
+.objectives-intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+.objectives-eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 14px;
+
+  color: var(--obj-orange);
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.8px;
+}
+
+.objectives-eyebrow span {
+  width: 31px;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--obj-orange),
+      var(--obj-gold)
+    );
+}
+
+.objectives-intro h1 {
+  max-width: 760px;
+
+  margin: 0 0 17px;
+
+  color: var(--obj-brown);
+
+  font-size: clamp(34px, 4.5vw, 54px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.6px;
+}
+
+.objectives-intro h1 span {
+  color: var(--obj-orange);
+}
+
+.objectives-intro-content > p {
+  max-width: 780px;
+
+  margin: 0;
+
+  color: var(--obj-muted);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   INTRO BADGE
+   ========================================================= */
+
+.objectives-intro-badge {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  place-items: center;
+
+  width: 205px;
+  height: 205px;
+
+  justify-self: end;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--obj-brown),
+      var(--obj-orange-dark)
+    );
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 22px 45px rgba(84, 34, 12, 0.22);
+}
+
+.objectives-intro-badge::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 11px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.28);
+
+  border-radius: 50%;
+}
+
+.objectives-intro-badge::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -13px;
+
+  border:
+    1px solid
+    rgba(233, 93, 22, 0.22);
+
+  border-radius: 50%;
+}
+
+.objective-badge-circle {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.objective-badge-circle strong {
+  color: var(--obj-gold);
+
+  font-size: 52px;
+
+  line-height: 0.95;
+
+  font-weight: 900;
+}
+
+.objective-badge-circle span {
+  margin-top: 8px;
+
+  color: #ffe8bd;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1.5;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.objectives-section {
+  animation: objectiveFadeUp 0.7s ease both;
+}
+
+.objectives-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 35px;
+
+  margin-bottom: 31px;
+}
+
+.objectives-small-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 10px;
+
+  color: var(--obj-orange);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+}
+
+.objectives-small-title span {
+  width: 26px;
+  height: 3px;
+
+  background: var(--obj-gold);
+
+  border-radius: 10px;
+}
+
+.objectives-section-heading h2 {
+  margin: 0;
+
+  color: var(--obj-brown);
+
+  font-size: clamp(28px, 3vw, 40px);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.8px;
+}
+
+.objectives-section-heading h2 span {
+  color: var(--obj-orange);
+}
+
+.objectives-section-heading > p {
+  max-width: 410px;
+
+  margin: 0;
+
+  color: var(--obj-muted);
+
+  font-size: 13px;
+
+  line-height: 1.75;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   OBJECTIVE GRID
+   ========================================================= */
+
+.objectives-grid {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+/* Connecting line */
+
+.objectives-grid::before {
+  content: "";
+
+  position: absolute;
+
+  left: 9%;
+  right: 9%;
+
+  top: 54px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #e7c879 12%,
+      #e7c879 88%,
+      transparent
+    );
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.objective-card {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 355px;
+
+  padding: 23px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fffdf8
+    );
+
+  border:
+    1px solid
+    var(--obj-border);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 12px 28px
+    rgba(76, 40, 11, 0.055);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.objective-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 105px;
+  height: 105px;
+
+  right: -58px;
+  bottom: -58px;
+
+  background:
+    rgba(239, 193, 77, 0.12);
+
+  border-radius: 50%;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.objective-card:hover {
+  transform: translateY(-9px);
+
+  border-color: #dfbb60;
+
+  box-shadow:
+    0 22px 42px
+    rgba(76, 40, 11, 0.12);
+}
+
+.objective-card:hover::before {
+  transform: scale(1.5);
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.objective-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.objective-number {
+  color: #e5d7bf;
+
+  font-size: 34px;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+}
+
+.objective-icon {
+  display: grid;
+
+  place-items: center;
+
+  width: 52px;
+  height: 52px;
+
+  color: var(--obj-orange);
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff4cd,
+      #fff9e9
+    );
+
+  border:
+    1px solid
+    #efdca9;
+
+  border-radius: 15px;
+
+  font-size: 23px;
+
+  box-shadow:
+    0 7px 16px
+    rgba(76, 40, 11, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.objective-card:hover .objective-icon {
+  transform: rotate(-5deg) scale(1.08);
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffe7a0,
+      #fff4d0
+    );
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.objective-card-content {
+  flex: 1;
+}
+
+.objective-card h3 {
+  margin: 0 0 13px;
+
+  color: var(--obj-brown);
+
+  font-size: 16px;
+
+  line-height: 1.45;
+
+  letter-spacing: -0.25px;
+}
+
+.objective-card p {
+  margin: 0;
+
+  color: var(--obj-muted);
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+   ========================================================= */
+
+.objective-card-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 24px;
+
+  padding-top: 14px;
+
+  border-top:
+    1px solid
+    #f0e5d1;
+}
+
+.objective-card-bottom > span:first-child {
+  color: #a18b70;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+}
+
+.objective-arrow {
+  display: grid;
+
+  place-items: center;
+
+  width: 27px;
+  height: 27px;
+
+  color: var(--obj-orange);
+
+  background: var(--obj-cream);
+
+  border:
+    1px solid
+    #edd9a5;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.objective-card:hover .objective-arrow {
+  transform: translateX(4px);
+
+  background: #fff0bd;
+}
+
+
+/* =========================================================
+   BOTTOM STATEMENT
+   ========================================================= */
+
+.objectives-statement {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 75px minmax(0, 1fr) 80px;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 58px;
+
+  padding: 35px 40px;
+
+  overflow: hidden;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      120deg,
+      #4b1d0b,
+      #74300d 55%,
+      #c74b0b
+    );
+
+  border-radius: 23px;
+
+  box-shadow:
+    0 20px 45px
+    rgba(84, 34, 12, 0.17);
+}
+
+.objectives-statement::before {
+  content: "";
+
+  position: absolute;
+
+  width: 270px;
+  height: 270px;
+
+  right: -120px;
+  top: -150px;
+
+  border:
+    45px solid
+    rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
+}
+
+.statement-mark {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  place-items: center;
+
+  width: 67px;
+  height: 67px;
+
+  color: var(--obj-brown);
+
+  background: var(--obj-gold);
+
+  border-radius: 17px;
+
+  font-family: Georgia, serif;
+
+  font-size: 42px;
+
+  line-height: 1;
+}
+
+.statement-content {
+  position: relative;
+  z-index: 2;
+}
+
+.statement-content > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #ffd979;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+}
+
+.statement-content h2 {
+  max-width: 750px;
+
+  margin: 0 0 8px;
+
+  color: #fff;
+
+  font-size: clamp(21px, 2.5vw, 29px);
+
+  line-height: 1.3;
+}
+
+.statement-content h2 strong {
+  color: #ffd979;
+}
+
+.statement-content p {
+  max-width: 780px;
+
+  margin: 0;
+
+  color: #f7dcc8;
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   DECORATION
+   ========================================================= */
+
+.statement-decoration {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  height: 55px;
+}
+
+.statement-decoration span {
+  display: block;
+
+  width: 5px;
+
+  border-radius: 5px;
+
+  background: var(--obj-gold);
+}
+
+.statement-decoration span:nth-child(1) {
+  height: 22px;
+  opacity: 0.55;
+}
+
+.statement-decoration span:nth-child(2) {
+  height: 43px;
+  opacity: 0.85;
+}
+
+.statement-decoration span:nth-child(3) {
+  height: 30px;
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes objectiveFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .objectives-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .objectives-grid::before {
+    display: none;
+  }
+
+  .objective-card {
+    min-height: 320px;
+  }
+}
+
+
+/* =========================================================
+   850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .objectives-intro {
+    grid-template-columns: 1fr;
+
+    padding: 38px;
+  }
+
+  .objectives-intro-badge {
+    justify-self: start;
+
+    width: 150px;
+    height: 150px;
+  }
+
+  .objective-badge-circle strong {
+    font-size: 40px;
+  }
+
+  .objectives-section-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .objectives-section-heading > p {
+    max-width: 650px;
+
+    text-align: left;
+  }
+
+  .objectives-statement {
+    grid-template-columns:
+      65px minmax(0, 1fr);
+  }
+
+  .statement-decoration {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .page-scope-objectives {
+    padding: 42px 0 65px;
+  }
+
+  .objectives-container {
+    width: min(100% - 24px, 1240px);
+  }
+
+  .objectives-intro {
+    padding: 30px 24px;
+
+    border-radius: 21px;
+  }
+
+  .objectives-intro h1 {
+    font-size: 34px;
+  }
+
+  .objectives-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .objective-card {
+    min-height: 310px;
+
+    padding: 19px;
+  }
+
+  .objective-card h3 {
+    font-size: 15px;
+  }
+
+  .objectives-statement {
+    padding: 28px 23px;
+
+    border-radius: 20px;
+  }
+}
+
+
+/* =========================================================
+   500px
+   ========================================================= */
+
+@media (max-width: 500px) {
+  .objectives-container {
+    width: min(100% - 18px, 1240px);
+  }
+
+  .objectives-intro {
+    padding: 26px 19px;
+  }
+
+  .objectives-intro h1 {
+    font-size: 29px;
+
+    letter-spacing: -0.9px;
+  }
+
+  .objectives-intro-content > p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .objectives-intro-badge {
+    width: 125px;
+    height: 125px;
+  }
+
+  .objective-badge-circle strong {
+    font-size: 34px;
+  }
+
+  .objective-badge-circle span {
+    font-size: 7px;
+  }
+
+  .objectives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .objective-card {
+    min-height: 270px;
+  }
+
+  .objectives-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .objectives-statement {
+    grid-template-columns: 1fr;
+
+    gap: 17px;
+
+    padding: 25px 20px;
+  }
+
+  .statement-mark {
+    width: 55px;
+    height: 55px;
+
+    font-size: 35px;
+  }
+
+  .statement-content h2 {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .objective-card {
+    padding: 17px;
+  }
+
+  .objective-card-top {
+    margin-bottom: 20px;
+  }
+
+  .objective-number {
+    font-size: 29px;
+  }
+
+  .objective-icon {
+    width: 47px;
+    height: 47px;
+
+    font-size: 20px;
+  }
+}
