@@ -219,11 +219,18 @@ export default function Header() {
               <b>उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत</b>
             </div>
           </Link>
-          <div className="brand-message">
+          {/* <div className="brand-message">
             <span>Education</span>
             <strong>Empowerment</strong>
             <span>Excellence</span>
-          </div>
+          </div> */}
+          <Link
+  to="/job-portal"
+  className="brand-message"
+  onClick={closeAll}
+>
+  Job Portal
+</Link>
         </div>
       </div>
 

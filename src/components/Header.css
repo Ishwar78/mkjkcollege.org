@@ -121,6 +121,10 @@
   color: #7b2f0f;
   box-shadow: 0 8px 20px rgba(99, 57, 14, 0.07);
   font-size: 11px;
+
+  /* added */
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .site-header .brand-message strong {
