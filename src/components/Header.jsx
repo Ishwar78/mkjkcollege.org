@@ -203,8 +203,8 @@ export default function Header() {
           </div>
           <div className="top-right">
             <span>Admissions 2026–27</span>
-            <Link to="/student/notices">Notices</Link>
-            <Link to="/admin/mkjklogin">Admin Login</Link>
+            {/* <Link to="/student/notices">Notices</Link>
+            <Link to="/admin/mkjklogin">Admin Login</Link> */}
           </div>
         </div>
       </div>
