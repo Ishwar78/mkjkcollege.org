@@ -238,11 +238,11 @@
 
   background: #fff;
 
-  color: #6d6257;
+  color: #060505;
 
   font-family: inherit;
 
-  font-size: 9px;
+  font-size: 14px;
 
   font-weight: 700;
 
@@ -294,6 +294,7 @@
   font-size: 8px;
 
   font-weight: 900;
+  display: none;
 }
 
 .ig-pill--active .ig-pill-count {
