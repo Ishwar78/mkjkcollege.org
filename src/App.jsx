@@ -79,6 +79,9 @@ import FooterResults from "./pages/public/footer/Results";
 import Delnet from "./pages/public/footer/Delnet";
 import Inflibnet from "./pages/public/footer/Inflibnet";
 import AcademicProgrammes from "./pages/public/footer/AcademicProgrammes";
+
+import StudentGrievances from "./pages/public/footer/StudentGrievances";
+
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminContact from "./pages/admin/AdminContact";
 import AdminCourses from "./pages/admin/AdminCourses";
@@ -98,6 +101,7 @@ import IQAC from "./pages/public/IQAC";
 import CommunityServices from "./pages/public/CommunityServices";
 import Contact from "./pages/public/Contact";
 import AdminLogin from "./pages/admin/AdminLogin";
+import PopupNotice from "./pages/public/PopupNotice";
 function AdminGuard({children}){return localStorage.getItem("mkjk_admin_auth")==="1"?children:<Navigate to="/admin/mkjklogin" replace/>}
 export default function App() {
   return <Routes>
@@ -134,6 +138,9 @@ export default function App() {
 <Route path="/about/best-practices" element={<PublicLayout><BestPractices/></PublicLayout>} />
 <Route path="/academics/courses-offered" element={<PublicLayout><CoursesOffered/></PublicLayout>} />
 <Route path="/academics/undergraduate" element={<PublicLayout><UnderGraduate/></PublicLayout>} />
+
+<Route path="/footer/student-grievances-redressal-cell" element={<PublicLayout><StudentGrievances/></PublicLayout>} />
+
 <Route path="/academics/postgraduate" element={<PublicLayout><PostGraduate/></PublicLayout>} />
 <Route path="/academics/other-courses" element={<PublicLayout><OtherCourses/></PublicLayout>} />
 <Route path="/academics/program-learning-outcomes" element={<PublicLayout><ProgramLearningOutcomes/></PublicLayout>} />
@@ -198,5 +205,7 @@ export default function App() {
 <Route path="/footer/delnet" element={<PublicLayout><Delnet/></PublicLayout>} />
 <Route path="/footer/inflibnet" element={<PublicLayout><Inflibnet/></PublicLayout>} />
 <Route path="/footer/academic-programmes" element={<PublicLayout><AcademicProgrammes/></PublicLayout>} />
+<Route path="/popup" element={<PublicLayout><PopupNotice/></PublicLayout>} />
+<Route path="/notice-popup" element={<PublicLayout><PopupNotice/></PublicLayout>} />
 <Route path="*" element={<Navigate to="/" replace/>}/></Routes>
 }

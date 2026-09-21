@@ -21,29 +21,47 @@
 }
 
 .page-scope-home .mkjk-home-hero {
-  min-height: 310px;
   position: relative;
   display: flex;
   align-items: center;
-  background-position: center;
-  background-size: cover;
-  transition: background-image 0.5s ease;
+  overflow: hidden;
 }
 
-.page-scope-home .mkjk-hero-pattern {
+/* ── Background image — full width, never cropped ── */
+.page-scope-home .mkjk-hero-bg-img {
   position: absolute;
   inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(135deg, rgba(255, 216, 91, 0.08) 25%, transparent 25%) 0 0 / 46px 46px,
-    linear-gradient(315deg, rgba(255, 216, 91, 0.05) 25%, transparent 25%) 0 0 / 46px 46px;
-  mix-blend-mode: screen;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  object-position: center 30%;
+  display: block;
+  z-index: 0;
+  animation: mkjkHeroFadeIn 0.6s ease;
+}
+
+@keyframes mkjkHeroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Dark gradient overlay ── */
+.page-scope-home .mkjk-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 12, 3, 0.90) 0%,
+    rgba(60, 22, 6, 0.68) 45%,
+    rgba(25, 10, 2, 0.22) 100%
+  );
 }
 
 .page-scope-home .mkjk-hero-content {
   position: relative;
   z-index: 2;
-  padding: 44px 0 68px;
+  padding: 52px 0 72px;
   color: #fff;
 }
 
@@ -331,9 +349,17 @@
   grid-template-columns: 82px minmax(0, 1fr) 18px;
   gap: 16px;
   align-items: center;
-  min-height: 72px;
-  padding: 13px 0;
+  min-height: 64px;
+  padding: 12px 0;
   border-top: 1px solid #f1e8d8;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.page-scope-home .mkjk-news-item:hover .mkjk-news-copy h3 {
+  color: #e85c17;
 }
 
 .page-scope-home .mkjk-news-date {
@@ -360,17 +386,18 @@
   color: #342013;
   font-size: 14px;
   line-height: 1.5;
-}
-
-.page-scope-home .mkjk-news-copy p {
-  margin: 5px 0 0;
-  color: #0c0a09;
-  font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
+  transition: color 0.2s ease;
 }
 
 .page-scope-home .mkjk-news-item-arrow {
   color: #d9b45d;
+  transition: all 0.2s ease;
+}
+
+.page-scope-home .mkjk-news-item:hover .mkjk-news-item-arrow {
+  color: #e85c17;
+  transform: translateX(4px);
 }
 
 .page-scope-home .mkjk-principal-panel {

@@ -1,3 +1,169 @@
-import React from "react"; import PageHero from "../../../components/PageHero"; import "./BestPractices.css";
-const years=["2020-21","2021-22","2022-23","2023-24"];
-export default function BestPractices(){return <><PageHero title="Best Practices" subtitle="Institutional best-practice records and quality initiatives."/><main className="inner-page page-scope-bestpractices"><div className="page-wrap"><section className="premium-card"><span className="eyebrow-premium">QUALITY & IMPROVEMENT</span><h2>Best Practices</h2><p>Select the academic session to open the corresponding best-practice document. The supplied reference confirms the four session labels below; the actual PDF files were not included in the uploaded material.</p><div className="year-grid">{years.map(y=><div className="year-card" key={y}><strong>{y}</strong><a href="https://www.mkjkcollege.org/" target="_blank" rel="noreferrer">View official site ↗</a><small>Use the official college record for the PDF/document for this session.</small></div>)}</div><div className="image-panel best-ref"><img src="/assets/best-practices-reference.png" alt="Best Practices reference supplied by user"/><div className="image-caption">Reference layout supplied by the college material.</div></div></section></div></main></>}
+import React from "react";
+import {
+  FiFileText,
+  FiExternalLink,
+  FiDownload,
+  FiArrowRight,
+} from "react-icons/fi";
+
+import PageHero from "../../../components/PageHero";
+import "./BestPractices.css";
+
+const documents = [
+  {
+    year: "2020-21",
+    title: "Best Practices Report",
+    file: "/best-practices-2020-21.pdf",
+  },
+  {
+    year: "2021-22",
+    title: "Best Practices Report",
+    file: "/best-practices-2021-22.pdf",
+  },
+  {
+    year: "2022-23",
+    title: "Best Practices Report",
+    file: "/best-practices-2022-23.pdf",
+  },
+  {
+    year: "2023-24",
+    title: "Best Practices Report",
+    file: "/best-practices-2023-24.pdf",
+  },
+];
+
+export default function BestPractices() {
+  return (
+    <>
+      <PageHero
+        title="Best Practices"
+        subtitle="Institutional best-practice records and quality initiatives."
+      />
+
+      <main className="inner-page page-scope-bestpractices">
+        <div className="page-wrap">
+
+          {/* ================================
+              MAIN CARD
+          ================================= */}
+          <section className="premium-card bp-main-card">
+
+            <div className="bp-heading">
+
+              <div className="bp-heading-icon">
+                <FiFileText />
+              </div>
+
+              <div>
+                <span className="eyebrow-premium">
+                  QUALITY & IMPROVEMENT
+                </span>
+
+                <h2>
+                  Best Practices
+                </h2>
+
+                <p>
+                  Explore the institutional best-practice reports
+                  for each academic session. Select a session below
+                  to view the corresponding PDF document.
+                </p>
+              </div>
+
+            </div>
+
+
+            {/* =================================
+                DOCUMENT GRID
+            ================================= */}
+            <div className="bp-document-grid">
+
+              {documents.map((doc, index) => (
+                <a
+                  key={doc.year}
+                  href={doc.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bp-document-card"
+                  style={{
+                    animationDelay: `${index * 0.08}s`,
+                  }}
+                >
+
+                  <div className="bp-card-top">
+
+                    <div className="bp-pdf-icon">
+                      <FiFileText />
+                    </div>
+
+                    <span className="bp-pdf-label">
+                      PDF DOCUMENT
+                    </span>
+
+                  </div>
+
+
+                  <div className="bp-card-content">
+
+                    <span className="bp-session-label">
+                      ACADEMIC SESSION
+                    </span>
+
+                    <h3>
+                      {doc.year}
+                    </h3>
+
+                    <p>
+                      {doc.title}
+                    </p>
+
+                  </div>
+
+
+                  <div className="bp-card-footer">
+
+                    <span>
+                      View PDF
+                    </span>
+
+                    <span className="bp-arrow">
+                      <FiArrowRight />
+                    </span>
+
+                  </div>
+
+                </a>
+              ))}
+
+            </div>
+
+
+            {/* =================================
+                BOTTOM INFORMATION
+            ================================= */}
+            <div className="bp-info-strip">
+
+              <div className="bp-info-icon">
+                <FiExternalLink />
+              </div>
+
+              <div>
+                <strong>
+                  Open official document
+                </strong>
+
+                <span>
+                  Click any academic session to open its
+                  Best Practices PDF in a new browser tab.
+                </span>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+      </main>
+    </>
+  );
+}

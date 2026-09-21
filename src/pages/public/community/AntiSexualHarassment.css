@@ -660,7 +660,7 @@
 .form-heading h2 {
   margin-bottom: 9px;
 
-  color: var(--ahs-brown);
+  color: black;
 
   font-size: clamp(28px, 3vw, 38px);
   line-height: 1.15;

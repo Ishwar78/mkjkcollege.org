@@ -1,158 +1,2101 @@
-.page-scope-ekbharat .inner-page{ padding: 42px 0; }
-.page-scope-ekbharat .content-grid{ display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; align-items: start; }
-.page-scope-ekbharat .content-main{ background: #fff; border: 1px solid #e6ebf1; border-radius: 18px; padding: 28px; box-shadow: 0 14px 34px rgba(20,44,82,.07); }
-.page-scope-ekbharat .content-section{ padding: 4px 0 25px; border-bottom: 1px solid #e8edf3; margin-bottom: 24px; animation: mkjkRise .5s ease both; }
-.page-scope-ekbharat .content-section:last-child{ border-bottom: 0; margin-bottom: 0; }
-.page-scope-ekbharat .content-section h2{ margin: 5px 0 12px; color: #172033; font-size: 26px; line-height: 1.25; }
-.page-scope-ekbharat .content-section h3{ color: #a80a4e; font-size: 18px; }
-.page-scope-ekbharat .content-section p, .page-scope-ekbharat .content-main p{ color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-ekbharat .side-card{ position: sticky; top: 140px; border-radius: 18px; background: linear-gradient(145deg,#102a52,#1d6090); color: #fff; padding: 24px; box-shadow: 0 16px 35px rgba(16,42,82,.16); }
-.page-scope-ekbharat .side-card h3{ margin: 10px 0; font-size: 20px; }
-.page-scope-ekbharat .side-card p{ color: #dceaf5; font-size: 15px; line-height: 1.7; }
-.page-scope-ekbharat .side-accent{ height: 4px; width: 55px; background: #f50075; border-radius: 5px; }
-.page-scope-ekbharat .side-links .side-links a:hover{ color: #fff59d; }
-.page-scope-ekbharat .table-wrap{ overflow-x: auto; }
-.page-scope-ekbharat .data-table{ width: 100%; border-collapse: collapse; background: #fff; }
-.page-scope-ekbharat .data-table th, .page-scope-ekbharat .data-table td{ padding: 13px 14px; border-bottom: 1px solid #e8edf3; text-align: left; }
-.page-scope-ekbharat .data-table th{ background: #fff4fa; color: #a20b4f; font-size: 13px; }
-.page-scope-ekbharat .list{ padding-left: 20px; color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-ekbharat .list li{ margin: 7px 0; }
-.page-scope-ekbharat .quote{ padding: 24px; border-radius: 16px; background: linear-gradient(135deg,#fff9cf,#fff1d0); border: 1px solid #ffe1ed; color: #6c2144; font-size: 16px; font-weight: 600; }
-.page-scope-ekbharat .empty-image{ min-height: 220px; border-radius: 16px; background: linear-gradient(135deg,#fff59d,#ffd7ea 50%,#dff4ff); display: grid; place-items: center; color: #f50075; font-weight: 800; }
-.page-scope-ekbharat .form-grid{ display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
-.page-scope-ekbharat .field{ display: grid; gap: 6px; }
-.page-scope-ekbharat .field.full{ grid-column: 1 / -1; }
-.page-scope-ekbharat .field label{ font-size: 12px; font-weight: 700; color: #26364c; }
-.page-scope-ekbharat .field input, .page-scope-ekbharat .field textarea, .page-scope-ekbharat .field select{ width: 100%; border: 1px solid #dfe5ec; border-radius: 10px; padding: 11px 12px; outline: none; background: #fff; }
-.page-scope-ekbharat .field textarea{ min-height: 130px; resize: vertical; }
-.page-scope-ekbharat .field input:focus, .page-scope-ekbharat .field textarea:focus, .page-scope-ekbharat .field select:focus{ border-color: #f50075; box-shadow: 0 0 0 3px #fff1d0; }
-.page-scope-ekbharat .btn{ display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 9px; padding: 11px 17px; font-weight: 700; cursor: pointer; transition: .25s; }
-.page-scope-ekbharat .btn-primary{ background: #f50075; color: #fff; box-shadow: 0 8px 20px rgba(245,0,117,.22); }
-.page-scope-ekbharat .btn-primary:hover{ transform: translateY(-2px); background: #c91563; }
-.page-scope-ekbharat .btn-light{ background: #fff; color: #172033; border: 1px solid #e2e8ef; }
-@keyframes mkjkRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-@media (max-width: 800px) {
-  .inner-page { padding: 34px 0; }
-  .content-grid { grid-template-columns: 1fr; }
-  .side-card { position: static; }
-  .content-main { padding: 21px; }
-  .form-grid { grid-template-columns: 1fr; }
-  .field.full { grid-column: auto; }
-}
+/* =========================================================
+   MKJK - EK BHARAT / SHRESHTH BHARAT
+   Premium Warm Institutional Design
+========================================================= */
 
-/* MKJK WARM PREMIUM PAGE LAYER */
 .page-scope-ekbharat {
-  --mkjk-page-brown: #54220c;
-  --mkjk-page-orange: #e95d16;
-  --mkjk-page-gold: #efc14d;
-  --mkjk-page-cream: #fff8df;
-  --mkjk-page-paper: #fffdf8;
-  --mkjk-page-ink: #3f2616;
-  --mkjk-page-muted: #735e4b;
-  font-family: "Montserrat", sans-serif;
-  color: var(--mkjk-page-ink);
-  background: #fffdf8;
-}
+  --ek-brown: #54220c;
+  --ek-dark: #35170b;
+  --ek-orange: #e95d16;
+  --ek-orange-dark: #c94708;
+  --ek-gold: #efc14d;
+  --ek-cream: #fff8df;
+  --ek-paper: #fffdf8;
+  --ek-white: #ffffff;
+  --ek-ink: #3f2616;
+  --ek-muted: #735e4b;
+  --ek-border: #eadabd;
+  --ek-soft: #fbf1dd;
 
-.page-scope-ekbharat [class*="container"] {
-  width: min(1280px, calc(100% - 30px));
-  margin-left: auto;
-  margin-right: auto;
-}
+  position: relative;
 
-.page-scope-ekbharat p,
-.page-scope-ekbharat li {
-  font-size: 16px;
-  line-height: 1.82;
-  color: var(--mkjk-page-muted);
-}
-
-.page-scope-ekbharat h1,
-.page-scope-ekbharat h2,
-.page-scope-ekbharat h3,
-.page-scope-ekbharat h4 {
-  color: var(--mkjk-page-ink);
-  letter-spacing: -0.35px;
-}
-
-.page-scope-ekbharat h1 {
-  font-size: clamp(30px, 4vw, 50px);
-}
-
-.page-scope-ekbharat h2 {
-  font-size: clamp(24px, 3vw, 36px);
-}
-
-.page-scope-ekbharat a {
-  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
-}
-
-.page-scope-ekbharat article,
-.page-scope-ekbharat .card,
-.page-scope-ekbharat [class*="card"] {
-  border-color: #eadabd;
-}
-
-.page-scope-ekbharat article:hover,
-.page-scope-ekbharat .card:hover,
-.page-scope-ekbharat [class*="card"]:hover {
-  border-color: #e6b94d;
-}
-
-.page-scope-ekbharat table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
   overflow: hidden;
-  border: 1px solid #e8d8b9;
-  border-radius: 15px;
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
-}
 
-.page-scope-ekbharat th {
-  padding: 14px 16px;
-  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
-  color: #5b2a12;
-  font-size: 13px;
-  text-align: left;
-}
+  padding: 55px 0 80px;
 
-.page-scope-ekbharat td {
-  padding: 13px 16px;
-  border-top: 1px solid #f0e5d1;
-  color: #634d3a;
-  font-size: 14px;
-}
+  color: var(--ek-ink);
 
-.page-scope-ekbharat tr:hover td {
-  background: #fffaf0;
-}
-
-.page-scope-ekbharat ul {
-  padding-left: 23px;
-}
-
-.page-scope-ekbharat li::marker {
-  color: var(--mkjk-page-orange);
-}
-
-.page-scope-ekbharat button {
   font-family: "Montserrat", sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 5% 5%,
+      rgba(239, 193, 77, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 95% 22%,
+      rgba(233, 93, 22, 0.07),
+      transparent 27%
+    ),
+    linear-gradient(
+      180deg,
+      #fffdf8 0%,
+      #fffaf1 50%,
+      #fff7e9 100%
+    );
 }
+
+.page-scope-ekbharat *,
+.page-scope-ekbharat *::before,
+.page-scope-ekbharat *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.ekbharat-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.ekbharat-hero {
+  position: relative;
+
+  min-height: 525px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(420px, 0.95fr);
+
+  align-items: center;
+
+  gap: 45px;
+
+  padding: 70px 65px;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffdf8 0%,
+      #fff7e7 52%,
+      #fff0d1 100%
+    );
+
+  border: 1px solid rgba(84, 34, 12, 0.09);
+
+  box-shadow:
+    0 25px 70px rgba(84, 34, 12, 0.10);
+}
+
+.ekbharat-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  right: -160px;
+  top: -170px;
+
+  border-radius: 50%;
+
+  background: rgba(239, 193, 77, 0.18);
+}
+
+.ekbharat-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  left: -140px;
+  bottom: -140px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(233, 93, 22, 0.12);
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.ekbharat-hero-content {
+  position: relative;
+  z-index: 4;
+}
+
+.ekbharat-eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  padding: 9px 15px;
+
+  border-radius: 999px;
+
+  color: var(--ek-brown);
+
+  background: rgba(239, 193, 77, 0.18);
+
+  border: 1px solid rgba(84, 34, 12, 0.10);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.55px;
+}
+
+.ekbharat-eyebrow svg {
+  color: var(--ek-orange);
+
+  font-size: 15px;
+}
+
+.ekbharat-hero h1 {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--ek-dark);
+
+  font-size: clamp(42px, 5vw, 70px);
+
+  line-height: 1.03;
+
+  letter-spacing: -2.7px;
+
+  font-weight: 900;
+}
+
+.ekbharat-hero h1 span {
+  display: block;
+
+  color: var(--ek-orange);
+}
+
+.ekbharat-hero-content > p {
+  max-width: 625px;
+
+  margin: 25px 0 0;
+
+  color: var(--ek-muted);
+
+  font-size: 15px;
+
+  line-height: 1.88;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   HERO ACTIONS
+========================================================= */
+
+.ekbharat-hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 31px;
+
+  flex-wrap: wrap;
+}
+
+.ekbharat-primary-btn,
+.ekbharat-secondary-btn {
+  min-height: 52px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 22px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.ekbharat-primary-btn {
+  color: #fff;
+
+  background: var(--ek-orange);
+
+  box-shadow:
+    0 12px 25px rgba(233, 93, 22, 0.23);
+}
+
+.ekbharat-primary-btn:hover {
+  color: #fff;
+
+  transform: translateY(-3px);
+
+  background: var(--ek-orange-dark);
+
+  box-shadow:
+    0 17px 30px rgba(233, 93, 22, 0.28);
+}
+
+.ekbharat-secondary-btn {
+  color: var(--ek-brown);
+
+  background: rgba(255, 255, 255, 0.75);
+
+  border: 1px solid var(--ek-border);
+}
+
+.ekbharat-secondary-btn:hover {
+  color: var(--ek-brown);
+
+  transform: translateY(-3px);
+
+  background: #fff;
+
+  box-shadow:
+    0 12px 25px rgba(84, 34, 12, 0.08);
+}
+
+.ekbharat-primary-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.ekbharat-hero-visual {
+  position: relative;
+
+  min-height: 400px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.ekbharat-glow {
+  position: absolute;
+
+  width: 310px;
+  height: 310px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(239, 193, 77, 0.42),
+      rgba(233, 93, 22, 0.10) 47%,
+      transparent 72%
+    );
+
+  filter: blur(3px);
+}
+
+/* =========================================================
+   MAIN CIRCLE
+========================================================= */
+
+.ekbharat-main-circle {
+  position: relative;
+  z-index: 3;
+
+  width: 235px;
+  height: 235px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--ek-dark),
+      var(--ek-brown)
+    );
+
+  border: 10px solid rgba(255, 255, 255, 0.76);
+
+  box-shadow:
+    0 30px 65px rgba(84, 34, 12, 0.23),
+    inset 0 0 0 1px rgba(239, 193, 77, 0.25);
+}
+
+.ekbharat-circle-inner {
+  width: 175px;
+  height: 175px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  border: 1px solid rgba(239, 193, 77, 0.40);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(239, 193, 77, 0.18),
+      transparent 72%
+    );
+}
+
+.ekbharat-circle-inner svg {
+  margin-bottom: 7px;
+
+  color: var(--ek-gold);
+
+  font-size: 47px;
+}
+
+.ekbharat-circle-inner strong {
+  color: #fff;
+
+  font-size: 29px;
+
+  line-height: 1;
+
+  letter-spacing: 2px;
+
+  font-weight: 900;
+}
+
+.ekbharat-circle-inner span {
+  margin-top: 5px;
+
+  color: var(--ek-gold);
+
+  font-size: 10px;
+
+  letter-spacing: 4px;
+
+  font-weight: 900;
+}
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.ekbharat-orbit {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.ekbharat-orbit-one {
+  width: 325px;
+  height: 325px;
+
+  border: 1px solid rgba(84, 34, 12, 0.17);
+}
+
+.ekbharat-orbit-two {
+  width: 430px;
+  height: 430px;
+
+  border: 1px dashed rgba(233, 93, 22, 0.17);
+
+  transform: rotate(25deg);
+}
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.ekbharat-floating-card {
+  position: absolute;
+
+  z-index: 5;
+
+  min-width: 170px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 13px 15px;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.93);
+
+  border: 1px solid rgba(84, 34, 12, 0.09);
+
+  box-shadow:
+    0 18px 35px rgba(84, 34, 12, 0.12);
+
+  backdrop-filter: blur(10px);
+
+  animation:
+    ekbharatFloat 4.5s ease-in-out infinite;
+}
+
+.ekbharat-floating-card svg {
+  flex-shrink: 0;
+
+  width: 37px;
+  height: 37px;
+
+  padding: 9px;
+
+  border-radius: 10px;
+
+  color: var(--ek-orange);
+
+  background: var(--ek-cream);
+}
+
+.ekbharat-floating-card div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.ekbharat-floating-card strong {
+  color: var(--ek-brown);
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.ekbharat-floating-card span {
+  color: var(--ek-muted);
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+.ekbharat-floating-one {
+  left: -3px;
+  top: 55px;
+}
+
+.ekbharat-floating-two {
+  right: -8px;
+  top: 145px;
+
+  animation-delay: -1.5s;
+}
+
+.ekbharat-floating-three {
+  left: 30px;
+  bottom: 32px;
+
+  animation-delay: -3s;
+}
+
+@keyframes ekbharatFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.ekbharat-intro {
+  display: grid;
+
+  grid-template-columns: 100px minmax(0, 1fr);
+
+  gap: 35px;
+
+  align-items: start;
+
+  margin-top: 75px;
+
+  padding: 48px;
+
+  border-radius: 25px;
+
+  background: #fff;
+
+  border: 1px solid var(--ek-border);
+
+  box-shadow:
+    0 15px 40px rgba(84, 34, 12, 0.06);
+}
+
+.ekbharat-intro-icon {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  color: var(--ek-orange);
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff3d2,
+      #fff8e9
+    );
+
+  border: 1px solid rgba(233, 93, 22, 0.13);
+}
+
+.ekbharat-intro-icon svg {
+  font-size: 36px;
+}
+
+.ekbharat-section-label {
+  display: inline-block;
+
+  margin-bottom: 11px;
+
+  color: var(--ek-orange);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.ekbharat-intro h2,
+.ekbharat-section-heading h2,
+.ekbharat-values-header h2,
+.ekbharat-support h2 {
+  margin: 0;
+
+  color: var(--ek-dark);
+
+  font-size: clamp(27px, 3vw, 39px);
+
+  line-height: 1.16;
+
+  letter-spacing: -1px;
+
+  font-weight: 900;
+}
+
+.ekbharat-intro h2 span,
+.ekbharat-section-heading h2 span,
+.ekbharat-values-header h2 span,
+.ekbharat-support h2 span {
+  color: var(--ek-orange);
+}
+
+.ekbharat-intro-content p {
+  max-width: 850px;
+
+  margin: 17px 0 0;
+
+  color: var(--ek-muted);
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.ekbharat-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 32px;
+}
+
+.ekbharat-section-heading > p {
+  max-width: 390px;
+
+  margin: 0;
+
+  color: var(--ek-muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   EXCHANGE
+========================================================= */
+
+.ekbharat-exchange {
+  margin-top: 85px;
+}
+
+.ekbharat-exchange-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 17px;
+}
+
+.ekbharat-exchange-card {
+  position: relative;
+
+  min-height: 280px;
+
+  padding: 28px 25px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  border: 1px solid var(--ek-border);
+
+  box-shadow:
+    0 12px 30px rgba(84, 34, 12, 0.055);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.ekbharat-exchange-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(233, 93, 22, 0.30);
+
+  box-shadow:
+    0 24px 45px rgba(84, 34, 12, 0.11);
+}
+
+.ekbharat-card-number {
+  position: absolute;
+
+  top: 13px;
+  right: 18px;
+
+  color: rgba(84, 34, 12, 0.07);
+
+  font-size: 48px;
+
+  line-height: 1;
+
+  font-weight: 900;
+}
+
+.ekbharat-card-icon {
+  width: 53px;
+  height: 53px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  border-radius: 15px;
+
+  color: var(--ek-orange);
+
+  background: var(--ek-cream);
+
+  border: 1px solid rgba(233, 93, 22, 0.10);
+}
+
+.ekbharat-card-icon svg {
+  font-size: 24px;
+}
+
+.ekbharat-exchange-card h3 {
+  margin: 0 0 11px;
+
+  color: var(--ek-brown);
+
+  font-size: 17px;
+
+  font-weight: 900;
+}
+
+.ekbharat-exchange-card p {
+  margin: 0;
+
+  color: var(--ek-muted);
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+.ekbharat-card-line {
+  position: absolute;
+
+  left: 25px;
+  bottom: 23px;
+
+  width: 34px;
+  height: 3px;
+
+  border-radius: 999px;
+
+  background: var(--ek-orange);
+}
+
+/* =========================================================
+   CULTURAL JOURNEY
+========================================================= */
+
+.ekbharat-journey {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 65px;
+
+  align-items: center;
+
+  min-height: 470px;
+
+  margin-top: 90px;
+
+  padding: 65px;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  background:
+    radial-gradient(
+      circle at 10% 50%,
+      rgba(239, 193, 77, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #35170b,
+      #54220c
+    );
+
+  box-shadow:
+    0 30px 70px rgba(53, 23, 11, 0.22);
+}
+
+.ekbharat-journey::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -210px;
+  top: -200px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(239, 193, 77, 0.16);
+}
+
+.ekbharat-journey::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  left: -150px;
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(233, 93, 22, 0.08);
+}
+
+/* =========================================================
+   JOURNEY VISUAL
+========================================================= */
+
+.ekbharat-journey-visual {
+  position: relative;
+
+  min-height: 330px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.ekbharat-journey-globe {
+  position: relative;
+  z-index: 2;
+
+  width: 220px;
+  height: 220px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--ek-gold);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(239, 193, 77, 0.18),
+      rgba(255, 255, 255, 0.02)
+    );
+
+  border: 1px solid rgba(239, 193, 77, 0.35);
+
+  box-shadow:
+    0 0 0 35px rgba(239, 193, 77, 0.025),
+    0 0 0 70px rgba(239, 193, 77, 0.018);
+}
+
+.ekbharat-journey-globe svg {
+  font-size: 84px;
+}
+
+/* Map dots */
+
+.ekbharat-map-dot {
+  position: absolute;
+
+  z-index: 3;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--ek-orange);
+
+  box-shadow:
+    0 0 0 6px rgba(233, 93, 22, 0.13);
+}
+
+.dot-one {
+  top: 58px;
+  left: 30%;
+}
+
+.dot-two {
+  top: 92px;
+  right: 25%;
+}
+
+.dot-three {
+  bottom: 72px;
+  left: 26%;
+}
+
+.dot-four {
+  bottom: 110px;
+  right: 31%;
+}
+
+/* Journey Cards */
+
+.ekbharat-journey-card {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 11px 15px;
+
+  color: var(--ek-brown);
+
+  background: #fff;
+
+  border-radius: 12px;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.20);
+}
+
+.ekbharat-journey-card svg {
+  color: var(--ek-orange);
+
+  font-size: 18px;
+}
+
+.journey-card-one {
+  top: 35px;
+  right: 15px;
+}
+
+.journey-card-two {
+  bottom: 35px;
+  left: 20px;
+}
+
+/* =========================================================
+   JOURNEY CONTENT
+========================================================= */
+
+.ekbharat-journey-content {
+  position: relative;
+
+  z-index: 3;
+}
+
+.ekbharat-section-label.light {
+  color: var(--ek-gold);
+}
+
+.ekbharat-journey-content h2 {
+  max-width: 630px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(30px, 3.4vw, 45px);
+
+  line-height: 1.12;
+
+  letter-spacing: -1.2px;
+
+  font-weight: 900;
+}
+
+.ekbharat-journey-content h2 span {
+  color: var(--ek-gold);
+}
+
+.ekbharat-journey-content > p {
+  max-width: 610px;
+
+  margin: 20px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+.ekbharat-check-list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 13px;
+
+  margin-top: 27px;
+}
+
+.ekbharat-check-list div {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+.ekbharat-check-list svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+  color: var(--ek-gold);
+
+  font-size: 16px;
+}
+
+/* =========================================================
+   STUDENT PARTICIPATION
+========================================================= */
+
+.ekbharat-participation {
+  margin-top: 90px;
+}
+
+.ekbharat-activity-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.ekbharat-activity-item {
+  display: grid;
+
+  grid-template-columns: 44px minmax(0, 1fr) 22px;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-height: 82px;
+
+  padding: 14px 18px;
+
+  border-radius: 15px;
+
+  background: #fff;
+
+  border: 1px solid var(--ek-border);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.ekbharat-activity-item:hover {
+  transform: translateX(5px);
+
+  border-color: rgba(233, 93, 22, 0.25);
+
+  box-shadow:
+    0 14px 30px rgba(84, 34, 12, 0.08);
+}
+
+.ekbharat-activity-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: var(--ek-orange);
+
+  background: var(--ek-cream);
+}
+
+.ekbharat-activity-icon svg {
+  font-size: 19px;
+}
+
+.ekbharat-activity-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.ekbharat-activity-content span {
+  color: #b99d78;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.ekbharat-activity-content strong {
+  color: var(--ek-brown);
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.ekbharat-activity-arrow {
+  color: #c8b39b;
+
+  font-size: 15px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ekbharat-activity-item:hover .ekbharat-activity-arrow {
+  color: var(--ek-orange);
+
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.ekbharat-values {
+  margin-top: 90px;
+
+  padding: 65px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff6dd,
+      #fffdf7
+    );
+
+  border: 1px solid var(--ek-border);
+}
+
+.ekbharat-values-header {
+  max-width: 720px;
+
+  margin-bottom: 38px;
+}
+
+.ekbharat-values-header p {
+  max-width: 620px;
+
+  margin: 15px 0 0;
+
+  color: var(--ek-muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.ekbharat-values-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.ekbharat-value-card {
+  position: relative;
+
+  min-height: 230px;
+
+  padding: 25px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(84, 34, 12, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ekbharat-value-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 35px rgba(84, 34, 12, 0.09);
+}
+
+.ekbharat-value-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 21px;
+
+  border-radius: 13px;
+
+  color: var(--ek-orange);
+
+  background: #fff;
+
+  border: 1px solid var(--ek-border);
+}
+
+.ekbharat-value-icon svg {
+  font-size: 21px;
+}
+
+.ekbharat-value-number {
+  position: absolute;
+
+  top: 17px;
+  right: 18px;
+
+  color: rgba(84, 34, 12, 0.08);
+
+  font-size: 38px;
+
+  font-weight: 900;
+}
+
+.ekbharat-value-card h3 {
+  margin: 0 0 9px;
+
+  color: var(--ek-brown);
+
+  font-size: 16px;
+
+  font-weight: 900;
+}
+
+.ekbharat-value-card p {
+  margin: 0;
+
+  color: var(--ek-muted);
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   SUPPORT CTA
+========================================================= */
+
+.ekbharat-support {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 70px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 70px;
+
+  padding: 38px 42px;
+
+  overflow: hidden;
+
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--ek-brown),
+      var(--ek-dark)
+    );
+
+  box-shadow:
+    0 20px 50px rgba(84, 34, 12, 0.18);
+}
+
+.ekbharat-support::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -80px;
+  top: -100px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(239, 193, 77, 0.18);
+}
+
+.ekbharat-support-icon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  color: var(--ek-brown);
+
+  background: var(--ek-gold);
+}
+
+.ekbharat-support-icon svg {
+  font-size: 27px;
+}
+
+.ekbharat-support-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.ekbharat-support .ekbharat-section-label {
+  color: var(--ek-gold);
+
+  margin-bottom: 7px;
+}
+
+.ekbharat-support h2 {
+  color: #fff;
+
+  font-size: 28px;
+}
+
+.ekbharat-support h2 span {
+  color: var(--ek-gold);
+}
+
+.ekbharat-support-content p {
+  max-width: 620px;
+
+  margin: 8px 0 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.ekbharat-support-btn {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  border-radius: 11px;
+
+  color: var(--ek-brown);
+
+  background: #fff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ekbharat-support-btn:hover {
+  color: var(--ek-brown);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.20);
+}
+
+.ekbharat-support-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   FOOTER NOTE
+========================================================= */
+
+.ekbharat-footer-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  margin-top: 24px;
+
+  padding: 21px 25px;
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.70);
+
+  border: 1px solid var(--ek-border);
+}
+
+.ekbharat-footer-note-icon {
+  flex-shrink: 0;
+
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: var(--ek-orange);
+
+  background: var(--ek-cream);
+}
+
+.ekbharat-footer-note-icon svg {
+  font-size: 19px;
+}
+
+.ekbharat-footer-note strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--ek-brown);
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.ekbharat-footer-note p {
+  margin: 0;
+
+  color: var(--ek-muted);
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .ekbharat-hero {
+    grid-template-columns: 1fr 0.85fr;
+
+    padding: 55px 45px;
+
+    gap: 25px;
+  }
+
+  .ekbharat-exchange-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ekbharat-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ekbharat-journey {
+    padding: 50px;
+
+    gap: 35px;
+  }
+
+  .ekbharat-main-circle {
+    width: 190px;
+    height: 190px;
+  }
+
+  .ekbharat-circle-inner {
+    width: 142px;
+    height: 142px;
+  }
+
+  .ekbharat-orbit-one {
+    width: 280px;
+    height: 280px;
+  }
+
+  .ekbharat-orbit-two {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* =========================================================
+   SMALL LAPTOP / TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .ekbharat-hero {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    text-align: center;
+  }
+
+  .ekbharat-hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .ekbharat-hero h1 {
+    max-width: 750px;
+  }
+
+  .ekbharat-hero-content > p {
+    max-width: 680px;
+  }
+
+  .ekbharat-hero-visual {
+    min-height: 410px;
+
+    margin-top: 10px;
+  }
+
+  .ekbharat-floating-one {
+    left: 8%;
+  }
+
+  .ekbharat-floating-two {
+    right: 5%;
+  }
+
+  .ekbharat-floating-three {
+    left: 13%;
+  }
+
+  .ekbharat-journey {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .ekbharat-journey-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .ekbharat-journey-content > p {
+    max-width: 650px;
+  }
+
+  .ekbharat-check-list {
+    width: 100%;
+
+    max-width: 650px;
+
+    text-align: left;
+  }
+
+  .ekbharat-support {
+    grid-template-columns: 60px minmax(0, 1fr);
+  }
+
+  .ekbharat-support-btn {
+    grid-column: 2;
+
+    justify-self: start;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 650px) {
-  .page-scope-ekbharat [class*="container"] {
-    width: min(100% - 22px, 1280px);
+  .page-scope-ekbharat {
+    padding: 30px 0 50px;
   }
 
-  .page-scope-ekbharat p,
-  .page-scope-ekbharat li {
-    font-size: 15px;
+  .ekbharat-container {
+    width: min(100% - 24px, 1180px);
   }
 
-  .page-scope-ekbharat td,
-  .page-scope-ekbharat th {
-    padding: 11px 12px;
+  /* Hero */
+
+  .ekbharat-hero {
+    padding: 40px 22px 30px;
+
+    border-radius: 23px;
+  }
+
+  .ekbharat-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    padding: 8px 11px;
+  }
+
+  .ekbharat-hero h1 {
+    font-size: 39px;
+
+    letter-spacing: -1.8px;
+  }
+
+  .ekbharat-hero-content > p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .ekbharat-hero-actions {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .ekbharat-primary-btn,
+  .ekbharat-secondary-btn {
+    width: 100%;
+  }
+
+  .ekbharat-hero-visual {
+    min-height: 340px;
+  }
+
+  .ekbharat-main-circle {
+    width: 150px;
+    height: 150px;
+
+    border-width: 7px;
+  }
+
+  .ekbharat-circle-inner {
+    width: 112px;
+    height: 112px;
+  }
+
+  .ekbharat-circle-inner svg {
+    font-size: 32px;
+  }
+
+  .ekbharat-circle-inner strong {
+    font-size: 21px;
+  }
+
+  .ekbharat-circle-inner span {
+    font-size: 7px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .ekbharat-orbit-one {
+    width: 220px;
+    height: 220px;
+  }
+
+  .ekbharat-orbit-two {
+    width: 280px;
+    height: 280px;
+  }
+
+  .ekbharat-floating-card {
+    min-width: 130px;
+
+    padding: 9px 10px;
+
+    gap: 7px;
+  }
+
+  .ekbharat-floating-card svg {
+    width: 30px;
+    height: 30px;
+
+    padding: 7px;
+  }
+
+  .ekbharat-floating-card strong {
+    font-size: 10px;
+  }
+
+  .ekbharat-floating-card span {
+    font-size: 7px;
+  }
+
+  .ekbharat-floating-one {
+    left: -2px;
+    top: 30px;
+  }
+
+  .ekbharat-floating-two {
+    right: -3px;
+    top: 115px;
+  }
+
+  .ekbharat-floating-three {
+    left: 4px;
+    bottom: 22px;
+  }
+
+  /* Intro */
+
+  .ekbharat-intro {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    margin-top: 45px;
+
+    padding: 28px 22px;
+
+    border-radius: 20px;
+  }
+
+  .ekbharat-intro-icon {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 16px;
+  }
+
+  .ekbharat-intro-icon svg {
+    font-size: 27px;
+  }
+
+  .ekbharat-intro h2,
+  .ekbharat-section-heading h2,
+  .ekbharat-values-header h2 {
+    font-size: 27px;
+  }
+
+  .ekbharat-intro-content p {
+    font-size: 12px;
+  }
+
+  /* Section Heading */
+
+  .ekbharat-section-heading {
+    display: block;
+
+    margin-bottom: 24px;
+  }
+
+  .ekbharat-section-heading > p {
+    margin-top: 13px;
+
+    font-size: 11px;
+  }
+
+  /* Exchange */
+
+  .ekbharat-exchange {
+    margin-top: 55px;
+  }
+
+  .ekbharat-exchange-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .ekbharat-exchange-card {
+    min-height: 235px;
+
+    padding: 23px;
+  }
+
+  /* Journey */
+
+  .ekbharat-journey {
+    margin-top: 55px;
+
+    padding: 35px 22px;
+
+    border-radius: 22px;
+  }
+
+  .ekbharat-journey-visual {
+    min-height: 275px;
+  }
+
+  .ekbharat-journey-globe {
+    width: 170px;
+    height: 170px;
+  }
+
+  .ekbharat-journey-globe svg {
+    font-size: 60px;
+  }
+
+  .journey-card-one {
+    top: 18px;
+    right: 0;
+  }
+
+  .journey-card-two {
+    left: 0;
+    bottom: 18px;
+  }
+
+  .ekbharat-journey-content h2 {
+    font-size: 28px;
+  }
+
+  .ekbharat-journey-content > p {
+    font-size: 12px;
+  }
+
+  .ekbharat-check-list {
+    grid-template-columns: 1fr;
+
+    gap: 11px;
+  }
+
+  /* Activities */
+
+  .ekbharat-participation {
+    margin-top: 55px;
+  }
+
+  .ekbharat-activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ekbharat-activity-item {
+    min-height: 75px;
+
+    grid-template-columns: 39px minmax(0, 1fr) 18px;
+
+    gap: 11px;
+
+    padding: 11px 13px;
+  }
+
+  .ekbharat-activity-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .ekbharat-activity-content strong {
+    font-size: 11px;
+  }
+
+  /* Values */
+
+  .ekbharat-values {
+    margin-top: 55px;
+
+    padding: 32px 20px;
+
+    border-radius: 22px;
+  }
+
+  .ekbharat-values-grid {
+    grid-template-columns: 1fr;
+
+    gap: 11px;
+  }
+
+  .ekbharat-value-card {
+    min-height: 190px;
+
+    padding: 22px;
+  }
+
+  /* CTA */
+
+  .ekbharat-support {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    margin-top: 45px;
+
+    padding: 30px 22px;
+
+    border-radius: 20px;
+  }
+
+  .ekbharat-support-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .ekbharat-support h2 {
+    font-size: 27px;
+  }
+
+  .ekbharat-support-content p {
+    font-size: 10px;
+  }
+
+  .ekbharat-support-btn {
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+  /* Footer */
+
+  .ekbharat-footer-note {
+    align-items: flex-start;
+
+    padding: 17px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+  .ekbharat-hero h1 {
+    font-size: 34px;
+  }
+
+  .ekbharat-hero-visual {
+    min-height: 310px;
+  }
+
+  .ekbharat-main-circle {
+    width: 135px;
+    height: 135px;
+  }
+
+  .ekbharat-circle-inner {
+    width: 101px;
+    height: 101px;
+  }
+
+  .ekbharat-circle-inner svg {
+    font-size: 29px;
+  }
+
+  .ekbharat-orbit-one {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ekbharat-orbit-two {
+    width: 250px;
+    height: 250px;
+  }
+
+  .ekbharat-floating-card {
+    min-width: 116px;
+
+    padding: 8px;
+  }
+
+  .ekbharat-floating-card span {
+    display: none;
+  }
+
+  .ekbharat-floating-one {
+    left: -4px;
+  }
+
+  .ekbharat-floating-two {
+    right: -4px;
+  }
+
+  .ekbharat-floating-three {
+    left: 0;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .ekbharat-floating-card {
+    animation: none;
+  }
+
+  .ekbharat-exchange-card,
+  .ekbharat-activity-item,
+  .ekbharat-value-card,
+  .ekbharat-primary-btn,
+  .ekbharat-secondary-btn,
+  .ekbharat-support-btn {
+    transition: none;
   }
 }

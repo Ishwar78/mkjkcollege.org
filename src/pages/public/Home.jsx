@@ -18,6 +18,7 @@ import {
   FiPhone,
 } from "react-icons/fi";
 import "./Home.css";
+import PopupModal from "../../components/PopupModal";
 
 const slides = [
   {
@@ -25,7 +26,7 @@ const slides = [
     title: "Education that empowers women.",
     text:
       "A legacy of women’s education, academic opportunity and holistic development in Rohtak since 1988.",
-    image: "https://mkjkcollege.org/img/files/folder/college%20building.jpg",
+    image: "/building.png",
   },
   {
     eyebrow: "LEARNING · LEADERSHIP · EXCELLENCE",
@@ -33,7 +34,7 @@ const slides = [
     text:
       "Explore undergraduate, postgraduate and other academic opportunities designed for diverse interests and aspirations.",
     image:
-      "https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=2200&q=90",
+      "/sakshimalik.png",
   },
   {
     eyebrow: "KNOWLEDGE · CONFIDENCE · CHARACTER",
@@ -41,20 +42,49 @@ const slides = [
     text:
       "From classrooms and laboratories to sports, community service and student life, MKJK encourages purposeful growth.",
     image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2200&q=90",
+      "/building.png",
   },
 ];
 
 const notices = [
-  "Admission for the session 2026-27 has started",
-  "Election of 11-Executive Members & Staff representative of Governing Body Election",
-  "Download Images of Free Symbols as on 23.05.2025",
-  "Nomination Form for Election of the Executive Members of Governing Body of MKJK",
-  "Election Schedule 2026",
-  "Office of the Returning Officer",
-  "List of 105 Collegium Members",
-  "Advertisement for Guest Faculties in different subjects",
-  "Time Table",
+  {
+    title: "Admission for the session 2026-27 has started",
+    link: "/academics/admission-schedule",
+  },
+  {
+    title:
+      "Election of 11-Executive Members & Staff representative of Governing Body Election",
+    link: "/student/notices",
+  },
+  {
+    title: "Download Images of Free Symbols as on 23.05.2025",
+    link: "/student/notices",
+  },
+  {
+    title:
+      "Nomination Form for Election of the Executive Members of Governing Body of MKJK",
+    link: "/student/notices",
+  },
+  {
+    title: "Election Schedule 2026",
+    link: "/student/notices",
+  },
+  {
+    title: "Office of the Returning Officer",
+    link: "/student/notices",
+  },
+  {
+    title: "List of 105 Collegium Members",
+    link: "/student/notices",
+  },
+  {
+    title: "Advertisement for Guest Faculties in different subjects",
+    link: "/footer/guest-faculty",
+  },
+  {
+    title: "Time Table for session 2024-25",
+    link: "/student/time-table",
+  },
 ];
 
 const quickLinks = [
@@ -68,6 +98,7 @@ const quickLinks = [
 
 export default function Home() {
   const [active, setActive] = useState(0);
+  const [showPopup, setShowPopup] = useState(true);
 
   useEffect(() => {
     const id = window.setInterval(() => {
@@ -86,12 +117,18 @@ export default function Home() {
 
   return (
     <main className="mkjk-home page-scope-home">
-      <section
-        className="mkjk-home-hero"
-        style={{
-          backgroundImage: `linear-gradient(90deg, rgba(45, 18, 6, .88) 0%, rgba(78, 29, 8, .62) 46%, rgba(35, 17, 5, .16) 100%), url("${slide.image}")`,
-        }}
-      >
+      <section className="mkjk-home-hero">
+        {/* Actual image — never cropped */}
+        <img
+          key={slide.image}
+          src={slide.image}
+          alt={slide.eyebrow}
+          className="mkjk-hero-bg-img"
+        />
+
+        {/* Dark overlay for text legibility */}
+        <div className="mkjk-hero-overlay" />
+
         <div className="mkjk-hero-pattern" />
 
         <button
@@ -170,71 +207,123 @@ export default function Home() {
       </section>
 
       <section className="mkjk-home-section mkjk-news-principal">
-        <div className="mkjk-home-container mkjk-news-grid">
-          <article className="mkjk-news-panel">
-            <div className="mkjk-panel-heading">
-              <div>
-                <span>OFFICIAL COLLEGE UPDATES</span>
-                <h2>Latest News &amp; Notices</h2>
-              </div>
+  <div className="mkjk-home-container mkjk-news-grid">
 
-              <Link to="/student/notices">
-                View All <FiArrowRight />
-              </Link>
-            </div>
+    {/* =========================
+        LATEST NEWS & NOTICES
+    ========================== */}
+    <article className="mkjk-news-panel">
 
-            <div className="mkjk-news-window">
-              <div className="mkjk-news-track">
-                {loopedNotices.map((notice, index) => (
-                  <div
-                    className="mkjk-news-item"
-                    key={`${notice}-${index}`}
-                  >
-                    <div className="mkjk-news-date">
-                      <FiBell />
-                      <span>NOTICE</span>
-                    </div>
-
-                    <div className="mkjk-news-copy">
-                      <h3>{notice}</h3>
-                      <p>Official college update</p>
-                    </div>
-
-                    <FiArrowRight className="mkjk-news-item-arrow" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </article>
-
-          <aside className="mkjk-principal-panel">
-            <span className="mkjk-panel-label">FROM THE DESK OF THE PRINCIPAL</span>
-
-            <div className="mkjk-principal-accent" />
-
-            <h2>
-              Education should make us fit for life and better human beings.
-            </h2>
-
-            <p>
-              The college focuses on holistic development, confidence,
-              academic opportunity and humanistic values for girls.
-            </p>
-
-            <div className="mkjk-principal-person">
-              <div className="mkjk-principal-avatar">DR</div>
-              <div>
-                <strong>Dr. Rashmi Lohchab</strong>
-                <span>Principal, MKJK Mahavidyalaya</span>
-              </div>
-            </div>
-
-            <Link to="/about/our-college">
-              Read Principal&apos;s Message <FiArrowRight />
-            </Link>
-          </aside>
+      <div className="mkjk-panel-heading">
+        <div>
+          <span>OFFICIAL COLLEGE UPDATES</span>
+          <h2>Latest News &amp; Notices</h2>
         </div>
-      </section>
+
+        <Link to="/student/notices" className="mkjk-view-all">
+          View All
+          <FiArrowRight />
+        </Link>
+      </div>
+
+      <div className="mkjk-news-window">
+        <div className="mkjk-news-track">
+
+          {loopedNotices.map((notice, index) => {
+            const isExternal =
+              notice.link?.startsWith("http") || notice.link?.endsWith(".pdf");
+
+            const itemContent = (
+              <>
+                {/* NOTICE LABEL */}
+                <div className="mkjk-news-date">
+                  <FiBell />
+                  <span>NOTICE</span>
+                </div>
+
+                {/* NOTICE CONTENT */}
+                <div className="mkjk-news-copy">
+                  <h3>{notice.title}</h3>
+                </div>
+
+                {/* ARROW */}
+                <FiArrowRight className="mkjk-news-item-arrow" />
+              </>
+            );
+
+            return isExternal ? (
+              <a
+                key={`${notice.title}-${index}`}
+                href={notice.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mkjk-news-item"
+              >
+                {itemContent}
+              </a>
+            ) : (
+              <Link
+                key={`${notice.title}-${index}`}
+                to={notice.link || "/student/notices"}
+                className="mkjk-news-item"
+              >
+                {itemContent}
+              </Link>
+            );
+          })}
+
+        </div>
+      </div>
+
+    </article>
+
+
+    {/* =========================
+        PRINCIPAL MESSAGE
+    ========================== */}
+    <aside className="mkjk-principal-panel">
+
+      <span className="mkjk-panel-label">
+        FROM THE DESK OF THE PRINCIPAL
+      </span>
+
+      <div className="mkjk-principal-accent" />
+
+      <h2>
+        Education should make us fit for life and better human beings.
+      </h2>
+
+      <p>
+        The college focuses on holistic development, confidence,
+        academic opportunity and humanistic values for girls.
+      </p>
+
+      {/* PRINCIPAL */}
+      <div className="mkjk-principal-person">
+
+        <div className="mkjk-principal-avatar">
+          DR
+        </div>
+
+        <div>
+          <strong>Dr. Rashmi Lohchab</strong>
+          <span>Principal, MKJK Mahavidyalaya</span>
+        </div>
+
+      </div>
+
+      <Link
+        to="/about/our-college"
+        className="mkjk-principal-link"
+      >
+        Read Principal&apos;s Message
+        <FiArrowRight />
+      </Link>
+
+    </aside>
+
+  </div>
+</section>
 
       <section className="mkjk-home-section mkjk-why">
         <div className="mkjk-home-container">
@@ -450,6 +539,28 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Auto Announcement Notice Popup */}
+      <PopupModal
+        isOpen={showPopup}
+        onClose={() => setShowPopup(false)}
+        imageSrc="/assets/popup.png"
+        title="Notice & Announcements"
+        linkUrl="/popup"
+      />
+
+      {/* Floating button to re-open notice if closed */}
+      {!showPopup && (
+        <button
+          type="button"
+          className="mkjk-popup-float-btn"
+          onClick={() => setShowPopup(true)}
+          aria-label="View Notice Announcement"
+        >
+          <FiBell />
+          <span>Notice / Announcement</span>
+        </button>
+      )}
     </main>
   );
 }

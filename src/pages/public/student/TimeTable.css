@@ -1,158 +1,1469 @@
-.page-scope-timetable .inner-page{ padding: 42px 0; }
-.page-scope-timetable .content-grid{ display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; align-items: start; }
-.page-scope-timetable .content-main{ background: #fff; border: 1px solid #e6ebf1; border-radius: 18px; padding: 28px; box-shadow: 0 14px 34px rgba(20,44,82,.07); }
-.page-scope-timetable .content-section{ padding: 4px 0 25px; border-bottom: 1px solid #e8edf3; margin-bottom: 24px; animation: mkjkRise .5s ease both; }
-.page-scope-timetable .content-section:last-child{ border-bottom: 0; margin-bottom: 0; }
-.page-scope-timetable .content-section h2{ margin: 5px 0 12px; color: #172033; font-size: 26px; line-height: 1.25; }
-.page-scope-timetable .content-section h3{ color: #a80a4e; font-size: 18px; }
-.page-scope-timetable .content-section p, .page-scope-timetable .content-main p{ color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-timetable .side-card{ position: sticky; top: 140px; border-radius: 18px; background: linear-gradient(145deg,#102a52,#1d6090); color: #fff; padding: 24px; box-shadow: 0 16px 35px rgba(16,42,82,.16); }
-.page-scope-timetable .side-card h3{ margin: 10px 0; font-size: 20px; }
-.page-scope-timetable .side-card p{ color: #dceaf5; font-size: 15px; line-height: 1.7; }
-.page-scope-timetable .side-accent{ height: 4px; width: 55px; background: #f50075; border-radius: 5px; }
-.page-scope-timetable .side-links .side-links a:hover{ color: #fff59d; }
-.page-scope-timetable .table-wrap{ overflow-x: auto; }
-.page-scope-timetable .data-table{ width: 100%; border-collapse: collapse; background: #fff; }
-.page-scope-timetable .data-table th, .page-scope-timetable .data-table td{ padding: 13px 14px; border-bottom: 1px solid #e8edf3; text-align: left; }
-.page-scope-timetable .data-table th{ background: #fff4fa; color: #a20b4f; font-size: 13px; }
-.page-scope-timetable .list{ padding-left: 20px; color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-timetable .list li{ margin: 7px 0; }
-.page-scope-timetable .quote{ padding: 24px; border-radius: 16px; background: linear-gradient(135deg,#fff9cf,#fff1d0); border: 1px solid #ffe1ed; color: #6c2144; font-size: 16px; font-weight: 600; }
-.page-scope-timetable .empty-image{ min-height: 220px; border-radius: 16px; background: linear-gradient(135deg,#fff59d,#ffd7ea 50%,#dff4ff); display: grid; place-items: center; color: #f50075; font-weight: 800; }
-.page-scope-timetable .form-grid{ display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
-.page-scope-timetable .field{ display: grid; gap: 6px; }
-.page-scope-timetable .field.full{ grid-column: 1 / -1; }
-.page-scope-timetable .field label{ font-size: 12px; font-weight: 700; color: #26364c; }
-.page-scope-timetable .field input, .page-scope-timetable .field textarea, .page-scope-timetable .field select{ width: 100%; border: 1px solid #dfe5ec; border-radius: 10px; padding: 11px 12px; outline: none; background: #fff; }
-.page-scope-timetable .field textarea{ min-height: 130px; resize: vertical; }
-.page-scope-timetable .field input:focus, .page-scope-timetable .field textarea:focus, .page-scope-timetable .field select:focus{ border-color: #f50075; box-shadow: 0 0 0 3px #fff1d0; }
-.page-scope-timetable .btn{ display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 9px; padding: 11px 17px; font-weight: 700; cursor: pointer; transition: .25s; }
-.page-scope-timetable .btn-primary{ background: #f50075; color: #fff; box-shadow: 0 8px 20px rgba(245,0,117,.22); }
-.page-scope-timetable .btn-primary:hover{ transform: translateY(-2px); background: #c91563; }
-.page-scope-timetable .btn-light{ background: #fff; color: #172033; border: 1px solid #e2e8ef; }
-@keyframes mkjkRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-@media (max-width: 800px) {
-  .inner-page { padding: 34px 0; }
-  .content-grid { grid-template-columns: 1fr; }
-  .side-card { position: static; }
-  .content-main { padding: 21px; }
-  .form-grid { grid-template-columns: 1fr; }
-  .field.full { grid-column: auto; }
-}
+/* =========================================================
+   MKJK - TIME TABLE
+   Premium Warm Institutional Design
+========================================================= */
 
-/* MKJK WARM PREMIUM PAGE LAYER */
 .page-scope-timetable {
-  --mkjk-page-brown: #54220c;
-  --mkjk-page-orange: #e95d16;
-  --mkjk-page-gold: #efc14d;
-  --mkjk-page-cream: #fff8df;
-  --mkjk-page-paper: #fffdf8;
-  --mkjk-page-ink: #3f2616;
-  --mkjk-page-muted: #735e4b;
-  font-family: "Montserrat", sans-serif;
-  color: var(--mkjk-page-ink);
-  background: #fffdf8;
-}
+  --tt-brown: #54220c;
+  --tt-dark: #35170b;
+  --tt-orange: #e95d16;
+  --tt-orange-dark: #c94708;
+  --tt-gold: #efc14d;
+  --tt-cream: #fff8df;
+  --tt-paper: #fffdf8;
+  --tt-white: #ffffff;
+  --tt-ink: #3f2616;
+  --tt-muted: #735e4b;
+  --tt-border: #eadabd;
 
-.page-scope-timetable [class*="container"] {
-  width: min(1280px, calc(100% - 30px));
-  margin-left: auto;
-  margin-right: auto;
-}
+  position: relative;
 
-.page-scope-timetable p,
-.page-scope-timetable li {
-  font-size: 16px;
-  line-height: 1.82;
-  color: var(--mkjk-page-muted);
-}
-
-.page-scope-timetable h1,
-.page-scope-timetable h2,
-.page-scope-timetable h3,
-.page-scope-timetable h4 {
-  color: var(--mkjk-page-ink);
-  letter-spacing: -0.35px;
-}
-
-.page-scope-timetable h1 {
-  font-size: clamp(30px, 4vw, 50px);
-}
-
-.page-scope-timetable h2 {
-  font-size: clamp(24px, 3vw, 36px);
-}
-
-.page-scope-timetable a {
-  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
-}
-
-.page-scope-timetable article,
-.page-scope-timetable .card,
-.page-scope-timetable [class*="card"] {
-  border-color: #eadabd;
-}
-
-.page-scope-timetable article:hover,
-.page-scope-timetable .card:hover,
-.page-scope-timetable [class*="card"]:hover {
-  border-color: #e6b94d;
-}
-
-.page-scope-timetable table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
   overflow: hidden;
-  border: 1px solid #e8d8b9;
-  border-radius: 15px;
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
+
+  padding: 55px 0 80px;
+
+  color: var(--tt-ink);
+
+  font-family: "Montserrat", sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 5% 5%,
+      rgba(239, 193, 77, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 95% 20%,
+      rgba(233, 93, 22, 0.07),
+      transparent 26%
+    ),
+    linear-gradient(
+      180deg,
+      #fffdf8 0%,
+      #fffaf1 50%,
+      #fff7e9 100%
+    );
 }
 
-.page-scope-timetable th {
-  padding: 14px 16px;
-  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
-  color: #5b2a12;
-  font-size: 13px;
-  text-align: left;
+.page-scope-timetable *,
+.page-scope-timetable *::before,
+.page-scope-timetable *::after {
+  box-sizing: border-box;
 }
 
-.page-scope-timetable td {
-  padding: 13px 16px;
-  border-top: 1px solid #f0e5d1;
-  color: #634d3a;
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.timetable-container {
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.timetable-hero {
+  position: relative;
+
+  min-height: 500px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(400px, 0.95fr);
+
+  align-items: center;
+
+  gap: 50px;
+
+  padding: 65px;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffdf8 0%,
+      #fff7e7 55%,
+      #fff0d1 100%
+    );
+
+  border: 1px solid rgba(84, 34, 12, 0.09);
+
+  box-shadow:
+    0 25px 70px rgba(84, 34, 12, 0.10);
+}
+
+.timetable-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  right: -170px;
+  top: -170px;
+
+  border-radius: 50%;
+
+  background: rgba(239, 193, 77, 0.17);
+}
+
+.timetable-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  left: -140px;
+  bottom: -140px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(233, 93, 22, 0.12);
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.timetable-hero-content {
+  position: relative;
+
+  z-index: 3;
+}
+
+.timetable-eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 21px;
+
+  padding: 9px 15px;
+
+  border-radius: 999px;
+
+  color: var(--tt-brown);
+
+  background: rgba(239, 193, 77, 0.18);
+
+  border: 1px solid rgba(84, 34, 12, 0.10);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+.timetable-eyebrow svg {
+  color: var(--tt-orange);
+
+  font-size: 15px;
+}
+
+.timetable-hero h1 {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--tt-dark);
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  line-height: 1.04;
+
+  letter-spacing: -2.5px;
+
+  font-weight: 900;
+}
+
+.timetable-hero h1 span {
+  display: block;
+
+  color: var(--tt-orange);
+}
+
+.timetable-hero-content > p {
+  max-width: 620px;
+
+  margin: 24px 0 0;
+
+  color: var(--tt-muted);
+
+  font-size: 15px;
+
+  line-height: 1.85;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   HERO POINTS
+========================================================= */
+
+.timetable-hero-points {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 11px;
+
+  margin-top: 28px;
+}
+
+.timetable-hero-points div {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px 12px;
+
+  border-radius: 10px;
+
+  color: var(--tt-brown);
+
+  background: rgba(255, 255, 255, 0.70);
+
+  border: 1px solid rgba(84, 34, 12, 0.08);
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.timetable-hero-points svg {
+  color: var(--tt-orange);
+
   font-size: 14px;
 }
 
-.page-scope-timetable tr:hover td {
-  background: #fffaf0;
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.timetable-hero-visual {
+  position: relative;
+
+  min-height: 380px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
-.page-scope-timetable ul {
-  padding-left: 23px;
+.timetable-glow {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(239, 193, 77, 0.40),
+      rgba(233, 93, 22, 0.10) 50%,
+      transparent 72%
+    );
+
+  filter: blur(3px);
 }
 
-.page-scope-timetable li::marker {
-  color: var(--mkjk-page-orange);
+/* =========================================================
+   CALENDAR VISUAL
+========================================================= */
+
+.timetable-calendar {
+  position: relative;
+
+  z-index: 3;
+
+  width: 245px;
+  height: 285px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #fff;
+
+  border: 8px solid rgba(255, 255, 255, 0.82);
+
+  box-shadow:
+    0 30px 65px rgba(84, 34, 12, 0.20);
 }
 
-.page-scope-timetable button {
-  font-family: "Montserrat", sans-serif;
+.timetable-calendar-top {
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--tt-brown),
+      var(--tt-dark)
+    );
 }
 
-@media (max-width: 650px) {
-  .page-scope-timetable [class*="container"] {
-    width: min(100% - 22px, 1280px);
+.timetable-calendar-top span {
+  font-size: 16px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.timetable-calendar-top svg {
+  color: var(--tt-gold);
+
+  font-size: 24px;
+}
+
+.timetable-calendar-body {
+  position: relative;
+
+  height: calc(100% - 62px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-top: 28px;
+
+  color: var(--tt-brown);
+}
+
+.timetable-calendar-body > strong {
+  font-size: 12px;
+
+  letter-spacing: 5px;
+
+  color: var(--tt-orange);
+}
+
+.calendar-lines {
+  width: 145px;
+
+  display: grid;
+
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.calendar-lines span {
+  display: block;
+
+  height: 5px;
+
+  border-radius: 999px;
+
+  background: #f3e5cf;
+}
+
+.calendar-lines span:nth-child(2) {
+  width: 80%;
+}
+
+.calendar-lines span:nth-child(3) {
+  width: 90%;
+}
+
+.calendar-lines span:nth-child(4) {
+  width: 68%;
+}
+
+.calendar-clock {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 18px;
+
+  border-radius: 50%;
+
+  color: var(--tt-orange);
+
+  background: var(--tt-cream);
+
+  border: 1px solid var(--tt-border);
+}
+
+.calendar-clock svg {
+  font-size: 27px;
+}
+
+.timetable-calendar-body > b {
+  margin-top: 14px;
+
+  color: var(--tt-brown);
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+}
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.timetable-floating {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 160px;
+
+  padding: 13px 14px;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(84, 34, 12, 0.09);
+
+  box-shadow:
+    0 18px 35px rgba(84, 34, 12, 0.12);
+
+  backdrop-filter: blur(10px);
+
+  animation: timetableFloat 4.5s ease-in-out infinite;
+}
+
+.timetable-floating svg {
+  width: 36px;
+  height: 36px;
+
+  padding: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  color: var(--tt-orange);
+
+  background: var(--tt-cream);
+}
+
+.timetable-floating div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.timetable-floating strong {
+  color: var(--tt-brown);
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+.timetable-floating span {
+  color: var(--tt-muted);
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+.timetable-floating-one {
+  left: -3px;
+  top: 55px;
+}
+
+.timetable-floating-two {
+  right: -7px;
+  bottom: 55px;
+
+  animation-delay: -1.7s;
+}
+
+@keyframes timetableFloat {
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
-  .page-scope-timetable p,
-  .page-scope-timetable li {
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.timetable-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 32px;
+}
+
+.timetable-section-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: var(--tt-orange);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.timetable-section-heading h2 {
+  margin: 0;
+
+  color: var(--tt-dark);
+
+  font-size: clamp(28px, 3vw, 39px);
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+
+  font-weight: 900;
+}
+
+.timetable-section-heading h2 span {
+  color: var(--tt-orange);
+}
+
+.timetable-section-heading > p {
+  max-width: 390px;
+
+  margin: 0;
+
+  color: var(--tt-muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   PDF DOCUMENT SECTION
+========================================================= */
+
+.timetable-documents {
+  margin-top: 80px;
+}
+
+.timetable-pdf-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 17px;
+}
+
+/* =========================================================
+   PDF CARD
+========================================================= */
+
+.timetable-pdf-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  min-height: 145px;
+
+  padding: 25px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  border-radius: 21px;
+
+  background: #fff;
+
+  border: 1px solid var(--tt-border);
+
+  box-shadow:
+    0 12px 30px rgba(84, 34, 12, 0.055);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.timetable-pdf-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 4px;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--tt-orange),
+      var(--tt-gold)
+    );
+}
+
+.timetable-pdf-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(233, 93, 22, 0.30);
+
+  box-shadow:
+    0 25px 45px rgba(84, 34, 12, 0.11);
+}
+
+.timetable-pdf-left {
+  display: flex;
+
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 17px;
+}
+
+.timetable-pdf-icon {
+  flex-shrink: 0;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  color: var(--tt-orange);
+
+  background: var(--tt-cream);
+
+  border: 1px solid rgba(233, 93, 22, 0.12);
+}
+
+.timetable-pdf-icon svg {
+  font-size: 27px;
+}
+
+.timetable-pdf-info {
+  min-width: 0;
+}
+
+.timetable-pdf-session {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #b18f69;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.timetable-pdf-info h3 {
+  margin: 0;
+
+  color: var(--tt-brown);
+
+  font-size: 15px;
+
+  line-height: 1.45;
+
+  font-weight: 900;
+}
+
+.timetable-pdf-info p {
+  margin: 5px 0 0;
+
+  color: var(--tt-muted);
+
+  font-size: 11px;
+}
+
+.timetable-pdf-action {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--tt-orange);
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+.timetable-pdf-action svg {
+  font-size: 17px;
+
+  transition: transform 0.25s ease;
+}
+
+.timetable-pdf-card:hover .timetable-pdf-action svg {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   INFORMATION SECTION
+========================================================= */
+
+.timetable-info {
+  display: grid;
+
+  grid-template-columns: 72px minmax(0, 1fr);
+
+  gap: 25px;
+
+  align-items: center;
+
+  margin-top: 75px;
+
+  padding: 42px;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff6df,
+      #fffdf8
+    );
+
+  border: 1px solid var(--tt-border);
+
+  box-shadow:
+    0 15px 40px rgba(84, 34, 12, 0.06);
+}
+
+.timetable-info-icon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  color: var(--tt-orange);
+
+  background: #fff;
+
+  border: 1px solid var(--tt-border);
+
+  box-shadow:
+    0 10px 20px rgba(84, 34, 12, 0.06);
+}
+
+.timetable-info-icon svg {
+  font-size: 28px;
+}
+
+.timetable-info h2 {
+  margin: 0;
+
+  color: var(--tt-dark);
+
+  font-size: clamp(26px, 3vw, 36px);
+
+  line-height: 1.15;
+
+  font-weight: 900;
+}
+
+.timetable-info h2 span {
+  color: var(--tt-orange);
+}
+
+.timetable-info-content p {
+  max-width: 800px;
+
+  margin: 12px 0 0;
+
+  color: var(--tt-muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+
+.timetable-links-section {
+  margin-top: 80px;
+}
+
+.timetable-quick-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+.timetable-quick-card {
+  display: grid;
+
+  grid-template-columns: 48px minmax(0, 1fr) 18px;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-height: 90px;
+
+  padding: 15px;
+
+  text-decoration: none;
+
+  border-radius: 17px;
+
+  background: #fff;
+
+  border: 1px solid var(--tt-border);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.timetable-quick-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(233, 93, 22, 0.28);
+
+  box-shadow:
+    0 17px 35px rgba(84, 34, 12, 0.09);
+}
+
+.timetable-quick-icon {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  color: var(--tt-orange);
+
+  background: var(--tt-cream);
+}
+
+.timetable-quick-icon svg {
+  font-size: 20px;
+}
+
+.timetable-quick-card > div:nth-child(2) {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.timetable-quick-card strong {
+  color: var(--tt-brown);
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+.timetable-quick-card span {
+  color: var(--tt-muted);
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+.timetable-quick-card > svg {
+  color: #b9a388;
+
+  font-size: 15px;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.timetable-quick-card:hover > svg {
+  color: var(--tt-orange);
+
+  transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   FOOTER NOTE
+========================================================= */
+
+.timetable-footer-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  margin-top: 24px;
+
+  padding: 21px 25px;
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid var(--tt-border);
+}
+
+.timetable-footer-note-icon {
+  flex-shrink: 0;
+
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: var(--tt-orange);
+
+  background: var(--tt-cream);
+}
+
+.timetable-footer-note-icon svg {
+  font-size: 18px;
+}
+
+.timetable-footer-note strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--tt-brown);
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.timetable-footer-note p {
+  margin: 0;
+
+  color: var(--tt-muted);
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .timetable-hero {
+    grid-template-columns: 1fr 0.85fr;
+
+    padding: 55px 45px;
+
+    gap: 25px;
+  }
+
+  .timetable-pdf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timetable-quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   SMALL LAPTOP / TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .timetable-hero {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    text-align: center;
+  }
+
+  .timetable-hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .timetable-hero h1 {
+    max-width: 700px;
+  }
+
+  .timetable-hero-content > p {
+    max-width: 680px;
+  }
+
+  .timetable-hero-points {
+    justify-content: center;
+  }
+
+  .timetable-hero-visual {
+    min-height: 390px;
+  }
+
+  .timetable-floating-one {
+    left: 8%;
+  }
+
+  .timetable-floating-two {
+    right: 7%;
+  }
+
+  .timetable-info {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .page-scope-timetable {
+    padding: 30px 0 50px;
+  }
+
+  .timetable-container {
+    width: min(100% - 24px, 1180px);
+  }
+
+  /* Hero */
+
+  .timetable-hero {
+    padding: 40px 22px 30px;
+
+    border-radius: 23px;
+  }
+
+  .timetable-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    padding: 8px 11px;
+  }
+
+  .timetable-hero h1 {
+    font-size: 39px;
+
+    letter-spacing: -1.8px;
+  }
+
+  .timetable-hero-content > p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .timetable-hero-points {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .timetable-hero-points div {
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .timetable-hero-visual {
+    min-height: 340px;
+  }
+
+  .timetable-calendar {
+    width: 185px;
+    height: 225px;
+
+    border-width: 6px;
+
+    border-radius: 18px;
+  }
+
+  .timetable-calendar-top {
+    height: 48px;
+
+    padding: 0 14px;
+  }
+
+  .timetable-calendar-top span {
+    font-size: 12px;
+  }
+
+  .timetable-calendar-top svg {
+    font-size: 19px;
+  }
+
+  .timetable-calendar-body {
+    height: calc(100% - 48px);
+
+    padding-top: 20px;
+  }
+
+  .timetable-calendar-body > strong {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .calendar-lines {
+    width: 110px;
+
+    gap: 7px;
+
+    margin-top: 15px;
+  }
+
+  .calendar-lines span {
+    height: 4px;
+  }
+
+  .calendar-clock {
+    width: 44px;
+    height: 44px;
+
+    margin-top: 12px;
+  }
+
+  .calendar-clock svg {
+    font-size: 20px;
+  }
+
+  .timetable-calendar-body > b {
+    margin-top: 10px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .timetable-floating {
+    min-width: 120px;
+
+    padding: 9px;
+
+    gap: 7px;
+  }
+
+  .timetable-floating svg {
+    width: 30px;
+    height: 30px;
+
+    padding: 7px;
+  }
+
+  .timetable-floating strong {
+    font-size: 9px;
+  }
+
+  .timetable-floating span {
+    font-size: 7px;
+  }
+
+  .timetable-floating-one {
+    left: -3px;
+    top: 28px;
+  }
+
+  .timetable-floating-two {
+    right: -3px;
+    bottom: 25px;
+  }
+
+  /* Section */
+
+  .timetable-documents {
+    margin-top: 55px;
+  }
+
+  .timetable-section-heading {
+    display: block;
+
+    margin-bottom: 24px;
+  }
+
+  .timetable-section-heading > p {
+    margin-top: 13px;
+
+    font-size: 11px;
+  }
+
+  .timetable-section-heading h2 {
+    font-size: 27px;
+  }
+
+  /* PDF Cards */
+
+  .timetable-pdf-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .timetable-pdf-card {
+    min-height: 125px;
+
+    padding: 18px 15px;
+
+    gap: 10px;
+  }
+
+  .timetable-pdf-left {
+    gap: 11px;
+  }
+
+  .timetable-pdf-icon {
+    width: 47px;
+    height: 47px;
+
+    border-radius: 13px;
+  }
+
+  .timetable-pdf-icon svg {
+    font-size: 21px;
+  }
+
+  .timetable-pdf-session {
+    font-size: 7px;
+
+    letter-spacing: 1px;
+  }
+
+  .timetable-pdf-info h3 {
+    font-size: 12px;
+  }
+
+  .timetable-pdf-info p {
+    font-size: 9px;
+  }
+
+  .timetable-pdf-action {
+    flex-direction: column;
+
+    gap: 3px;
+
+    font-size: 8px;
+  }
+
+  .timetable-pdf-action svg {
     font-size: 15px;
   }
 
-  .page-scope-timetable td,
-  .page-scope-timetable th {
-    padding: 11px 12px;
+  /* Information */
+
+  .timetable-info {
+    grid-template-columns: 1fr;
+
+    gap: 17px;
+
+    margin-top: 55px;
+
+    padding: 28px 22px;
+
+    border-radius: 20px;
+  }
+
+  .timetable-info-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .timetable-info h2 {
+    font-size: 27px;
+  }
+
+  .timetable-info-content p {
+    font-size: 11px;
+  }
+
+  /* Quick Links */
+
+  .timetable-links-section {
+    margin-top: 55px;
+  }
+
+  .timetable-quick-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .timetable-quick-card {
+    min-height: 76px;
+
+    grid-template-columns: 42px minmax(0, 1fr) 16px;
+
+    padding: 11px;
+  }
+
+  .timetable-quick-icon {
+    width: 41px;
+    height: 41px;
+  }
+
+  .timetable-quick-card strong {
+    font-size: 10px;
+  }
+
+  .timetable-quick-card span {
+    font-size: 8px;
+  }
+
+  /* Footer */
+
+  .timetable-footer-note {
+    align-items: flex-start;
+
+    padding: 17px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+  .timetable-hero h1 {
+    font-size: 34px;
+  }
+
+  .timetable-hero-visual {
+    min-height: 310px;
+  }
+
+  .timetable-calendar {
+    width: 165px;
+    height: 205px;
+  }
+
+  .timetable-floating {
+    min-width: 108px;
+  }
+
+  .timetable-floating span {
+    display: none;
+  }
+
+  .timetable-floating-one {
+    left: -4px;
+  }
+
+  .timetable-floating-two {
+    right: -4px;
+  }
+
+  .timetable-pdf-card {
+    padding: 15px 12px;
+  }
+
+  .timetable-pdf-info h3 {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .timetable-floating {
+    animation: none;
+  }
+
+  .timetable-pdf-card,
+  .timetable-quick-card {
+    transition: none;
   }
 }

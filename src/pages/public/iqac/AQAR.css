@@ -1,158 +1,844 @@
-.page-scope-aqar .inner-page{ padding: 42px 0; }
-.page-scope-aqar .content-grid{ display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; align-items: start; }
-.page-scope-aqar .content-main{ background: #fff; border: 1px solid #e6ebf1; border-radius: 18px; padding: 28px; box-shadow: 0 14px 34px rgba(20,44,82,.07); }
-.page-scope-aqar .content-section{ padding: 4px 0 25px; border-bottom: 1px solid #e8edf3; margin-bottom: 24px; animation: mkjkRise .5s ease both; }
-.page-scope-aqar .content-section:last-child{ border-bottom: 0; margin-bottom: 0; }
-.page-scope-aqar .content-section h2{ margin: 5px 0 12px; color: #172033; font-size: 26px; line-height: 1.25; }
-.page-scope-aqar .content-section h3{ color: #a80a4e; font-size: 18px; }
-.page-scope-aqar .content-section p, .page-scope-aqar .content-main p{ color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-aqar .side-card{ position: sticky; top: 140px; border-radius: 18px; background: linear-gradient(145deg,#102a52,#1d6090); color: #fff; padding: 24px; box-shadow: 0 16px 35px rgba(16,42,82,.16); }
-.page-scope-aqar .side-card h3{ margin: 10px 0; font-size: 20px; }
-.page-scope-aqar .side-card p{ color: #dceaf5; font-size: 15px; line-height: 1.7; }
-.page-scope-aqar .side-accent{ height: 4px; width: 55px; background: #f50075; border-radius: 5px; }
-.page-scope-aqar .side-links .side-links a:hover{ color: #fff59d; }
-.page-scope-aqar .table-wrap{ overflow-x: auto; }
-.page-scope-aqar .data-table{ width: 100%; border-collapse: collapse; background: #fff; }
-.page-scope-aqar .data-table th, .page-scope-aqar .data-table td{ padding: 13px 14px; border-bottom: 1px solid #e8edf3; text-align: left; }
-.page-scope-aqar .data-table th{ background: #fff4fa; color: #a20b4f; font-size: 13px; }
-.page-scope-aqar .list{ padding-left: 20px; color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-aqar .list li{ margin: 7px 0; }
-.page-scope-aqar .quote{ padding: 24px; border-radius: 16px; background: linear-gradient(135deg,#fff9cf,#fff1d0); border: 1px solid #ffe1ed; color: #6c2144; font-size: 16px; font-weight: 600; }
-.page-scope-aqar .empty-image{ min-height: 220px; border-radius: 16px; background: linear-gradient(135deg,#fff59d,#ffd7ea 50%,#dff4ff); display: grid; place-items: center; color: #f50075; font-weight: 800; }
-.page-scope-aqar .form-grid{ display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
-.page-scope-aqar .field{ display: grid; gap: 6px; }
-.page-scope-aqar .field.full{ grid-column: 1 / -1; }
-.page-scope-aqar .field label{ font-size: 12px; font-weight: 700; color: #26364c; }
-.page-scope-aqar .field input, .page-scope-aqar .field textarea, .page-scope-aqar .field select{ width: 100%; border: 1px solid #dfe5ec; border-radius: 10px; padding: 11px 12px; outline: none; background: #fff; }
-.page-scope-aqar .field textarea{ min-height: 130px; resize: vertical; }
-.page-scope-aqar .field input:focus, .page-scope-aqar .field textarea:focus, .page-scope-aqar .field select:focus{ border-color: #f50075; box-shadow: 0 0 0 3px #fff1d0; }
-.page-scope-aqar .btn{ display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 9px; padding: 11px 17px; font-weight: 700; cursor: pointer; transition: .25s; }
-.page-scope-aqar .btn-primary{ background: #f50075; color: #fff; box-shadow: 0 8px 20px rgba(245,0,117,.22); }
-.page-scope-aqar .btn-primary:hover{ transform: translateY(-2px); background: #c91563; }
-.page-scope-aqar .btn-light{ background: #fff; color: #172033; border: 1px solid #e2e8ef; }
-@keyframes mkjkRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-@media (max-width: 800px) {
-  .inner-page { padding: 34px 0; }
-  .content-grid { grid-template-columns: 1fr; }
-  .side-card { position: static; }
-  .content-main { padding: 21px; }
-  .form-grid { grid-template-columns: 1fr; }
-  .field.full { grid-column: auto; }
-}
+/* =========================================================
+   MKJK AQAR PAGE
+   Premium Warm Theme
+========================================================= */
 
-/* MKJK WARM PREMIUM PAGE LAYER */
 .page-scope-aqar {
-  --mkjk-page-brown: #54220c;
-  --mkjk-page-orange: #e95d16;
-  --mkjk-page-gold: #efc14d;
-  --mkjk-page-cream: #fff8df;
-  --mkjk-page-paper: #fffdf8;
-  --mkjk-page-ink: #3f2616;
-  --mkjk-page-muted: #735e4b;
+  --aqar-brown: #54220c;
+  --aqar-orange: #e95d16;
+  --aqar-gold: #efc14d;
+  --aqar-cream: #fff8df;
+  --aqar-paper: #fffdf8;
+  --aqar-text: #4d5d70;
+  --aqar-muted: #7d8997;
+  --aqar-border: #eadabd;
+
   font-family: "Montserrat", sans-serif;
-  color: var(--mkjk-page-ink);
-  background: #fffdf8;
+
+  color: var(--aqar-brown);
+
+  background:
+    radial-gradient(
+      circle at 5% 10%,
+      rgba(233, 93, 22, 0.045),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 95% 35%,
+      rgba(239, 193, 77, 0.07),
+      transparent 25%
+    ),
+    var(--aqar-paper);
 }
 
-.page-scope-aqar [class*="container"] {
-  width: min(1280px, calc(100% - 30px));
-  margin-left: auto;
-  margin-right: auto;
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.aqar-container {
+  width: min(1180px, calc(100% - 30px));
+  margin: 0 auto;
 }
 
-.page-scope-aqar p,
-.page-scope-aqar li {
-  font-size: 16px;
-  line-height: 1.82;
-  color: var(--mkjk-page-muted);
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.aqar-intro {
+  padding: 58px 0 48px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf0 0%,
+      #fffdf8 100%
+    );
+
+  border-bottom: 1px solid #f0e5d2;
 }
 
-.page-scope-aqar h1,
-.page-scope-aqar h2,
-.page-scope-aqar h3,
-.page-scope-aqar h4 {
-  color: var(--mkjk-page-ink);
-  letter-spacing: -0.35px;
+.aqar-intro .aqar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
 }
 
-.page-scope-aqar h1 {
-  font-size: clamp(30px, 4vw, 50px);
+.aqar-intro-content {
+  max-width: 760px;
+
+  animation: aqarRise 0.6s ease both;
 }
 
-.page-scope-aqar h2 {
-  font-size: clamp(24px, 3vw, 36px);
+.aqar-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--aqar-orange);
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
 }
 
-.page-scope-aqar a {
-  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
+.aqar-eyebrow svg {
+  font-size: 15px;
 }
 
-.page-scope-aqar article,
-.page-scope-aqar .card,
-.page-scope-aqar [class*="card"] {
-  border-color: #eadabd;
+.aqar-intro-content h1 {
+  margin: 12px 0 14px;
+
+  color: var(--aqar-brown);
+
+  font-size: clamp(36px, 5vw, 56px);
+
+  line-height: 1.05;
+
+  letter-spacing: -1.5px;
+
+  font-weight: 800;
 }
 
-.page-scope-aqar article:hover,
-.page-scope-aqar .card:hover,
-.page-scope-aqar [class*="card"]:hover {
-  border-color: #e6b94d;
+.aqar-intro-content h1 span {
+  color: var(--aqar-orange);
 }
 
-.page-scope-aqar table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
-  border: 1px solid #e8d8b9;
-  border-radius: 15px;
+.aqar-intro-content p {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: var(--aqar-text);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.aqar-summary {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 17px 20px;
+
   background: #fff;
-  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
+
+  border: 1px solid var(--aqar-border);
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 12px 30px rgba(76, 40, 11, 0.06);
+
+  flex-shrink: 0;
 }
 
-.page-scope-aqar th {
-  padding: 14px 16px;
-  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
-  color: #5b2a12;
-  font-size: 13px;
-  text-align: left;
+.aqar-summary-icon {
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background: var(--aqar-cream);
+
+  color: var(--aqar-orange);
+
+  font-size: 21px;
 }
 
-.page-scope-aqar td {
-  padding: 13px 16px;
-  border-top: 1px solid #f0e5d1;
-  color: #634d3a;
-  font-size: 14px;
+.aqar-summary strong {
+  display: block;
+
+  color: var(--aqar-brown);
+
+  font-size: 23px;
+
+  line-height: 1;
 }
 
-.page-scope-aqar tr:hover td {
+.aqar-summary span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--aqar-muted);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   REPORT SECTION
+========================================================= */
+
+.aqar-reports-section {
+  padding: 50px 0 65px;
+}
+
+.aqar-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+}
+
+.aqar-heading > div > span {
+  color: var(--aqar-orange);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.aqar-heading h2 {
+  margin: 7px 0 0;
+
+  color: var(--aqar-brown);
+
+  font-size: clamp(26px, 3vw, 35px);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.8px;
+}
+
+.aqar-heading > p {
+  max-width: 360px;
+
+  margin: 0;
+
+  color: var(--aqar-muted);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.aqar-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.aqar-card {
+  position: relative;
+
+  min-height: 255px;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff,
+      #fffaf0
+    );
+
+  border: 1px solid var(--aqar-border);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(76, 40, 11, 0.055);
+
+  animation:
+    aqarRise 0.55s ease both;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.aqar-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--aqar-orange),
+      var(--aqar-gold)
+    );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.aqar-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #e6c27c;
+
+  box-shadow:
+    0 18px 38px rgba(76, 40, 11, 0.12);
+}
+
+.aqar-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.aqar-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.aqar-number {
+  color: #b7a695;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.aqar-calendar {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 12px;
+
+  color: var(--aqar-orange);
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff0ca,
+      #fff8e8
+    );
+
+  border: 1px solid #f0ddb5;
+
+  font-size: 18px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.aqar-card:hover .aqar-calendar {
+  transform:
+    rotate(-5deg)
+    scale(1.05);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.aqar-card-content {
+  margin-top: 25px;
+}
+
+.aqar-card-content > span {
+  color: var(--aqar-orange);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+.aqar-card-content h3 {
+  margin: 7px 0 2px;
+
+  color: var(--aqar-brown);
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.aqar-year {
+  color: var(--aqar-orange);
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.aqar-card-content p {
+  margin: 8px 0 0;
+
+  color: var(--aqar-muted);
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.aqar-open-button {
+  margin-top: auto;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: 1px solid #e6d0a5;
+
+  border-radius: 9px;
+
   background: #fffaf0;
+
+  color: var(--aqar-brown);
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.page-scope-aqar ul {
-  padding-left: 23px;
+.aqar-open-button svg {
+  font-size: 14px;
+
+  transition:
+    transform 0.25s ease;
 }
 
-.page-scope-aqar li::marker {
-  color: var(--mkjk-page-orange);
+.aqar-open-button:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #ee7522,
+      #d9500e
+    );
+
+  color: #fff;
+
+  border-color: transparent;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(233, 93, 22, 0.22);
 }
 
-.page-scope-aqar button {
-  font-family: "Montserrat", sans-serif;
+.aqar-open-button:hover svg {
+  transform:
+    translate(2px, -1px);
 }
 
-@media (max-width: 650px) {
-  .page-scope-aqar [class*="container"] {
-    width: min(100% - 22px, 1280px);
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.aqar-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 18px;
+
+  padding: 15px 17px;
+
+  border: 1px solid #eee1c8;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      100deg,
+      #fffaf0,
+      #fffdf8
+    );
+}
+
+.aqar-note-icon {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: #fff1cf;
+
+  color: var(--aqar-orange);
+
+  font-size: 16px;
+}
+
+.aqar-note strong {
+  color: var(--aqar-brown);
+
+  font-size: 11px;
+}
+
+.aqar-note p {
+  margin: 3px 0 0;
+
+  color: var(--aqar-muted);
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.aqar-bottom {
+  padding: 0 0 70px;
+}
+
+.aqar-bottom-inner {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 28px 30px;
+
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #54220c,
+      #8d3a10
+    );
+
+  box-shadow:
+    0 18px 40px rgba(76, 40, 11, 0.14);
+}
+
+.aqar-bottom-inner > div > span {
+  color: var(--aqar-gold);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.aqar-bottom-inner h2 {
+  margin: 7px 0 5px;
+
+  color: #fff;
+
+  font-size: 22px;
+
+  letter-spacing: -0.4px;
+}
+
+.aqar-bottom-inner p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #f8dec0;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.aqar-contact-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 15px;
+
+  border-radius: 9px;
+
+  background: #fff;
+
+  color: var(--aqar-brown);
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.aqar-contact-button:hover {
+  color: var(--aqar-brown);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.aqar-contact-button svg {
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes aqarRise {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(14px);
   }
 
-  .page-scope-aqar p,
-  .page-scope-aqar li {
-    font-size: 15px;
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .aqar-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
   }
 
-  .page-scope-aqar td,
-  .page-scope-aqar th {
-    padding: 11px 12px;
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .aqar-intro .aqar-container {
+    align-items: flex-start;
+
+    flex-direction: column;
   }
+
+  .aqar-summary {
+    width: fit-content;
+  }
+
+  .aqar-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .aqar-heading > p {
+    text-align: left;
+
+    max-width: 600px;
+  }
+
+  .aqar-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .aqar-container {
+    width: calc(100% - 22px);
+  }
+
+  .aqar-intro {
+    padding: 40px 0 35px;
+  }
+
+  .aqar-intro-content h1 {
+    font-size: 37px;
+  }
+
+  .aqar-intro-content p {
+    font-size: 13px;
+  }
+
+  .aqar-reports-section {
+    padding: 36px 0 50px;
+  }
+
+  .aqar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aqar-card {
+    min-height: 230px;
+  }
+
+  .aqar-bottom {
+    padding-bottom: 45px;
+  }
+
+  .aqar-bottom-inner {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 24px 20px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .aqar-intro-content h1 {
+    font-size: 32px;
+  }
+
+  .aqar-summary {
+    width: 100%;
+  }
+
+  .aqar-card {
+    padding: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .aqar-card,
+  .aqar-intro-content {
+    animation: none !important;
+
+    transition: none !important;
+  }
+
 }

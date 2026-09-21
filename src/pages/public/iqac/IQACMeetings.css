@@ -1,158 +1,859 @@
-.page-scope-iqacmeetings .inner-page{ padding: 42px 0; }
-.page-scope-iqacmeetings .content-grid{ display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; align-items: start; }
-.page-scope-iqacmeetings .content-main{ background: #fff; border: 1px solid #e6ebf1; border-radius: 18px; padding: 28px; box-shadow: 0 14px 34px rgba(20,44,82,.07); }
-.page-scope-iqacmeetings .content-section{ padding: 4px 0 25px; border-bottom: 1px solid #e8edf3; margin-bottom: 24px; animation: mkjkRise .5s ease both; }
-.page-scope-iqacmeetings .content-section:last-child{ border-bottom: 0; margin-bottom: 0; }
-.page-scope-iqacmeetings .content-section h2{ margin: 5px 0 12px; color: #172033; font-size: 26px; line-height: 1.25; }
-.page-scope-iqacmeetings .content-section h3{ color: #a80a4e; font-size: 18px; }
-.page-scope-iqacmeetings .content-section p, .page-scope-iqacmeetings .content-main p{ color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-iqacmeetings .side-card{ position: sticky; top: 140px; border-radius: 18px; background: linear-gradient(145deg,#102a52,#1d6090); color: #fff; padding: 24px; box-shadow: 0 16px 35px rgba(16,42,82,.16); }
-.page-scope-iqacmeetings .side-card h3{ margin: 10px 0; font-size: 20px; }
-.page-scope-iqacmeetings .side-card p{ color: #dceaf5; font-size: 15px; line-height: 1.7; }
-.page-scope-iqacmeetings .side-accent{ height: 4px; width: 55px; background: #f50075; border-radius: 5px; }
-.page-scope-iqacmeetings .side-links .side-links a:hover{ color: #fff59d; }
-.page-scope-iqacmeetings .table-wrap{ overflow-x: auto; }
-.page-scope-iqacmeetings .data-table{ width: 100%; border-collapse: collapse; background: #fff; }
-.page-scope-iqacmeetings .data-table th, .page-scope-iqacmeetings .data-table td{ padding: 13px 14px; border-bottom: 1px solid #e8edf3; text-align: left; }
-.page-scope-iqacmeetings .data-table th{ background: #fff4fa; color: #a20b4f; font-size: 13px; }
-.page-scope-iqacmeetings .list{ padding-left: 20px; color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-iqacmeetings .list li{ margin: 7px 0; }
-.page-scope-iqacmeetings .quote{ padding: 24px; border-radius: 16px; background: linear-gradient(135deg,#fff9cf,#fff1d0); border: 1px solid #ffe1ed; color: #6c2144; font-size: 16px; font-weight: 600; }
-.page-scope-iqacmeetings .empty-image{ min-height: 220px; border-radius: 16px; background: linear-gradient(135deg,#fff59d,#ffd7ea 50%,#dff4ff); display: grid; place-items: center; color: #f50075; font-weight: 800; }
-.page-scope-iqacmeetings .form-grid{ display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
-.page-scope-iqacmeetings .field{ display: grid; gap: 6px; }
-.page-scope-iqacmeetings .field.full{ grid-column: 1 / -1; }
-.page-scope-iqacmeetings .field label{ font-size: 12px; font-weight: 700; color: #26364c; }
-.page-scope-iqacmeetings .field input, .page-scope-iqacmeetings .field textarea, .page-scope-iqacmeetings .field select{ width: 100%; border: 1px solid #dfe5ec; border-radius: 10px; padding: 11px 12px; outline: none; background: #fff; }
-.page-scope-iqacmeetings .field textarea{ min-height: 130px; resize: vertical; }
-.page-scope-iqacmeetings .field input:focus, .page-scope-iqacmeetings .field textarea:focus, .page-scope-iqacmeetings .field select:focus{ border-color: #f50075; box-shadow: 0 0 0 3px #fff1d0; }
-.page-scope-iqacmeetings .btn{ display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 9px; padding: 11px 17px; font-weight: 700; cursor: pointer; transition: .25s; }
-.page-scope-iqacmeetings .btn-primary{ background: #f50075; color: #fff; box-shadow: 0 8px 20px rgba(245,0,117,.22); }
-.page-scope-iqacmeetings .btn-primary:hover{ transform: translateY(-2px); background: #c91563; }
-.page-scope-iqacmeetings .btn-light{ background: #fff; color: #172033; border: 1px solid #e2e8ef; }
-@keyframes mkjkRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-@media (max-width: 800px) {
-  .inner-page { padding: 34px 0; }
-  .content-grid { grid-template-columns: 1fr; }
-  .side-card { position: static; }
-  .content-main { padding: 21px; }
-  .form-grid { grid-template-columns: 1fr; }
-  .field.full { grid-column: auto; }
-}
+/* =========================================================
+   MKJK IQAC MEETINGS
+   Premium Warm Theme
+========================================================= */
 
-/* MKJK WARM PREMIUM PAGE LAYER */
 .page-scope-iqacmeetings {
-  --mkjk-page-brown: #54220c;
-  --mkjk-page-orange: #e95d16;
-  --mkjk-page-gold: #efc14d;
-  --mkjk-page-cream: #fff8df;
-  --mkjk-page-paper: #fffdf8;
-  --mkjk-page-ink: #3f2616;
-  --mkjk-page-muted: #735e4b;
+  --iqac-brown: #54220c;
+  --iqac-orange: #e95d16;
+  --iqac-gold: #efc14d;
+  --iqac-cream: #fff8df;
+  --iqac-paper: #fffdf8;
+  --iqac-text: #4d5d70;
+  --iqac-muted: #7d8997;
+  --iqac-border: #eadabd;
+
   font-family: "Montserrat", sans-serif;
-  color: var(--mkjk-page-ink);
-  background: #fffdf8;
+
+  color: var(--iqac-brown);
+
+  background:
+    radial-gradient(
+      circle at 4% 10%,
+      rgba(233, 93, 22, 0.045),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 96% 30%,
+      rgba(239, 193, 77, 0.07),
+      transparent 26%
+    ),
+    var(--iqac-paper);
 }
 
-.page-scope-iqacmeetings [class*="container"] {
-  width: min(1280px, calc(100% - 30px));
-  margin-left: auto;
-  margin-right: auto;
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.iqac-container {
+  width: min(1180px, calc(100% - 30px));
+  margin: 0 auto;
 }
 
-.page-scope-iqacmeetings p,
-.page-scope-iqacmeetings li {
-  font-size: 16px;
-  line-height: 1.82;
-  color: var(--mkjk-page-muted);
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.iqac-intro {
+  padding: 58px 0 48px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf0 0%,
+      #fffdf8 100%
+    );
+
+  border-bottom: 1px solid #f0e5d2;
 }
 
-.page-scope-iqacmeetings h1,
-.page-scope-iqacmeetings h2,
-.page-scope-iqacmeetings h3,
-.page-scope-iqacmeetings h4 {
-  color: var(--mkjk-page-ink);
-  letter-spacing: -0.35px;
+.iqac-intro .iqac-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
 }
 
-.page-scope-iqacmeetings h1 {
-  font-size: clamp(30px, 4vw, 50px);
+.iqac-intro-content {
+  max-width: 790px;
+
+  animation: iqacRise 0.6s ease both;
 }
 
-.page-scope-iqacmeetings h2 {
-  font-size: clamp(24px, 3vw, 36px);
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.iqac-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--iqac-orange);
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
 }
 
-.page-scope-iqacmeetings a {
-  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
+.iqac-eyebrow svg {
+  font-size: 15px;
 }
 
-.page-scope-iqacmeetings article,
-.page-scope-iqacmeetings .card,
-.page-scope-iqacmeetings [class*="card"] {
-  border-color: #eadabd;
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.iqac-intro-content h1 {
+  margin: 12px 0 14px;
+
+  color: var(--iqac-brown);
+
+  font-size: clamp(34px, 5vw, 55px);
+
+  line-height: 1.05;
+
+  letter-spacing: -1.5px;
+
+  font-weight: 800;
 }
 
-.page-scope-iqacmeetings article:hover,
-.page-scope-iqacmeetings .card:hover,
-.page-scope-iqacmeetings [class*="card"]:hover {
-  border-color: #e6b94d;
+.iqac-intro-content h1 span {
+  color: var(--iqac-orange);
 }
 
-.page-scope-iqacmeetings table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
-  border: 1px solid #e8d8b9;
-  border-radius: 15px;
+.iqac-intro-content p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: var(--iqac-text);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.iqac-summary {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 17px 20px;
+
   background: #fff;
-  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
+
+  border: 1px solid var(--iqac-border);
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 12px 30px rgba(76, 40, 11, 0.06);
+
+  flex-shrink: 0;
 }
 
-.page-scope-iqacmeetings th {
-  padding: 14px 16px;
-  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
-  color: #5b2a12;
-  font-size: 13px;
-  text-align: left;
+.iqac-summary-icon {
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff0ca,
+      #fff8e8
+    );
+
+  color: var(--iqac-orange);
+
+  font-size: 21px;
 }
 
-.page-scope-iqacmeetings td {
-  padding: 13px 16px;
-  border-top: 1px solid #f0e5d1;
-  color: #634d3a;
-  font-size: 14px;
+.iqac-summary strong {
+  display: block;
+
+  color: var(--iqac-brown);
+
+  font-size: 23px;
+
+  line-height: 1;
 }
 
-.page-scope-iqacmeetings tr:hover td {
+.iqac-summary span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--iqac-muted);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   REPORT SECTION
+========================================================= */
+
+.iqac-reports-section {
+  padding: 50px 0 65px;
+}
+
+.iqac-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+}
+
+.iqac-heading > div > span {
+  color: var(--iqac-orange);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.iqac-heading h2 {
+  margin: 7px 0 0;
+
+  color: var(--iqac-brown);
+
+  font-size: clamp(26px, 3vw, 35px);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.8px;
+}
+
+.iqac-heading > p {
+  max-width: 390px;
+
+  margin: 0;
+
+  color: var(--iqac-muted);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.iqac-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.iqac-card {
+  position: relative;
+
+  min-height: 255px;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff,
+      #fffaf0
+    );
+
+  border: 1px solid var(--iqac-border);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(76, 40, 11, 0.055);
+
+  animation:
+    iqacRise 0.55s ease both;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.iqac-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--iqac-orange),
+      var(--iqac-gold)
+    );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.iqac-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #e6c27c;
+
+  box-shadow:
+    0 18px 38px rgba(76, 40, 11, 0.12);
+}
+
+.iqac-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.iqac-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.iqac-number {
+  color: #b7a695;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.iqac-calendar {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 12px;
+
+  color: var(--iqac-orange);
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff0ca,
+      #fff8e8
+    );
+
+  border: 1px solid #f0ddb5;
+
+  font-size: 18px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.iqac-card:hover .iqac-calendar {
+  transform:
+    rotate(-5deg)
+    scale(1.05);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.iqac-card-content {
+  margin-top: 25px;
+}
+
+.iqac-card-label {
+  color: var(--iqac-orange);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+.iqac-card-content h3 {
+  margin: 7px 0 2px;
+
+  color: var(--iqac-brown);
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.iqac-session {
+  color: var(--iqac-orange);
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.iqac-card-content p {
+  margin: 8px 0 0;
+
+  color: var(--iqac-muted);
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PDF BUTTON
+========================================================= */
+
+.iqac-open-button {
+  margin-top: auto;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: 1px solid #e6d0a5;
+
+  border-radius: 9px;
+
   background: #fffaf0;
+
+  color: var(--iqac-brown);
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.page-scope-iqacmeetings ul {
-  padding-left: 23px;
+.iqac-open-button svg {
+  font-size: 14px;
+
+  transition:
+    transform 0.25s ease;
 }
 
-.page-scope-iqacmeetings li::marker {
-  color: var(--mkjk-page-orange);
+.iqac-open-button:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #ee7522,
+      #d9500e
+    );
+
+  color: #fff;
+
+  border-color: transparent;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(233, 93, 22, 0.22);
 }
 
-.page-scope-iqacmeetings button {
-  font-family: "Montserrat", sans-serif;
+.iqac-open-button:hover svg {
+  transform:
+    translate(2px, -1px);
 }
 
-@media (max-width: 650px) {
-  .page-scope-iqacmeetings [class*="container"] {
-    width: min(100% - 22px, 1280px);
+
+/* =========================================================
+   INFORMATION NOTE
+========================================================= */
+
+.iqac-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 18px;
+
+  padding: 15px 17px;
+
+  border: 1px solid #eee1c8;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      100deg,
+      #fffaf0,
+      #fffdf8
+    );
+}
+
+.iqac-note-icon {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: #fff1cf;
+
+  color: var(--iqac-orange);
+
+  font-size: 16px;
+}
+
+.iqac-note strong {
+  color: var(--iqac-brown);
+
+  font-size: 11px;
+}
+
+.iqac-note p {
+  margin: 3px 0 0;
+
+  color: var(--iqac-muted);
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   BOTTOM SECTION
+========================================================= */
+
+.iqac-bottom {
+  padding: 0 0 70px;
+}
+
+.iqac-bottom-inner {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 28px 30px;
+
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #54220c,
+      #8d3a10
+    );
+
+  box-shadow:
+    0 18px 40px rgba(76, 40, 11, 0.14);
+}
+
+.iqac-bottom-inner > div > span {
+  color: var(--iqac-gold);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.iqac-bottom-inner h2 {
+  margin: 7px 0 5px;
+
+  color: #fff;
+
+  font-size: 22px;
+
+  letter-spacing: -0.4px;
+}
+
+.iqac-bottom-inner p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #f8dec0;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.iqac-contact-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 15px;
+
+  border-radius: 9px;
+
+  background: #fff;
+
+  color: var(--iqac-brown);
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.iqac-contact-button:hover {
+  color: var(--iqac-brown);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.iqac-contact-button svg {
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes iqacRise {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(14px);
   }
 
-  .page-scope-iqacmeetings p,
-  .page-scope-iqacmeetings li {
-    font-size: 15px;
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .iqac-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
   }
 
-  .page-scope-iqacmeetings td,
-  .page-scope-iqacmeetings th {
-    padding: 11px 12px;
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .iqac-intro .iqac-container {
+    align-items: flex-start;
+
+    flex-direction: column;
   }
+
+  .iqac-summary {
+    width: fit-content;
+  }
+
+  .iqac-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .iqac-heading > p {
+    text-align: left;
+
+    max-width: 600px;
+  }
+
+  .iqac-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .iqac-container {
+    width: calc(100% - 22px);
+  }
+
+  .iqac-intro {
+    padding: 40px 0 35px;
+  }
+
+  .iqac-intro-content h1 {
+    font-size: 36px;
+  }
+
+  .iqac-intro-content p {
+    font-size: 13px;
+  }
+
+  .iqac-reports-section {
+    padding: 36px 0 50px;
+  }
+
+  .iqac-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .iqac-card {
+    min-height: 230px;
+  }
+
+  .iqac-bottom {
+    padding-bottom: 45px;
+  }
+
+  .iqac-bottom-inner {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 24px 20px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .iqac-intro-content h1 {
+    font-size: 32px;
+  }
+
+  .iqac-summary {
+    width: 100%;
+  }
+
+  .iqac-card {
+    padding: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .iqac-card,
+  .iqac-intro-content {
+    animation: none !important;
+
+    transition: none !important;
+  }
+
 }

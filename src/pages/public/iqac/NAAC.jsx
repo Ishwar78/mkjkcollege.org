@@ -16,7 +16,7 @@ const naacDocuments = [
     label: "Self Study Report",
     description:
       "Download the Self Study Report submitted for NAAC accreditation.",
-    pdf: "/NAAC/SSR.pdf",
+    pdf: "/SSRNAAC.pdf",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const naacDocuments = [
     label: "Annual Quality Assurance Report",
     description:
       "Annual Quality Assurance Report for the academic session 2018-19.",
-    pdf: "/NAAC/AQAR-2018-19.pdf",
+    pdf: "/AQAR 2018-19.pdf",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const naacDocuments = [
     label: "Annual Quality Assurance Report",
     description:
       "Annual Quality Assurance Report for the academic session 2019-20.",
-    pdf: "/NAAC/AQAR-2019-20.pdf",
+    pdf: "/0AQAR 2019-20.pdf",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const naacDocuments = [
     label: "Annual Quality Assurance Report",
     description:
       "Annual Quality Assurance Report for the academic session 2020-21.",
-    pdf: "/NAAC/AQAR-2020-21.pdf",
+    pdf: "/AQAR 2021-21.pdf",
   },
 ];
 

@@ -1,158 +1,961 @@
-.page-scope-alumniregistration .inner-page{ padding: 42px 0; }
-.page-scope-alumniregistration .content-grid{ display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; align-items: start; }
-.page-scope-alumniregistration .content-main{ background: #fff; border: 1px solid #e6ebf1; border-radius: 18px; padding: 28px; box-shadow: 0 14px 34px rgba(20,44,82,.07); }
-.page-scope-alumniregistration .content-section{ padding: 4px 0 25px; border-bottom: 1px solid #e8edf3; margin-bottom: 24px; animation: mkjkRise .5s ease both; }
-.page-scope-alumniregistration .content-section:last-child{ border-bottom: 0; margin-bottom: 0; }
-.page-scope-alumniregistration .content-section h2{ margin: 5px 0 12px; color: #172033; font-size: 26px; line-height: 1.25; }
-.page-scope-alumniregistration .content-section h3{ color: #a80a4e; font-size: 18px; }
-.page-scope-alumniregistration .content-section p, .page-scope-alumniregistration .content-main p{ color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-alumniregistration .side-card{ position: sticky; top: 140px; border-radius: 18px; background: linear-gradient(145deg,#102a52,#1d6090); color: #fff; padding: 24px; box-shadow: 0 16px 35px rgba(16,42,82,.16); }
-.page-scope-alumniregistration .side-card h3{ margin: 10px 0; font-size: 20px; }
-.page-scope-alumniregistration .side-card p{ color: #dceaf5; font-size: 15px; line-height: 1.7; }
-.page-scope-alumniregistration .side-accent{ height: 4px; width: 55px; background: #f50075; border-radius: 5px; }
-.page-scope-alumniregistration .side-links .side-links a:hover{ color: #fff59d; }
-.page-scope-alumniregistration .table-wrap{ overflow-x: auto; }
-.page-scope-alumniregistration .data-table{ width: 100%; border-collapse: collapse; background: #fff; }
-.page-scope-alumniregistration .data-table th, .page-scope-alumniregistration .data-table td{ padding: 13px 14px; border-bottom: 1px solid #e8edf3; text-align: left; }
-.page-scope-alumniregistration .data-table th{ background: #fff4fa; color: #a20b4f; font-size: 13px; }
-.page-scope-alumniregistration .list{ padding-left: 20px; color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-alumniregistration .list li{ margin: 7px 0; }
-.page-scope-alumniregistration .quote{ padding: 24px; border-radius: 16px; background: linear-gradient(135deg,#fff9cf,#fff1d0); border: 1px solid #ffe1ed; color: #6c2144; font-size: 16px; font-weight: 600; }
-.page-scope-alumniregistration .empty-image{ min-height: 220px; border-radius: 16px; background: linear-gradient(135deg,#fff59d,#ffd7ea 50%,#dff4ff); display: grid; place-items: center; color: #f50075; font-weight: 800; }
-.page-scope-alumniregistration .form-grid{ display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
-.page-scope-alumniregistration .field{ display: grid; gap: 6px; }
-.page-scope-alumniregistration .field.full{ grid-column: 1 / -1; }
-.page-scope-alumniregistration .field label{ font-size: 12px; font-weight: 700; color: #26364c; }
-.page-scope-alumniregistration .field input, .page-scope-alumniregistration .field textarea, .page-scope-alumniregistration .field select{ width: 100%; border: 1px solid #dfe5ec; border-radius: 10px; padding: 11px 12px; outline: none; background: #fff; }
-.page-scope-alumniregistration .field textarea{ min-height: 130px; resize: vertical; }
-.page-scope-alumniregistration .field input:focus, .page-scope-alumniregistration .field textarea:focus, .page-scope-alumniregistration .field select:focus{ border-color: #f50075; box-shadow: 0 0 0 3px #fff1d0; }
-.page-scope-alumniregistration .btn{ display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 9px; padding: 11px 17px; font-weight: 700; cursor: pointer; transition: .25s; }
-.page-scope-alumniregistration .btn-primary{ background: #f50075; color: #fff; box-shadow: 0 8px 20px rgba(245,0,117,.22); }
-.page-scope-alumniregistration .btn-primary:hover{ transform: translateY(-2px); background: #c91563; }
-.page-scope-alumniregistration .btn-light{ background: #fff; color: #172033; border: 1px solid #e2e8ef; }
-@keyframes mkjkRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-@media (max-width: 800px) {
-  .inner-page { padding: 34px 0; }
-  .content-grid { grid-template-columns: 1fr; }
-  .side-card { position: static; }
-  .content-main { padding: 21px; }
-  .form-grid { grid-template-columns: 1fr; }
-  .field.full { grid-column: auto; }
-}
+/* =========================================================
+   MKJK ALUMNI REGISTRATION
+   Premium Warm Institutional Theme
+========================================================= */
 
-/* MKJK WARM PREMIUM PAGE LAYER */
 .page-scope-alumniregistration {
-  --mkjk-page-brown: #54220c;
-  --mkjk-page-orange: #e95d16;
-  --mkjk-page-gold: #efc14d;
-  --mkjk-page-cream: #fff8df;
-  --mkjk-page-paper: #fffdf8;
-  --mkjk-page-ink: #3f2616;
-  --mkjk-page-muted: #735e4b;
+
+  --alumni-brown: #54220c;
+  --alumni-dark: #3f2616;
+  --alumni-orange: #e95d16;
+  --alumni-gold: #efc14d;
+
+  --alumni-cream: #fff8df;
+  --alumni-paper: #fffdf8;
+
+  --alumni-muted: #735e4b;
+  --alumni-border: #eadabd;
+
   font-family: "Montserrat", sans-serif;
-  color: var(--mkjk-page-ink);
-  background: #fffdf8;
+
+  background:
+    radial-gradient(
+      circle at 5% 5%,
+      rgba(233, 93, 22, 0.035),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 95% 40%,
+      rgba(239, 193, 77, 0.055),
+      transparent 25%
+    ),
+    var(--alumni-paper);
+
+  color: var(--alumni-dark);
 }
 
-.page-scope-alumniregistration [class*="container"] {
-  width: min(1280px, calc(100% - 30px));
-  margin-left: auto;
-  margin-right: auto;
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.alumni-container {
+
+  width: min(1180px, calc(100% - 30px));
+
+  margin: 0 auto;
+
+  padding: 45px 0 70px;
 }
 
-.page-scope-alumniregistration p,
-.page-scope-alumniregistration li {
-  font-size: 16px;
-  line-height: 1.82;
-  color: var(--mkjk-page-muted);
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.alumni-intro {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  margin-bottom: 25px;
+
+  animation: alumniFadeUp .55s ease both;
 }
 
-.page-scope-alumniregistration h1,
-.page-scope-alumniregistration h2,
-.page-scope-alumniregistration h3,
-.page-scope-alumniregistration h4 {
-  color: var(--mkjk-page-ink);
-  letter-spacing: -0.35px;
+.alumni-intro-icon {
+
+  width: 58px;
+  height: 58px;
+
+  flex: 0 0 58px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0ca,
+      #fff9e9
+    );
+
+  color: var(--alumni-orange);
+
+  border: 1px solid #ecd49d;
+
+  font-size: 24px;
+
+  box-shadow:
+    0 8px 20px rgba(76,40,11,.07);
 }
 
-.page-scope-alumniregistration h1 {
-  font-size: clamp(30px, 4vw, 50px);
+.alumni-eyebrow {
+
+  display: inline-block;
+
+  color: var(--alumni-orange);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
 }
 
-.page-scope-alumniregistration h2 {
-  font-size: clamp(24px, 3vw, 36px);
+.alumni-intro h1 {
+
+  margin: 5px 0 3px;
+
+  color: var(--alumni-brown);
+
+  font-size: clamp(27px, 3.5vw, 40px);
+
+  line-height: 1.15;
+
+  letter-spacing: -.8px;
 }
 
-.page-scope-alumniregistration a {
-  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
-}
+.alumni-intro p {
 
-.page-scope-alumniregistration article,
-.page-scope-alumniregistration .card,
-.page-scope-alumniregistration [class*="card"] {
-  border-color: #eadabd;
-}
+  margin: 0;
 
-.page-scope-alumniregistration article:hover,
-.page-scope-alumniregistration .card:hover,
-.page-scope-alumniregistration [class*="card"]:hover {
-  border-color: #e6b94d;
-}
+  color: var(--alumni-muted);
 
-.page-scope-alumniregistration table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
-  border: 1px solid #e8d8b9;
-  border-radius: 15px;
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
-}
-
-.page-scope-alumniregistration th {
-  padding: 14px 16px;
-  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
-  color: #5b2a12;
-  font-size: 13px;
-  text-align: left;
-}
-
-.page-scope-alumniregistration td {
-  padding: 13px 16px;
-  border-top: 1px solid #f0e5d1;
-  color: #634d3a;
   font-size: 14px;
+
+  line-height: 1.6;
 }
 
-.page-scope-alumniregistration tr:hover td {
-  background: #fffaf0;
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.alumni-form-card {
+
+  background: rgba(255,255,255,.96);
+
+  border: 1px solid var(--alumni-border);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 18px 50px rgba(76,40,11,.09);
+
+  padding: 30px;
+
+  animation:
+    alumniFadeUp .65s ease both;
+
+  overflow: hidden;
 }
 
-.page-scope-alumniregistration ul {
-  padding-left: 23px;
+
+/* =========================================================
+   FORM CARD HEADER
+========================================================= */
+
+.form-card-heading {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 20px;
+
+  padding-bottom: 23px;
+
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid #f0e5d1;
 }
 
-.page-scope-alumniregistration li::marker {
-  color: var(--mkjk-page-orange);
+.form-mini-label {
+
+  display: block;
+
+  color: var(--alumni-orange);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.4px;
 }
 
-.page-scope-alumniregistration button {
+.form-card-heading h2 {
+
+  margin: 6px 0 0;
+
+  color: var(--alumni-brown);
+
+  font-size: 25px;
+
+  letter-spacing: -.4px;
+}
+
+.required-note {
+
+  white-space: nowrap;
+
+  color: #8c7866;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.required-note span {
+
+  color: var(--alumni-orange);
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.form-section {
+
+  padding: 0 0 27px;
+
+  margin-bottom: 27px;
+
+  border-bottom: 1px solid #f0e5d1;
+}
+
+.form-section:last-of-type {
+
+  border-bottom: 0;
+
+  margin-bottom: 8px;
+
+  padding-bottom: 8px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.section-icon {
+
+  width: 39px;
+  height: 39px;
+
+  flex: 0 0 39px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 11px;
+
+  color: var(--alumni-orange);
+
+  background: #fff3d8;
+
+  border: 1px solid #f0dbad;
+
+  font-size: 17px;
+}
+
+.section-heading h3 {
+
+  margin: 0 0 2px;
+
+  color: var(--alumni-brown);
+
+  font-size: 16px;
+
+  font-weight: 800;
+}
+
+.section-heading p {
+
+  margin: 0;
+
+  color: #917d6b;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.form-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px 17px;
+}
+
+.field {
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.field-wide {
+
+  grid-column: span 1;
+}
+
+.field-professional {
+
+  max-width: 390px;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.field label {
+
+  color: #4b392b;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  line-height: 1.45;
+}
+
+.field label span {
+
+  color: var(--alumni-orange);
+
+  margin-left: 2px;
+}
+
+.field label small {
+
+  color: #927f6c;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  margin-left: 4px;
+}
+
+
+/* =========================================================
+   INPUT WRAP
+========================================================= */
+
+.input-wrap {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.input-wrap > svg {
+
+  position: absolute;
+
+  left: 13px;
+
+  color: #b09275;
+
+  font-size: 15px;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   INPUTS / SELECT
+========================================================= */
+
+.input-wrap input,
+.input-wrap select {
+
+  width: 100%;
+
+  height: 46px;
+
+  border: 1px solid #dfd5c7;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff,
+      #fffdfa
+    );
+
+  color: #49382b;
+
   font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  padding: 0 13px 0 39px;
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
 }
+
+.input-wrap input::placeholder {
+
+  color: #a89b8f;
+
+  font-weight: 500;
+}
+
+.input-wrap select {
+
+  color: #8c7d6e;
+
+  cursor: pointer;
+
+  appearance: auto;
+}
+
+
+/* focus */
+
+.input-wrap input:focus,
+.input-wrap select:focus {
+
+  border-color: var(--alumni-orange);
+
+  background: #fff;
+
+  box-shadow:
+    0 0 0 3px rgba(233,93,22,.09);
+}
+
+.input-wrap:focus-within > svg {
+
+  color: var(--alumni-orange);
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.textarea-wrap {
+
+  position: relative;
+}
+
+.textarea-wrap > svg {
+
+  position: absolute;
+
+  left: 13px;
+
+  top: 14px;
+
+  color: #b09275;
+
+  font-size: 15px;
+
+  pointer-events: none;
+}
+
+.textarea-wrap textarea {
+
+  width: 100%;
+
+  min-height: 108px;
+
+  resize: vertical;
+
+  border: 1px solid #dfd5c7;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  padding: 13px 13px 13px 39px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff,
+      #fffdfa
+    );
+
+  color: #49382b;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.textarea-wrap textarea::placeholder {
+
+  color: #a89b8f;
+}
+
+.textarea-wrap textarea:focus {
+
+  border-color: var(--alumni-orange);
+
+  box-shadow:
+    0 0 0 3px rgba(233,93,22,.09);
+}
+
+.textarea-wrap:focus-within > svg {
+
+  color: var(--alumni-orange);
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.form-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding-top: 9px;
+}
+
+.alumni-btn {
+
+  min-height: 44px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  border-radius: 10px;
+
+  padding: 0 19px;
+
+  border: 0;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+.alumni-btn svg {
+
+  font-size: 15px;
+}
+
+
+/* submit */
+
+.alumni-btn-primary {
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e95d16,
+      #c9470e
+    );
+
+  box-shadow:
+    0 9px 22px rgba(233,93,22,.23);
+}
+
+.alumni-btn-primary:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 28px rgba(233,93,22,.3);
+}
+
+
+/* reset */
+
+.alumni-btn-secondary {
+
+  color: #634b37;
+
+  background: #fffaf0;
+
+  border: 1px solid #e3d4bd;
+
+  box-shadow: none;
+}
+
+.alumni-btn-secondary:hover {
+
+  transform: translateY(-2px);
+
+  background: #fff1d2;
+
+  border-color: #dcbf8c;
+}
+
+
+/* =========================================================
+   MANDATORY MESSAGE
+========================================================= */
+
+.mandatory-message {
+
+  margin-top: 13px;
+
+  color: #917e6d;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+.mandatory-message strong {
+
+  color: var(--alumni-orange);
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.alumni-bottom-note {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  justify-content: center;
+
+  margin-top: 22px;
+
+  color: #9a836d;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.note-line {
+
+  height: 1px;
+
+  flex: 1;
+
+  max-width: 150px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #e5d5bd
+    );
+}
+
+.note-line:last-child {
+
+  background:
+    linear-gradient(
+      90deg,
+      #e5d5bd,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes alumniFadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(14px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .form-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .field-wide {
+
+    grid-column: span 1;
+  }
+
+  .field-professional {
+
+    max-width: none;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 650px) {
-  .page-scope-alumniregistration [class*="container"] {
-    width: min(100% - 22px, 1280px);
+
+  .alumni-container {
+
+    width: min(
+      calc(100% - 20px),
+      1180px
+    );
+
+    padding:
+      32px 0 50px;
   }
 
-  .page-scope-alumniregistration p,
-  .page-scope-alumniregistration li {
-    font-size: 15px;
+  .alumni-intro {
+
+    align-items: flex-start;
+
+    gap: 12px;
   }
 
-  .page-scope-alumniregistration td,
-  .page-scope-alumniregistration th {
-    padding: 11px 12px;
+  .alumni-intro-icon {
+
+    width: 48px;
+    height: 48px;
+
+    flex-basis: 48px;
+
+    font-size: 19px;
+
+    border-radius: 14px;
   }
+
+  .alumni-intro h1 {
+
+    font-size: 27px;
+  }
+
+  .alumni-intro p {
+
+    font-size: 12px;
+  }
+
+  .alumni-form-card {
+
+    padding: 20px 16px;
+
+    border-radius: 17px;
+  }
+
+  .form-card-heading {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    padding-bottom: 18px;
+
+    margin-bottom: 20px;
+  }
+
+  .form-card-heading h2 {
+
+    font-size: 21px;
+  }
+
+  .form-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .field-wide {
+
+    grid-column: auto;
+  }
+
+  .field-professional {
+
+    max-width: none;
+  }
+
+  .section-heading {
+
+    align-items: flex-start;
+  }
+
+  .section-icon {
+
+    width: 35px;
+    height: 35px;
+
+    flex-basis: 35px;
+  }
+
+  .form-actions {
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .alumni-btn {
+
+    width: 100%;
+  }
+
+  .alumni-bottom-note {
+
+    font-size: 9px;
+
+    gap: 7px;
+  }
+
+  .note-line {
+
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .alumni-form-card {
+
+    padding:
+      18px 13px;
+  }
+
+  .alumni-intro h1 {
+
+    font-size: 24px;
+  }
+
+  .field label {
+
+    font-size: 10px;
+  }
+
+  .input-wrap input,
+  .input-wrap select {
+
+    height: 44px;
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation: none !important;
+
+    transition: none !important;
+  }
+
 }
