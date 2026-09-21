@@ -13,23 +13,23 @@ export default function AcademicCalendar() {
   const calendars = [
     {
       year: "2019-20",
-      file: "/academic-calendar-2019-20.pdf",
+      file: "/ACADEMIC Calender 2018-19.jpg",
     },
     {
       year: "2020-21",
-      file: "/academic-calendar-2020-21.pdf",
+      file: "/0Academic Calendar 2020-21.jpeg",
     },
     {
       year: "2021-22",
-      file: "/academic-calendar-2021-22.pdf",
+      file: "/Academic Calender 2021-22.jpg",
     },
     {
       year: "2022-23",
-      file: "/academic-calendar-2022-23.pdf",
+      file: "/Academic Calender 2022-23.jpg",
     },
     {
       year: "2023-24",
-      file: "/academic-calendar-2023-24.pdf",
+      file: "/Academic Calender 2023-24.jpg",
     },
   ];
 

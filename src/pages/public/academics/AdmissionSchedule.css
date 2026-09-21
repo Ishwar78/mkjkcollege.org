@@ -1,158 +1,981 @@
-.page-scope-admissionschedule .inner-page{ padding: 42px 0; }
-.page-scope-admissionschedule .content-grid{ display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; align-items: start; }
-.page-scope-admissionschedule .content-main{ background: #fff; border: 1px solid #e6ebf1; border-radius: 18px; padding: 28px; box-shadow: 0 14px 34px rgba(20,44,82,.07); }
-.page-scope-admissionschedule .content-section{ padding: 4px 0 25px; border-bottom: 1px solid #e8edf3; margin-bottom: 24px; animation: mkjkRise .5s ease both; }
-.page-scope-admissionschedule .content-section:last-child{ border-bottom: 0; margin-bottom: 0; }
-.page-scope-admissionschedule .content-section h2{ margin: 5px 0 12px; color: #172033; font-size: 26px; line-height: 1.25; }
-.page-scope-admissionschedule .content-section h3{ color: #a80a4e; font-size: 18px; }
-.page-scope-admissionschedule .content-section p, .page-scope-admissionschedule .content-main p{ color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-admissionschedule .side-card{ position: sticky; top: 140px; border-radius: 18px; background: linear-gradient(145deg,#102a52,#1d6090); color: #fff; padding: 24px; box-shadow: 0 16px 35px rgba(16,42,82,.16); }
-.page-scope-admissionschedule .side-card h3{ margin: 10px 0; font-size: 20px; }
-.page-scope-admissionschedule .side-card p{ color: #dceaf5; font-size: 15px; line-height: 1.7; }
-.page-scope-admissionschedule .side-accent{ height: 4px; width: 55px; background: #f50075; border-radius: 5px; }
-.page-scope-admissionschedule .side-links .side-links a:hover{ color: #fff59d; }
-.page-scope-admissionschedule .table-wrap{ overflow-x: auto; }
-.page-scope-admissionschedule .data-table{ width: 100%; border-collapse: collapse; background: #fff; }
-.page-scope-admissionschedule .data-table th, .page-scope-admissionschedule .data-table td{ padding: 13px 14px; border-bottom: 1px solid #e8edf3; text-align: left; }
-.page-scope-admissionschedule .data-table th{ background: #fff4fa; color: #a20b4f; font-size: 13px; }
-.page-scope-admissionschedule .list{ padding-left: 20px; color: #59677a; font-size: 16px; line-height: 1.8; }
-.page-scope-admissionschedule .list li{ margin: 7px 0; }
-.page-scope-admissionschedule .quote{ padding: 24px; border-radius: 16px; background: linear-gradient(135deg,#fff9cf,#fff1d0); border: 1px solid #ffe1ed; color: #6c2144; font-size: 16px; font-weight: 600; }
-.page-scope-admissionschedule .empty-image{ min-height: 220px; border-radius: 16px; background: linear-gradient(135deg,#fff59d,#ffd7ea 50%,#dff4ff); display: grid; place-items: center; color: #f50075; font-weight: 800; }
-.page-scope-admissionschedule .form-grid{ display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
-.page-scope-admissionschedule .field{ display: grid; gap: 6px; }
-.page-scope-admissionschedule .field.full{ grid-column: 1 / -1; }
-.page-scope-admissionschedule .field label{ font-size: 12px; font-weight: 700; color: #26364c; }
-.page-scope-admissionschedule .field input, .page-scope-admissionschedule .field textarea, .page-scope-admissionschedule .field select{ width: 100%; border: 1px solid #dfe5ec; border-radius: 10px; padding: 11px 12px; outline: none; background: #fff; }
-.page-scope-admissionschedule .field textarea{ min-height: 130px; resize: vertical; }
-.page-scope-admissionschedule .field input:focus, .page-scope-admissionschedule .field textarea:focus, .page-scope-admissionschedule .field select:focus{ border-color: #f50075; box-shadow: 0 0 0 3px #fff1d0; }
-.page-scope-admissionschedule .btn{ display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 9px; padding: 11px 17px; font-weight: 700; cursor: pointer; transition: .25s; }
-.page-scope-admissionschedule .btn-primary{ background: #f50075; color: #fff; box-shadow: 0 8px 20px rgba(245,0,117,.22); }
-.page-scope-admissionschedule .btn-primary:hover{ transform: translateY(-2px); background: #c91563; }
-.page-scope-admissionschedule .btn-light{ background: #fff; color: #172033; border: 1px solid #e2e8ef; }
-@keyframes mkjkRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-@media (max-width: 800px) {
-  .inner-page { padding: 34px 0; }
-  .content-grid { grid-template-columns: 1fr; }
-  .side-card { position: static; }
-  .content-main { padding: 21px; }
-  .form-grid { grid-template-columns: 1fr; }
-  .field.full { grid-column: auto; }
-}
+/* =========================================================
+   MKJK ADMISSION SCHEDULE
+   ========================================================= */
 
-/* MKJK WARM PREMIUM PAGE LAYER */
 .page-scope-admissionschedule {
-  --mkjk-page-brown: #54220c;
-  --mkjk-page-orange: #e95d16;
-  --mkjk-page-gold: #efc14d;
-  --mkjk-page-cream: #fff8df;
-  --mkjk-page-paper: #fffdf8;
-  --mkjk-page-ink: #3f2616;
-  --mkjk-page-muted: #735e4b;
+  --admission-brown: #54220c;
+  --admission-dark: #35170b;
+  --admission-orange: #e95d16;
+  --admission-gold: #efc14d;
+  --admission-cream: #fff8df;
+  --admission-paper: #fffdf8;
+  --admission-ink: #3f2616;
+  --admission-muted: #735e4b;
+  --admission-border: #eadabd;
+
+  background: linear-gradient(
+    180deg,
+    #fffdf8 0%,
+    #fffaf1 100%
+  );
+
   font-family: "Montserrat", sans-serif;
-  color: var(--mkjk-page-ink);
-  background: #fffdf8;
+  color: var(--admission-ink);
+
+  padding: 0 0 80px;
 }
 
-.page-scope-admissionschedule [class*="container"] {
-  width: min(1280px, calc(100% - 30px));
-  margin-left: auto;
-  margin-right: auto;
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.admission-container {
+  width: min(1240px, calc(100% - 30px));
+  margin: 0 auto;
 }
 
-.page-scope-admissionschedule p,
-.page-scope-admissionschedule li {
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.admission-hero {
+  min-height: 450px;
+
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+
+  gap: 45px;
+  align-items: center;
+
+  padding: 55px 15px 40px;
+}
+
+
+.admission-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.admission-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 15px;
+
+  color: var(--admission-orange);
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.7px;
+}
+
+
+.admission-eyebrow svg {
+  font-size: 15px;
+}
+
+
+.admission-hero h1 {
+  max-width: 650px;
+
+  margin: 0 0 20px;
+
+  color: var(--admission-brown);
+
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.04;
+
+  letter-spacing: -2px;
+}
+
+
+.admission-hero h1 span {
+  display: block;
+  color: var(--admission-orange);
+}
+
+
+.admission-hero p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--admission-muted);
+
   font-size: 16px;
-  line-height: 1.82;
-  color: var(--mkjk-page-muted);
+  line-height: 1.85;
 }
 
-.page-scope-admissionschedule h1,
-.page-scope-admissionschedule h2,
-.page-scope-admissionschedule h3,
-.page-scope-admissionschedule h4 {
-  color: var(--mkjk-page-ink);
-  letter-spacing: -0.35px;
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.admission-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 27px;
 }
 
-.page-scope-admissionschedule h1 {
-  font-size: clamp(30px, 4vw, 50px);
+
+.admission-primary-btn,
+.admission-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
 }
 
-.page-scope-admissionschedule h2 {
-  font-size: clamp(24px, 3vw, 36px);
+
+.admission-primary-btn {
+  background: var(--admission-orange);
+  color: #fff;
+
+  box-shadow: 0 10px 24px rgba(233,93,22,.22);
 }
 
-.page-scope-admissionschedule a {
-  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease;
+
+.admission-primary-btn:hover {
+  transform: translateY(-2px);
+  color: #fff;
 }
 
-.page-scope-admissionschedule article,
-.page-scope-admissionschedule .card,
-.page-scope-admissionschedule [class*="card"] {
-  border-color: #eadabd;
-}
 
-.page-scope-admissionschedule article:hover,
-.page-scope-admissionschedule .card:hover,
-.page-scope-admissionschedule [class*="card"]:hover {
-  border-color: #e6b94d;
-}
+.admission-secondary-btn {
+  border: 1px solid var(--admission-border);
 
-.page-scope-admissionschedule table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
-  border: 1px solid #e8d8b9;
-  border-radius: 15px;
   background: #fff;
-  box-shadow: 0 12px 30px rgba(76, 40, 11, .07);
+
+  color: var(--admission-brown);
 }
 
-.page-scope-admissionschedule th {
-  padding: 14px 16px;
-  background: linear-gradient(90deg, #fff0c2, #ffe7bd);
-  color: #5b2a12;
-  font-size: 13px;
-  text-align: left;
+
+.admission-secondary-btn:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--admission-gold);
+
+  color: var(--admission-orange);
 }
 
-.page-scope-admissionschedule td {
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.admission-hero-visual {
+  position: relative;
+
+  min-height: 350px;
+
+  display: grid;
+  place-items: center;
+}
+
+
+.admission-circle {
+  position: relative;
+
+  width: 235px;
+  height: 235px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #fff5d5,
+      #ffe7af 60%,
+      #f3c65e
+    );
+
+  border: 1px solid #e6c36f;
+
+  color: var(--admission-brown);
+
+  box-shadow:
+    0 30px 65px rgba(84,34,12,.14),
+    inset 0 0 0 17px rgba(255,255,255,.45);
+}
+
+
+.admission-circle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 310px;
+  height: 310px;
+
+  border: 1px dashed #e2bd62;
+
+  border-radius: 50%;
+}
+
+
+.admission-circle svg {
+  margin-bottom: 8px;
+
+  color: var(--admission-orange);
+
+  font-size: 48px;
+}
+
+
+.admission-circle strong {
+  font-size: 29px;
+  font-weight: 900;
+}
+
+
+.admission-circle span {
+  margin-top: 5px;
+
+  color: var(--admission-muted);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .8px;
+}
+
+
+/* FLOATING */
+
+.admission-floating {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   padding: 13px 16px;
-  border-top: 1px solid #f0e5d1;
-  color: #634d3a;
+
+  border: 1px solid var(--admission-border);
+  border-radius: 13px;
+
+  background: rgba(255,255,255,.96);
+
+  box-shadow: 0 15px 35px rgba(76,40,11,.10);
+
+  z-index: 2;
+}
+
+
+.admission-floating svg {
+  color: var(--admission-orange);
+  font-size: 21px;
+}
+
+
+.admission-floating strong {
+  display: block;
+
+  color: var(--admission-brown);
+
+  font-size: 11px;
+}
+
+
+.admission-floating span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--admission-muted);
+
+  font-size: 9px;
+}
+
+
+.admission-floating-one {
+  top: 20px;
+  right: 0;
+}
+
+
+.admission-floating-two {
+  bottom: 20px;
+  left: 0;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.admission-section-heading,
+.application-heading {
+  margin-bottom: 22px;
+}
+
+
+.admission-section-heading span,
+.application-heading > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--admission-orange);
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+}
+
+
+.admission-section-heading h2,
+.application-heading h2 {
+  margin: 0;
+
+  color: var(--admission-brown);
+
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.15;
+}
+
+
+.application-heading p {
+  max-width: 700px;
+
+  margin: 10px 0 0;
+
+  color: var(--admission-muted);
+
   font-size: 14px;
+  line-height: 1.75;
 }
 
-.page-scope-admissionschedule tr:hover td {
-  background: #fffaf0;
+
+/* =========================================================
+   SESSION
+   ========================================================= */
+
+.admission-session {
+  padding: 20px 0 50px;
 }
 
-.page-scope-admissionschedule ul {
-  padding-left: 23px;
+
+.admission-session-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 65px minmax(0, 1fr) auto;
+
+  gap: 20px;
+  align-items: center;
+
+  padding: 27px;
+
+  border: 1px solid var(--admission-border);
+  border-radius: 18px;
+
+  background: #fff;
+
+  box-shadow: 0 12px 30px rgba(76,40,11,.06);
 }
 
-.page-scope-admissionschedule li::marker {
-  color: var(--mkjk-page-orange);
+
+.session-icon {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: #fff0cc;
+
+  color: var(--admission-orange);
+
+  font-size: 25px;
 }
 
-.page-scope-admissionschedule button {
-  font-family: "Montserrat", sans-serif;
+
+.session-label {
+  color: var(--admission-orange);
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.3px;
 }
 
-@media (max-width: 650px) {
-  .page-scope-admissionschedule [class*="container"] {
-    width: min(100% - 22px, 1280px);
+
+.session-content h3 {
+  margin: 5px 0 7px;
+
+  color: var(--admission-brown);
+
+  font-size: 20px;
+}
+
+
+.session-content p {
+  max-width: 750px;
+
+  margin: 0;
+
+  color: var(--admission-muted);
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+.session-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 11px 15px;
+
+  border-radius: 9px;
+
+  background: var(--admission-brown);
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+.session-link:hover {
+  background: var(--admission-orange);
+  color: #fff;
+}
+
+
+/* =========================================================
+   APPLICATION JOURNEY
+   ========================================================= */
+
+.application-section {
+  padding: 15px 0 45px;
+}
+
+
+.application-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+
+.application-card {
+  position: relative;
+
+  min-height: 235px;
+
+  padding: 25px 21px;
+
+  border: 1px solid var(--admission-border);
+  border-radius: 17px;
+
+  background: #fff;
+
+  box-shadow: 0 10px 26px rgba(76,40,11,.05);
+
+  overflow: hidden;
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+
+.application-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #dfb84f;
+
+  box-shadow: 0 17px 34px rgba(76,40,11,.09);
+}
+
+
+.application-number {
+  position: absolute;
+
+  top: 15px;
+  right: 17px;
+
+  color: #eadfcf;
+
+  font-size: 34px;
+  font-weight: 900;
+}
+
+
+.application-icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 13px;
+
+  background: #fff1d1;
+
+  color: var(--admission-orange);
+
+  font-size: 21px;
+}
+
+
+.application-card h3 {
+  margin: 0 0 8px;
+
+  color: var(--admission-brown);
+
+  font-size: 16px;
+}
+
+
+.application-card p {
+  margin: 0;
+
+  color: var(--admission-muted);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   IMPORTANT
+   ========================================================= */
+
+.admission-important {
+  display: grid;
+
+  grid-template-columns: 60px minmax(0, 1fr) auto;
+
+  gap: 20px;
+
+  align-items: center;
+
+  padding: 28px;
+
+  border: 1px solid #efd7a0;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff1c7,
+      #fff9e8
+    );
+
+  margin-bottom: 45px;
+}
+
+
+.important-icon {
+  width: 57px;
+  height: 57px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: var(--admission-brown);
+
+  color: #fff;
+
+  font-size: 23px;
+}
+
+
+.admission-important span {
+  color: var(--admission-orange);
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.4px;
+}
+
+
+.admission-important h2 {
+  margin: 5px 0 7px;
+
+  color: var(--admission-brown);
+
+  font-size: 20px;
+}
+
+
+.admission-important p {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: var(--admission-muted);
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+
+.admission-important a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 11px 16px;
+
+  border-radius: 9px;
+
+  background: var(--admission-orange);
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.admission-bottom {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+
+/* CONTACT */
+
+.admission-contact-card {
+  padding: 30px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #54220c,
+      #3b180a
+    );
+
+  box-shadow: 0 18px 40px rgba(84,34,12,.15);
+}
+
+
+.contact-accent {
+  width: 55px;
+  height: 4px;
+
+  margin-bottom: 16px;
+
+  border-radius: 5px;
+
+  background: var(--admission-orange);
+}
+
+
+.admission-contact-card > span {
+  color: var(--admission-gold);
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+
+.admission-contact-card h2 {
+  margin: 8px 0;
+
+  color: #fff;
+
+  font-size: 24px;
+}
+
+
+.admission-contact-card p {
+  margin: 0 0 19px;
+
+  color: #eadbca;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+.admission-contact-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 11px 17px;
+
+  border-radius: 9px;
+
+  background: var(--admission-orange);
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+/* LINKS */
+
+.admission-links {
+  display: grid;
+  gap: 12px;
+}
+
+
+.admission-links a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 19px;
+
+  border: 1px solid var(--admission-border);
+  border-radius: 15px;
+
+  background: #fff;
+
+  color: var(--admission-ink);
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 22px rgba(76,40,11,.05);
+
+  transition:
+    transform .22s ease,
+    border-color .22s ease;
+}
+
+
+.admission-links a:hover {
+  transform: translateX(4px);
+
+  border-color: #dfb84f;
+}
+
+
+.admission-links a > svg:first-child {
+  flex: 0 0 auto;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 10px;
+
+  border-radius: 11px;
+
+  background: #fff1d1;
+
+  color: var(--admission-orange);
+}
+
+
+.admission-links div {
+  flex: 1;
+}
+
+
+.admission-links strong {
+  display: block;
+
+  color: var(--admission-brown);
+
+  font-size: 13px;
+}
+
+
+.admission-links span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--admission-muted);
+
+  font-size: 10px;
+}
+
+
+.admission-links a > svg:last-child {
+  color: var(--admission-orange);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .application-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .page-scope-admissionschedule p,
-  .page-scope-admissionschedule li {
-    font-size: 15px;
+}
+
+
+@media (max-width: 850px) {
+
+  .admission-hero {
+    grid-template-columns: 1fr;
   }
 
-  .page-scope-admissionschedule td,
-  .page-scope-admissionschedule th {
-    padding: 11px 12px;
+  .admission-hero-visual {
+    min-height: 310px;
   }
+
+  .admission-session-card {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .session-link {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .admission-important {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .admission-important a {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .admission-bottom {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .admission-container {
+    width: min(100% - 22px, 1240px);
+  }
+
+  .admission-hero {
+    padding: 40px 0 25px;
+  }
+
+  .admission-hero h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .admission-hero p {
+    font-size: 14px;
+  }
+
+  .admission-hero-visual {
+    min-height: 270px;
+  }
+
+  .admission-circle {
+    width: 190px;
+    height: 190px;
+  }
+
+  .admission-circle::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  .admission-floating {
+    padding: 10px 12px;
+  }
+
+  .admission-floating strong {
+    font-size: 9px;
+  }
+
+  .admission-floating span {
+    font-size: 8px;
+  }
+
+  .application-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .application-card {
+    min-height: auto;
+  }
+
+  .admission-session-card {
+    grid-template-columns: 1fr;
+  }
+
+  .session-link {
+    grid-column: auto;
+  }
+
+  .admission-important {
+    grid-template-columns: 1fr;
+  }
+
+  .admission-important a {
+    grid-column: auto;
+  }
+
+  .admission-info-card {
+    display: block;
+  }
+
+  .admission-bottom {
+    grid-template-columns: 1fr;
+  }
+
 }
