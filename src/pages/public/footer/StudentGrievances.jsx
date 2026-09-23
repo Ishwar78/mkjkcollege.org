@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PageHero from "../../../components/PageHero";
+import api from "../../../lib/api";
 import {
   FiAlertCircle,
   FiUser,
@@ -55,6 +56,9 @@ export default function StudentGrievances() {
     subject: "",
     complaint: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,25 +67,49 @@ export default function StudentGrievances() {
       ...prev,
       [name]: value,
     }));
+    setError("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
 
-    console.log("Grievance Form Submitted:", formData);
+    try {
+      const payload = {
+        type: "grievance",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.mobile,
+        altPhone: formData.phone,
+        address: formData.address,
+        department: formData.department,
+        subject: formData.subject || "Student’s Grievance",
+        message: formData.complaint,
+      };
 
-    alert("Your grievance has been submitted successfully.");
-
-    setFormData({
-      department: "",
-      name: "",
-      email: "",
-      mobile: "",
-      phone: "",
-      address: "",
-      subject: "",
-      complaint: "",
-    });
+      const res = await api.post("/api/inquiries", payload);
+      if (res && res.success) {
+        setSubmitted(true);
+        setFormData({
+          department: "",
+          name: "",
+          email: "",
+          mobile: "",
+          phone: "",
+          address: "",
+          subject: "",
+          complaint: "",
+        });
+      } else {
+        setError(res?.message || "Could not submit grievance. Please check required fields.");
+      }
+    } catch (err) {
+      console.error("Grievance submission error:", err);
+      setError(err.message || "Failed to connect to server. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -242,10 +270,56 @@ export default function StudentGrievances() {
             </div>
 
 
-            <form
-              className="sg-form"
-              onSubmit={handleSubmit}
-            >
+            {submitted ? (
+              <div
+                style={{
+                  background: "#edf9f2",
+                  border: "1.5px solid #bce6ce",
+                  borderRadius: "16px",
+                  padding: "36px 24px",
+                  textAlign: "center",
+                  color: "#18693c",
+                  margin: "20px 0",
+                }}
+              >
+                <div style={{ fontSize: "40px", marginBottom: "12px" }}>✓</div>
+                <h3 style={{ margin: "0 0 10px", fontSize: "22px", color: "#145932" }}>
+                  Grievance Submitted Successfully
+                </h3>
+                <p style={{ maxWidth: "600px", margin: "0 auto 24px", fontSize: "14.5px", lineHeight: 1.6 }}>
+                  Your grievance has been submitted directly to the Student’s Grievances Redressal Cell.
+                  The committee members will look into the matter with confidentiality.
+                </p>
+                <button
+                  type="button"
+                  className="sg-submit-btn"
+                  onClick={() => setSubmitted(false)}
+                  style={{ display: "inline-flex", margin: "0 auto" }}
+                >
+                  Submit Another Grievance
+                </button>
+              </div>
+            ) : (
+              <form
+                className="sg-form"
+                onSubmit={handleSubmit}
+              >
+                {error && (
+                  <div
+                    style={{
+                      background: "#feeceb",
+                      border: "1px solid #f5c2be",
+                      color: "#b02a24",
+                      padding: "14px 18px",
+                      borderRadius: "10px",
+                      marginBottom: "20px",
+                      fontSize: "13.5px",
+                      fontWeight: 700,
+                    }}
+                  >
+                    ⚠️ {error}
+                  </div>
+                )}
 
               <div className="sg-form-grid">
 
@@ -452,15 +526,17 @@ export default function StudentGrievances() {
                 <button
                   type="submit"
                   className="sg-submit-btn"
+                  disabled={loading}
+                  style={{ opacity: loading ? 0.7 : 1, cursor: loading ? "not-allowed" : "pointer" }}
                 >
                   <FiSend />
-                  Submit Grievance
+                  {loading ? "Submitting..." : "Submit Grievance"}
                 </button>
 
               </div>
 
             </form>
-
+          )}
           </section>
 
         </div>

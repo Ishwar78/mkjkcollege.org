@@ -101,6 +101,7 @@ import IQAC from "./pages/public/IQAC";
 import CommunityServices from "./pages/public/CommunityServices";
 import Contact from "./pages/public/Contact";
 import AdminLogin from "./pages/admin/AdminLogin";
+import AdminPopup from "./pages/admin/AdminPopup";
 import PopupNotice from "./pages/public/PopupNotice";
 function AdminGuard({children}){return localStorage.getItem("mkjk_admin_auth")==="1"?children:<Navigate to="/admin/mkjklogin" replace/>}
 export default function App() {
@@ -108,10 +109,11 @@ export default function App() {
 <Route path="/admin/mkjklogin" element={<AdminLogin/> } />
 <Route path="/admin/dashboard" element={<AdminGuard><AdminDashboard/></AdminGuard> } />
 <Route path="/admin/contact" element={<AdminGuard><AdminContact/></AdminGuard> } />
+<Route path="/admin/inquiries" element={<AdminGuard><AdminInquiries/></AdminGuard> } />
+<Route path="/admin/popup" element={<AdminGuard><AdminPopup/></AdminGuard> } />
 <Route path="/admin/courses" element={<AdminGuard><AdminCourses/></AdminGuard> } />
 <Route path="/admin/academic-programs" element={<AdminGuard><AdminAcademicPrograms/></AdminGuard> } />
 <Route path="/admin/about" element={<AdminGuard><AdminAbout/></AdminGuard> } />
-<Route path="/admin/inquiries" element={<AdminGuard><AdminInquiries/></AdminGuard> } />
 <Route path="/admin/faculty" element={<AdminGuard><AdminFaculty/></AdminGuard> } />
 <Route path="/admin/academics" element={<AdminGuard><AdminAcademics/></AdminGuard> } />
 <Route path="/admin/facilities" element={<AdminGuard><AdminFacilities/></AdminGuard> } />

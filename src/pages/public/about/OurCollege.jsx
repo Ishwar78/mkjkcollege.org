@@ -40,4 +40,11 @@ export default function OurCollege(){
                                                 competence will exhibit the highest standards of ethical behaviors in every
                                                  walk of life and turn every difficulty into an opportunity to move ahead
                                                   towards perfection.</p>
-                                                  </div></section><section className="mkjk-college-values"><div><span>OUR VALUES</span><h2>Education with purpose</h2><p>The very motto of the college <b>Arise, Awake and Achieve</b> implies a journey from the dark labyrinths of ignorance to the luminous vistas of knowledge.</p></div><div className="mkjk-value-list">{['Knowledge and lifelong learning','Courage and confidence','Ethical behaviour and responsibility','Empowerment of women'].map(x=><div key={x}><FiCheckCircle/><span>{x}</span></div>)}</div></section><a className="mkjk-college-next" href="/about/our-inspiration">Explore Our Inspirations <FiArrowRight/></a></div></main></>}
+                                                  </div></section><section className="mkjk-college-values"><div>
+                                                    <span>OUR VALUES</span>
+                                                    <h2>Education with purpose</h2>
+                                                    <p>The very motto of the college
+                                                         <b>Arise, Awake and Achieve</b>
+                                                         implies a journey from the dark labyrinths of ignorance to the luminous vistas of knowledge.</p>
+                                                         </div>
+                                                         <div className="mkjk-value-list">{['Knowledge and lifelong learning','Courage and confidence','Ethical behaviour and responsibility','Empowerment of women'].map(x=><div key={x}><FiCheckCircle/><span>{x}</span></div>)}</div></section><a className="mkjk-college-next" href="/about/our-inspiration">Explore Our Inspirations <FiArrowRight/></a></div></main></>}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PageHero from "../../../components/PageHero";
+import api from "../../../lib/api";
 import "./AntiSexualHarassment.css";
 
 const committeeMembers = [
@@ -51,27 +52,59 @@ const initialForm = {
 
 export default function AntiSexualHarassment() {
   const [form, setForm] = useState(initialForm);
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setForm((prev) => ({
       ...prev,
       [name]: value,
     }));
+    setError("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
 
-    // Backend/API can be connected here later.
-    alert(
-      "Your complaint form has been submitted successfully. The concerned committee will review the complaint."
-    );
+    try {
+      const payload = {
+        type: "sexual_harassment",
+        name: form.complainantName,
+        designation: form.designation,
+        phone: form.mobile,
+        email: form.email,
+        aadhaar: form.aadhaar,
+        district: form.district,
+        accusedDept: form.accusedDepartment,
+        accusedName: form.accusedName,
+        accusedDesignation: form.accusedDesignation,
+        relationship: form.relationship,
+        message: form.description,
+        subject: "SEXUAL HARASSMENT & VIOLENCE Complaint",
+      };
+
+      const res = await api.post("/api/inquiries", payload);
+      if (res && res.success) {
+        setSubmitted(true);
+        setForm(initialForm);
+      } else {
+        setError(res?.message || "Could not submit complaint. Please check fields.");
+      }
+    } catch (err) {
+      console.error("Sexual Harassment submission error:", err);
+      setError(err.message || "Failed to connect to server. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleReset = () => {
     setForm(initialForm);
+    setError("");
   };
 
   return (
@@ -299,10 +332,57 @@ export default function AntiSexualHarassment() {
               </div>
             </div>
 
-            <form
-              className="complaint-form"
-              onSubmit={handleSubmit}
-            >
+            {submitted ? (
+              <div
+                style={{
+                  background: "#edf9f2",
+                  border: "1.5px solid #bce6ce",
+                  borderRadius: "16px",
+                  padding: "32px",
+                  textAlign: "center",
+                  color: "#18693c",
+                  margin: "20px 0",
+                }}
+              >
+                <div style={{ fontSize: "40px", marginBottom: "12px" }}>✓</div>
+                <h3 style={{ margin: "0 0 10px", fontSize: "22px", color: "#145932" }}>
+                  Complaint Registered Successfully
+                </h3>
+                <p style={{ maxWidth: "600px", margin: "0 auto 20px", fontSize: "14.5px", lineHeight: 1.6 }}>
+                  Your complaint regarding Sexual Harassment & Violence has been submitted
+                  securely and confidentially to the Anti-Sexual Harassment Cell committee of MKJK Mahavidyalaya.
+                  Appropriate inquiry will be initiated per college and UGC regulations.
+                </p>
+                <button
+                  type="button"
+                  className="form-btn form-btn-submit"
+                  onClick={() => setSubmitted(false)}
+                  style={{ display: "inline-block", margin: "0 auto" }}
+                >
+                  Submit Another Form
+                </button>
+              </div>
+            ) : (
+              <form
+                className="complaint-form"
+                onSubmit={handleSubmit}
+              >
+                {error && (
+                  <div
+                    style={{
+                      background: "#feeceb",
+                      border: "1px solid #f5c2be",
+                      color: "#b02a24",
+                      padding: "14px 18px",
+                      borderRadius: "10px",
+                      marginBottom: "20px",
+                      fontSize: "13.5px",
+                      fontWeight: 700,
+                    }}
+                  >
+                    ⚠️ {error}
+                  </div>
+                )}
               {/* COMPLAINANT INFORMATION */}
               <div className="form-block">
                 <div className="form-block-heading">
@@ -553,15 +633,18 @@ export default function AntiSexualHarassment() {
                   <button
                     type="submit"
                     className="form-btn form-btn-submit"
+                    disabled={loading}
+                    style={{ opacity: loading ? 0.7 : 1, cursor: loading ? "not-allowed" : "pointer" }}
                   >
-                    Submit Complaint
+                    {loading ? "Submitting..." : "Submit Complaint"}
                     <span>→</span>
                   </button>
                 </div>
 
               </div>
             </form>
-          </section>
+          )}
+        </section>
 
         </div>
       </main>

@@ -12,6 +12,7 @@ import {
 } from "react-icons/fi";
 
 import PageHero from "../../../components/PageHero";
+import api from "../../../lib/api";
 import "./AlumniRegistration.css";
 
 export default function AlumniRegistration() {
@@ -35,6 +36,9 @@ export default function AlumniRegistration() {
   };
 
   const [form, setForm] = useState(initialForm);
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,19 +47,47 @@ export default function AlumniRegistration() {
       ...prev,
       [name]: value,
     }));
+    setError("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
 
-    // Backend/API can be connected here later.
-    console.log("Alumni Registration:", form);
+    try {
+      const fullName = [form.title, form.firstName, form.middleName, form.lastName]
+        .filter(Boolean)
+        .join(" ")
+        .trim();
 
-    alert("Alumni registration submitted successfully.");
+      const payload = {
+        ...form,
+        type: "alumni",
+        name: fullName || form.firstName || "Alumni Member",
+        phone: form.mobile,
+        subject: `Alumni Registration - ${form.coursePassed || ""} (${form.passingYear || ""})`,
+        message: form.professional || `Registered as Alumni of MKJK College (${form.coursePassed})`,
+      };
+
+      const res = await api.post("/api/inquiries", payload);
+      if (res && res.success) {
+        setSubmitted(true);
+        setForm(initialForm);
+      } else {
+        setError(res?.message || "Could not complete registration. Please check fields.");
+      }
+    } catch (err) {
+      console.error("Alumni registration error:", err);
+      setError(err.message || "Failed to connect to server. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleReset = () => {
     setForm(initialForm);
+    setError("");
   };
 
   return (
@@ -119,8 +151,53 @@ export default function AlumniRegistration() {
 
             </div>
 
-
-            <form onSubmit={handleSubmit}>
+            {submitted ? (
+              <div
+                style={{
+                  background: "#edf9f2",
+                  border: "1.5px solid #bce6ce",
+                  borderRadius: "16px",
+                  padding: "36px 24px",
+                  textAlign: "center",
+                  color: "#18693c",
+                  margin: "20px 0",
+                }}
+              >
+                <div style={{ fontSize: "44px", marginBottom: "14px" }}>🎓</div>
+                <h3 style={{ margin: "0 0 10px", fontSize: "22px", color: "#145932" }}>
+                  Alumni Registration Submitted Successfully!
+                </h3>
+                <p style={{ maxWidth: "600px", margin: "0 auto 24px", fontSize: "14.5px", lineHeight: 1.6 }}>
+                  Thank you for registering with the MKJK Mahavidyalaya Alumni Association.
+                  Your information has been securely stored in our alumni network database.
+                </p>
+                <button
+                  type="button"
+                  className="alumni-btn alumni-btn-primary"
+                  onClick={() => setSubmitted(false)}
+                  style={{ display: "inline-flex", margin: "0 auto" }}
+                >
+                  Register Another Alumni
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                {error && (
+                  <div
+                    style={{
+                      background: "#feeceb",
+                      border: "1px solid #f5c2be",
+                      color: "#b02a24",
+                      padding: "14px 18px",
+                      borderRadius: "10px",
+                      marginBottom: "20px",
+                      fontSize: "13.5px",
+                      fontWeight: 700,
+                    }}
+                  >
+                    ⚠️ {error}
+                  </div>
+                )}
 
               {/* ==================================
                   PERSONAL DETAILS
@@ -695,9 +772,11 @@ export default function AlumniRegistration() {
                 <button
                   type="submit"
                   className="alumni-btn alumni-btn-primary"
+                  disabled={loading}
+                  style={{ opacity: loading ? 0.7 : 1, cursor: loading ? "not-allowed" : "pointer" }}
                 >
                   <FiSend />
-                  Submit Registration
+                  {loading ? "Submitting..." : "Submit Registration"}
                 </button>
 
 
@@ -719,7 +798,7 @@ export default function AlumniRegistration() {
               </div>
 
             </form>
-
+          )}
           </section>
 
 

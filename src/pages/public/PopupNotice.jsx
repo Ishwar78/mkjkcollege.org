@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   FiDownload,
@@ -11,10 +11,33 @@ import {
   FiMail,
 } from "react-icons/fi";
 import PageHero from "../../components/PageHero";
+import api, { getAssetUrl } from "../../lib/api";
 import "./PopupNotice.css";
 
 export default function PopupNotice() {
-  const imageSrc = "/assets/popup.png";
+  const [popup, setPopup] = useState({
+    title: "Notice & Announcements",
+    subtitle:
+      "Important institutional updates, timetables, and notifications from MKJK College.",
+    imageUrl: "/assets/popup.png",
+  });
+
+  useEffect(() => {
+    let isMounted = true;
+    api
+      .get("/api/popup")
+      .then((res) => {
+        if (isMounted && res && res.success && res.popup) {
+          setPopup(res.popup);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const imageSrc = getAssetUrl(popup.imageUrl);
 
   const handlePrint = () => {
     window.print();
@@ -23,8 +46,11 @@ export default function PopupNotice() {
   return (
     <div className="page-scope-popupnotice">
       <PageHero
-        title="Notice & Announcements"
-        subtitle="Important institutional updates, timetables, and notifications from MKJK College."
+        title={popup.title || "Notice & Announcements"}
+        subtitle={
+          popup.subtitle ||
+          "Important institutional updates, timetables, and notifications from MKJK College."
+        }
       />
 
       <main className="pn-container">
@@ -34,7 +60,7 @@ export default function PopupNotice() {
             <div className="pn-notice-header">
               <div className="pn-notice-title">
                 <span className="pn-notice-badge">Official Notice</span>
-                <h2>Institutional Announcement</h2>
+                <h2>{popup.title || "Institutional Announcement"}</h2>
               </div>
 
               <div className="pn-action-buttons">

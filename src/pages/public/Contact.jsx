@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FiMapPin,
   FiPhone,
@@ -10,14 +10,88 @@ import {
   FiMessageCircle,
 } from "react-icons/fi";
 import PageHero from "../../components/PageHero";
+import api from "../../lib/api";
 import "./Contact.css";
 
 export default function Contact() {
-  const [sent, setSent] = useState(false);
+  const [contactInfo, setContactInfo] = useState({
+    phone: "01262-274660, 9812152759",
+    email: "mkjkmrt@gmail.com",
+    address: "Delhi Road, Rohtak, Haryana – 124001",
+    officeHours: "Monday – Saturday\n9:00 AM – 5:00 PM",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Maharani+Kishori+Jat+Kanya+Mahavidyalaya+Rohtak",
+  });
 
-  const handleSubmit = (e) => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [submitting, setSubmitting] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  useEffect(() => {
+    async function loadContact() {
+      try {
+        const res = await api.get("/api/contact");
+        if (res && res.contact) {
+          setContactInfo({
+            phone: res.contact.phone || "01262-274660, 9812152759",
+            email: res.contact.email || "mkjkmrt@gmail.com",
+            address: res.contact.address || "Delhi Road, Rohtak, Haryana – 124001",
+            officeHours:
+              res.contact.officeHours || "Monday – Saturday\n9:00 AM – 5:00 PM",
+            mapLink:
+              res.contact.mapLink ||
+              "https://www.google.com/maps/search/?api=1&query=Maharani+Kishori+Jat+Kanya+Mahavidyalaya+Rohtak",
+          });
+        }
+      } catch (err) {
+        console.warn("Using default contact info:", err.message);
+      }
+    }
+    loadContact();
+  }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    setErrorMsg("");
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSent(true);
+    setSubmitting(true);
+    setErrorMsg("");
+
+    try {
+      const res = await api.post("/api/inquiries", {
+        ...form,
+        type: "contact",
+      });
+      if (res && res.success) {
+        setSent(true);
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setErrorMsg(res.message || "Could not submit inquiry. Please try again.");
+      }
+    } catch (err) {
+      console.error("Inquiry submission error:", err);
+      setErrorMsg(err.message || "Could not connect to server. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -86,7 +160,7 @@ export default function Contact() {
 
               {/* Address */}
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Maharani+Kishori+Jat+Kanya+Mahavidyalaya+Rohtak"
+                href={contactInfo.mapLink}
                 target="_blank"
                 rel="noreferrer"
                 className="contact-detail-card"
@@ -98,10 +172,8 @@ export default function Contact() {
                 <div className="detail-content">
                   <span>VISIT US</span>
                   <strong>College Address</strong>
-                  <p>
-                    Delhi Road,
-                    <br />
-                    Rohtak, Haryana – 124001
+                  <p style={{ whiteSpace: "pre-line" }}>
+                    {contactInfo.address}
                   </p>
                 </div>
 
@@ -110,7 +182,7 @@ export default function Contact() {
 
               {/* Phone */}
               <a
-                href="tel:01262274660"
+                href={`tel:${contactInfo.phone.split(",")[0].trim()}`}
                 className="contact-detail-card"
               >
                 <div className="detail-icon">
@@ -120,10 +192,8 @@ export default function Contact() {
                 <div className="detail-content">
                   <span>CALL US</span>
                   <strong>Phone</strong>
-                  <p>
-                    01262-274660
-                    <br />
-                    9812152759
+                  <p style={{ whiteSpace: "pre-line" }}>
+                    {contactInfo.phone.replace(/,\s*/g, "\n")}
                   </p>
                 </div>
 
@@ -132,7 +202,7 @@ export default function Contact() {
 
               {/* Email */}
               <a
-                href="mailto:mkjkmrt@gmail.com"
+                href={`mailto:${contactInfo.email}`}
                 className="contact-detail-card"
               >
                 <div className="detail-icon">
@@ -142,7 +212,7 @@ export default function Contact() {
                 <div className="detail-content">
                   <span>EMAIL US</span>
                   <strong>Email</strong>
-                  <p>mkjkmrt@gmail.com</p>
+                  <p>{contactInfo.email}</p>
                 </div>
 
                 <FiArrowRight className="detail-arrow" />
@@ -157,10 +227,8 @@ export default function Contact() {
                 <div className="detail-content">
                   <span>OFFICE HOURS</span>
                   <strong>College Office</strong>
-                  <p>
-                    Monday – Saturday
-                    <br />
-                    9:00 AM – 5:00 PM
+                  <p style={{ whiteSpace: "pre-line" }}>
+                    {contactInfo.officeHours}
                   </p>
                 </div>
               </div>
@@ -201,6 +269,8 @@ export default function Contact() {
                       name="name"
                       type="text"
                       required
+                      value={form.name}
+                      onChange={handleChange}
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -215,6 +285,8 @@ export default function Contact() {
                       name="email"
                       type="email"
                       required
+                      value={form.email}
+                      onChange={handleChange}
                       placeholder="name@example.com"
                     />
                   </div>
@@ -232,6 +304,8 @@ export default function Contact() {
                       id="contact-phone"
                       name="phone"
                       type="tel"
+                      value={form.phone}
+                      onChange={handleChange}
                       placeholder="Enter mobile number"
                     />
                   </div>
@@ -245,6 +319,8 @@ export default function Contact() {
                       id="contact-subject"
                       name="subject"
                       type="text"
+                      value={form.subject}
+                      onChange={handleChange}
                       placeholder="What can we help with?"
                     />
                   </div>
@@ -260,17 +336,26 @@ export default function Contact() {
                     id="contact-message"
                     name="message"
                     required
+                    value={form.message}
+                    onChange={handleChange}
                     placeholder="Write your message here..."
                   />
                 </div>
+
+                {errorMsg && (
+                  <div style={{ color: "#c53414", fontSize: "13px", fontWeight: "600", marginBottom: "10px" }}>
+                    {errorMsg}
+                  </div>
+                )}
 
                 <div className="form-submit-row">
 
                   <button
                     type="submit"
                     className="contact-submit-btn"
+                    disabled={submitting}
                   >
-                    <span>Send Message</span>
+                    <span>{submitting ? "Sending..." : "Send Message"}</span>
                     <FiSend />
                   </button>
 
@@ -284,10 +369,10 @@ export default function Contact() {
                   <div className="contact-success">
                     <span>✓</span>
                     <div>
-                      <strong>Message captured successfully.</strong>
+                      <strong>Your inquiry has been sent successfully!</strong>
                       <p>
-                        Connect this form with your backend/API to store
-                        and process enquiries.
+                        Our college administrative office will review your query and
+                        get in touch with you soon.
                       </p>
                     </div>
                   </div>

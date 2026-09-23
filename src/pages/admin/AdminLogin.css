@@ -1,3 +1,344 @@
-.admin-login{min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at top,#fff5fb,#eaf6ff 55%,#fff);padding:25px}.admin-login-card{width:min(430px,100%);background:#fff;border:1px solid #e8edf3;border-radius:24px;padding:34px;box-shadow:0 25px 70px #142c5220;text-align:center}.admin-login-card .admin-login-card h1{margin:5px 0;font-size:30px}.admin-login-card p{color:#718095;font-size:14px}.admin-login-card form{display:grid;gap:15px;text-align:left;margin-top:22px}.admin-login-card label{display:grid;gap:6px;font-size:12px;font-weight:700}.admin-login-card input{border:1px solid #dce3eb;border-radius:10px;padding:12px;outline:0}.admin-login-card input:focus{border-color:#f50075}.login-error{background:#fff0f0;color:#c22a35;border-radius:9px;padding:10px;font-size:12px}.admin-login-card small{display:block;color:#8995a4;font-size:10px;margin-top:18px;line-height:1.6}
+/* =========================================
+   ADMIN LOGIN PAGE
+========================================= */
 
-.admin-login{min-height:100vh!important;background:radial-gradient(circle at 15% 10%,#fff0bf,#fff9ed 42%,#f6e8d5 100%)!important}.admin-login-card{border-color:#eadabd!important;box-shadow:0 28px 80px rgba(76,40,11,.18)!important}.admin-login-card h1{color:#54220c!important}.admin-login-card input{border-color:#dfd1b7!important}.admin-login-card input:focus{border-color:#e85c17!important}.admin-login-card .btn-primary{background:linear-gradient(90deg,#ff9a24,#e85c17)!important}.admin-login-card small{color:#8a725c!important}
+.admin-login {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+
+  padding: 30px 20px;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      #fff0bf 0%,
+      #fff9ed 42%,
+      #f6e8d5 100%
+    );
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.admin-login-card {
+  width: min(430px, 100%);
+
+  background: #ffffff;
+
+  border: 1px solid #eadabd;
+  border-radius: 24px;
+
+  padding: 30px 34px 28px;
+
+  text-align: center;
+
+  box-shadow:
+    0 28px 80px rgba(76, 40, 11, 0.18);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.admin-logo-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 14px;
+}
+
+
+/*
+  Logo size intentionally kept small.
+  This prevents the original large logo issue.
+*/
+
+.admin-logo {
+  width: 82px;
+  height: 82px;
+
+  max-width: 82px;
+  max-height: 82px;
+
+  object-fit: contain;
+
+  display: block;
+
+  border-radius: 12px;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.admin-login-card .eyebrow {
+  display: inline-block;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #e85c17;
+
+  margin-bottom: 6px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.admin-login-card h1 {
+  margin: 5px 0 7px;
+
+  color: #54220c;
+
+  font-size: 30px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.admin-login-card p {
+  margin: 0;
+
+  color: #718095;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.admin-login-card form {
+  display: grid;
+  gap: 15px;
+
+  text-align: left;
+
+  margin-top: 22px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.admin-login-card label {
+  display: grid;
+  gap: 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #54220c;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.admin-login-card input {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #dfd1b7;
+  border-radius: 10px;
+
+  padding: 12px 13px;
+
+  background: #fffdf9;
+
+  color: #333;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.admin-login-card input::placeholder {
+  color: #a7a09a;
+}
+
+
+.admin-login-card input:focus {
+  border-color: #e85c17;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(232, 92, 23, 0.10);
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.login-error {
+  background: #fff0f0;
+
+  color: #c22a35;
+
+  border: 1px solid #ffd4d4;
+
+  border-radius: 9px;
+
+  padding: 10px 12px;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.admin-login-card .btn-primary {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 0;
+  border-radius: 10px;
+
+  padding: 12px 16px;
+
+  background: linear-gradient(
+    90deg,
+    #ff9a24,
+    #e85c17
+  );
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.admin-login-card .btn-primary svg {
+  font-size: 17px;
+}
+
+
+.admin-login-card .btn-primary:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(232, 92, 23, 0.25);
+}
+
+
+.admin-login-card .btn-primary:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   FOOTER NOTE
+========================================= */
+
+.admin-login-card small {
+  display: block;
+
+  color: #8a725c;
+
+  font-size: 10px;
+
+  margin-top: 18px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .admin-login {
+    padding: 20px 14px;
+  }
+
+  .admin-login-card {
+    width: 100%;
+
+    padding: 26px 22px 24px;
+
+    border-radius: 20px;
+  }
+
+  .admin-logo {
+    width: 68px;
+    height: 68px;
+    max-width: 68px;
+    max-height: 68px;
+  }
+
+  .admin-login-card h1 {
+    font-size: 26px;
+  }
+
+  .admin-login-card p {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .admin-login-card {
+    padding: 23px 18px;
+  }
+
+  .admin-logo {
+    width: 62px;
+    height: 62px;
+    max-width: 62px;
+    max-height: 62px;
+  }
+
+  .admin-login-card h1 {
+    font-size: 24px;
+  }
+}

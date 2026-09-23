@@ -19,6 +19,7 @@ import {
 } from "react-icons/fi";
 import "./Home.css";
 import PopupModal from "../../components/PopupModal";
+import api, { getAssetUrl } from "../../lib/api";
 
 const slides = [
   {
@@ -98,7 +99,34 @@ const quickLinks = [
 
 export default function Home() {
   const [active, setActive] = useState(0);
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupData, setPopupData] = useState({
+    title: "Notice & Announcements",
+    imageUrl: "/assets/popup.png",
+    linkUrl: "/popup",
+    isActive: true,
+  });
+
+  useEffect(() => {
+    let isMounted = true;
+    api
+      .get("/api/popup")
+      .then((res) => {
+        if (isMounted && res && res.success && res.popup) {
+          setPopupData(res.popup);
+          if (res.popup.isActive !== false) {
+            setShowPopup(true);
+          }
+        }
+      })
+      .catch((err) => {
+        console.error("Popup fetch error:", err);
+        if (isMounted) setShowPopup(true);
+      });
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   useEffect(() => {
     const id = window.setInterval(() => {
@@ -379,18 +407,25 @@ export default function Home() {
       </section>
 
       <section className="mkjk-stats">
-        <div className="mkjk-home-container mkjk-stats-grid">
-          {[
-            ["1988", "College established"],
-            ["12.5", "Acres campus"],
-            ["12B & 2F", "UGC recognition"],
-            ["NCTE", "B.P.Ed & M.P.Ed"],
-          ].map(([number, label]) => (
-            <div key={label}>
-              <strong>{number}</strong>
-              <span>{label}</span>
-            </div>
-          ))}
+        <div className="mkjk-home-container">
+          <div className="mkjk-stats-grid">
+            {[
+              ["1988", "College established", FiCalendar],
+              ["12.5", "Acres campus", FiMapPin],
+              ["12B & 2F", "UGC recognition", FiAward],
+              ["NCTE", "B.P.Ed & M.P.Ed", FiCheckCircle],
+            ].map(([number, label, Icon]) => (
+              <div key={label} className="mkjk-stat-box">
+                <div className="mkjk-stat-icon">
+                  <Icon />
+                </div>
+                <div className="mkjk-stat-info">
+                  <strong>{number}</strong>
+                  <span>{label}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -544,13 +579,13 @@ export default function Home() {
       <PopupModal
         isOpen={showPopup}
         onClose={() => setShowPopup(false)}
-        imageSrc="/assets/popup.png"
-        title="Notice & Announcements"
-        linkUrl="/popup"
+        imageSrc={getAssetUrl(popupData.imageUrl)}
+        title={popupData.title || "Notice & Announcements"}
+        linkUrl={popupData.linkUrl || "/popup"}
       />
 
       {/* Floating button to re-open notice if closed */}
-      {!showPopup && (
+      {!showPopup && popupData.isActive !== false && (
         <button
           type="button"
           className="mkjk-popup-float-btn"
